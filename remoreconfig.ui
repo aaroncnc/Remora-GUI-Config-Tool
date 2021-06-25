@@ -1,0 +1,6837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Remoraconfigtool</class>
+ <widget class="QMainWindow" name="Remoraconfigtool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1039</width>
+    <height>777</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Remora Config Tool</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>1001</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>6</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Boards</string>
+     </attribute>
+     <widget class="QComboBox" name="boards">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>271</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>BIGTREETECH SKR v1.3 &amp; v1.4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MKS SBASE v1.3</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select control board</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="axis">
+     <attribute name="title">
+      <string>axis</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxisjoint">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_105">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_106">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>20</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Joint</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxistxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>X-axis</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_107">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>10</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Step Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxisstep">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.2</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxisdir">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.6</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_108">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxisenable">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.1</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_109">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>10</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dir Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="xaxis">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>X Axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxistxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>110</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Y-axis</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxisenable">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.8</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="yaxis">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Y Axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxisdir">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.20</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxisjoint">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxisstep">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.19</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxistxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Z-axis</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxisenable">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.21</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="zaxis">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Z Axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxisdir">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.11</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxisjoint">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxisstep">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.22</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axistxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>210</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E0-axis</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axisenable">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.12</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="e0axis">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>E0 Axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axisdir">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.11</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axisjoint">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axisstep">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.13</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axistxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>260</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E1-axis</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axisenable">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.16</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="e1axis">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>E1 Axis</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axisdir">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.14</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axisjoint">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axisstep">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.15</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_75">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_76">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>541</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_77">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>541</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_78">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>551</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_79">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>551</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_80">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>541</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_81">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>551</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_82">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_83">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_84">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_85">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="outputs">
+     <attribute name="title">
+      <string>outputs</string>
+     </attribute>
+     <widget class="QCheckBox" name="outchk0">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 0</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 4</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>310</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 5</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>360</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 6</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outchk7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>410</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Output 7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt0">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin0">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin1">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt1">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>110</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>160</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>210</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>210</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>260</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>260</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>310</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>310</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt6">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>360</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outpin7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>410</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="outtxt7">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>410</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable outputs</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin State</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="outstate3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>210</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate0">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>60</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate1">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>160</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate7">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>410</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>310</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="outstate6">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>360</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert output</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv0">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>60</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv1">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>110</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv2">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>160</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv3">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>210</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv5">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>310</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv6">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>360</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outinv7">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>410</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_12">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>16</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_13">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>16</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_14">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>20</y>
+        <width>16</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_15">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>20</y>
+        <width>16</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_24">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_25">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_26">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_27">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_28">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_29">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_30">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>390</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_31">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_32">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="inputs">
+     <attribute name="title">
+      <string>inputs</string>
+     </attribute>
+     <widget class="QLineEdit" name="intxt3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>210</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>410</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>160</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt7">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>410</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>260</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt1">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>110</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>410</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable Inputs</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>360</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 6</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>310</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 4</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt6">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>360</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin1">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>310</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>310</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 5</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>160</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt0">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk0">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>210</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="intxt4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>260</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inpin0">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="inchk1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Input 1</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="instate0">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>60</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin State</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="instate1">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>110</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>160</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>210</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>310</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate6">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>360</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="instate7">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>410</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="ininv7">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>410</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv1">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>110</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert Input</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv5">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>310</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv3">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>210</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv2">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>160</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv6">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>360</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ininv0">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>60</y>
+        <width>131</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invert enable</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>16</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_9">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>16</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_10">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>20</y>
+        <width>16</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_11">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>20</y>
+        <width>16</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_33">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_34">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_35">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_36">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_37">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_38">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_39">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_40">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>390</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_41">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="estop">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>460</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>E-Stop</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="estoppin">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>460</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="estoptxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>460</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="reset">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>510</y>
+        <width>99</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Reset Pin</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="resetpin">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>510</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.31</string>
+      </property>
+      <property name="placeholderText">
+       <string>Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="resettxt">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>510</y>
+        <width>113</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reset pin</string>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_58">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>490</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_59">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>540</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SP">
+     <attribute name="title">
+      <string>PWM/Servo</string>
+     </attribute>
+     <widget class="QCheckBox" name="pwm0">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Max PWM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>20</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Pin Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>0</y>
+        <width>68</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Hardware PWM</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>0</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Variable Freq</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>20</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Freq US</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>20</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Period</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt0">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax0">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin0">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>50</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw0">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>50</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf0">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>50</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq0">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod0">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>50</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_7">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw1">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>100</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq1">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>100</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin1">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod1">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>100</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf1">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>100</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt1">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>100</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax1">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>100</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw2">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>150</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>150</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin2">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>150</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod2">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>150</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>150</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>150</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>200</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq3">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>200</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin3">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod3">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>200</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>200</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 3</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>200</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax3">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>200</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>250</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>250</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin4">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>250</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod4">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>250</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf4">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>250</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 4</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt4">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>250</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax4">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>250</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>300</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq5">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>300</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin5">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>300</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod5">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>300</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf5">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>300</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 5</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt5">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>300</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax5">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>300</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmhw6">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>350</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmfreq6">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>350</y>
+        <width>51</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmpin6">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>350</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmperiod6">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>350</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwmvf6">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>350</y>
+        <width>21</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pwm6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>PWM 6</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmtxt6">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>350</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmmax6">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>350</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_16">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_17">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_18">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_20">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_21">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_22">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_23">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>460</y>
+        <width>451</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>If hardware PWM is enabled only the following pins can be used  2.0, 2.5, 1.18, 1.20, 1.21, 1.23, 1.24, 1.26, 3.25, 3.26</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_55">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_56">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>20</y>
+        <width>16</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>250</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi6">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>350</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>150</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi0">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>50</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>300</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi1">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>100</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pwmspi3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>200</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_65">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>20</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SP[i]</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rcservotxt">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>400</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rcservospi">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>400</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <property name="placeholderText">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="rcservo">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>400</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>RC Servo</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rcservopin">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>400</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>pin #</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_57">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>821</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>460</y>
+        <width>301</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>To use PWM0-6 for servos or ESC use the following, hardware pwm enabled, variable freq enabled, Period=2 Freq US=20000</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>530</y>
+        <width>301</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>In linux cnc pass a variable out to the SP[i] between 3-15 for full range of control on a standard servo.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PV">
+     <attribute name="title">
+      <string>Encoders</string>
+     </attribute>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>0</y>
+        <width>68</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Index Input #</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qeminput">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>60</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="qem">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>81</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>QEM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pointer #</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qempv">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qemtxt">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>300</y>
+        <width>461</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Index input will take the place of one of the inputs, what ever number set in index input must not be used on the inputs tab</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="enc0">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Encoder 0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enctxt0">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>110</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encpv0">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encapin0">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encbpin0">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encipin0">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="encstate0">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>110</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="encpv1">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enctxt1">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>160</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="encstate1">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>160</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="encapin1">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encbpin1">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encipin1">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="enc1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Encoder 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encpv2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enctxt2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>210</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="encstate2">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>210</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="encapin2">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encbpin2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encipin2">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="enc2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Encoder 2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encpv3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="enctxt3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>260</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="encstate3">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>260</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="encapin3">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encbpin3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encipin3">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="enc3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>101</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Encoder 3</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_42">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>851</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_43">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_44">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_45">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_47">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>741</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_46">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>20</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_48">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>30</y>
+        <width>20</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_49">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>20</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_50">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>20</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_51">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>40</y>
+        <width>20</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_52">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>40</y>
+        <width>20</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encinput0">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>110</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encinput1">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>160</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encinput2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>210</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="encinput3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>260</y>
+        <width>31</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_53">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>40</y>
+        <width>20</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="qemstate">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>60</y>
+        <width>101</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pull None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Open Drain</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Up</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pull Down</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_61">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin State</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_62">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>10</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ChA Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qemapin">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.20</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qembpin">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.23</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_63">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ChB Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_64">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>10</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Index Pin</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="qemipin">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1.24</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="Line" name="line_54">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>50</y>
+        <width>20</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_86">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>841</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>140</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Leave index input empty to disable index</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_92">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>210</y>
+        <width>20</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_93">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>50</y>
+        <width>20</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>310</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pointer # is limted to 0-7 for a total of 8 and each number can only be used once in the entire application. Do not use the same number twice</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>420</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>QEM = Quadrature Encoder Module, This is a high speed pin dedicated encoder input for very fast encoders. Used mainly for spindles</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_39">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>400</y>
+        <width>361</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Encoders 0-3 are software based encoders they have a rough max input of 30KHz.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_40">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>450</y>
+        <width>281</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RPM of axis * pulse per rev * 4 / 60 </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_41">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>470</y>
+        <width>411</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Example: 500rpm * 100 pulse per rev * 4 / 60 = 3.333KHz</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Temp/Switch</string>
+     </attribute>
+     <widget class="QLabel" name="label_66">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>68</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Beta</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppv0">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_56">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temptxt0">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_67">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pointer #</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_68">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin #</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppin0">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempr0">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_69">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>t0</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempt0">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_70">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>r0</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempbeta0">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="temp0">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Thermistor0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swsp0">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>410</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>360</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Mode</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpin0">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>410</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sw0">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>410</y>
+        <width>121</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Switch 0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpv0">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>410</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swtxt0">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>410</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="swmode0">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>410</y>
+        <width>85</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="tempr1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppin1">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="temp1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>110</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Thermistor1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempt1">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppv1">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temptxt1">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>110</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempbeta1">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempr2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppin2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="temp2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Thermistor2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempt2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppv2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temptxt2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>160</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempbeta2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempr3">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppin3">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="temp3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>210</y>
+        <width>111</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Thermistor3</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempt3">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temppv3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temptxt3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>210</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tempbeta3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swsp1">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>460</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sw1">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>460</y>
+        <width>121</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Switch 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swtxt1">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>460</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpv1">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>460</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpin1">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>460</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="swmode1">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>460</y>
+        <width>85</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="swsp2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>510</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>#</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sw2">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>510</y>
+        <width>121</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>Switch 2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swtxt2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>510</y>
+        <width>81</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>comment</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpv2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>510</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0-7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="swpin2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>510</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Pin#</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="swmode2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>510</y>
+        <width>85</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="Line" name="line_60">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_61">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_62">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_63">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_64">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_65">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>20</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_67">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>440</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_68">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>490</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_69">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_70">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_71">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_72">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_73">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_74">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>540</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_87">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>571</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_73">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>360</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pin #</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>111</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>370</y>
+        <width>68</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_75">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>360</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SP</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_76">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>370</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pointer #</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_66">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>380</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_88">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>380</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_89">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>380</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_90">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>380</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_91">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>380</y>
+        <width>20</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>250</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pointer # is limted to 0-7 for a total of 8 and each number can only be used once in the entire application. Do not use the same number twice</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>550</y>
+        <width>391</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>The switch works when the pointer # value excedes SP value and will turn on or off. This can be used to turn a fan on when a thermistor is above a set temp.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="save">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save config</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="load">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load Config</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1039</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menubeta">
+    <property name="title">
+     <string>beta</string>
+    </property>
+   </widget>
+   <addaction name="menubeta"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>boards</tabstop>
+  <tabstop>xaxis</tabstop>
+  <tabstop>xaxistxt</tabstop>
+  <tabstop>xaxisjoint</tabstop>
+  <tabstop>xaxisstep</tabstop>
+  <tabstop>xaxisdir</tabstop>
+  <tabstop>xaxisenable</tabstop>
+  <tabstop>yaxis</tabstop>
+  <tabstop>yaxistxt</tabstop>
+  <tabstop>yaxisjoint</tabstop>
+  <tabstop>yaxisstep</tabstop>
+  <tabstop>yaxisdir</tabstop>
+  <tabstop>yaxisenable</tabstop>
+  <tabstop>zaxis</tabstop>
+  <tabstop>zaxistxt</tabstop>
+  <tabstop>zaxisjoint</tabstop>
+  <tabstop>zaxisstep</tabstop>
+  <tabstop>zaxisdir</tabstop>
+  <tabstop>zaxisenable</tabstop>
+  <tabstop>e0axis</tabstop>
+  <tabstop>e0axistxt</tabstop>
+  <tabstop>e0axisjoint</tabstop>
+  <tabstop>e0axisstep</tabstop>
+  <tabstop>e0axisdir</tabstop>
+  <tabstop>e0axisenable</tabstop>
+  <tabstop>e1axis</tabstop>
+  <tabstop>e1axistxt</tabstop>
+  <tabstop>e1axisjoint</tabstop>
+  <tabstop>e1axisstep</tabstop>
+  <tabstop>e1axisdir</tabstop>
+  <tabstop>e1axisenable</tabstop>
+  <tabstop>outchk0</tabstop>
+  <tabstop>outtxt0</tabstop>
+  <tabstop>outpin0</tabstop>
+  <tabstop>outstate0</tabstop>
+  <tabstop>outinv0</tabstop>
+  <tabstop>outchk1</tabstop>
+  <tabstop>outtxt1</tabstop>
+  <tabstop>outpin1</tabstop>
+  <tabstop>outstate1</tabstop>
+  <tabstop>outinv1</tabstop>
+  <tabstop>outchk2</tabstop>
+  <tabstop>outtxt2</tabstop>
+  <tabstop>outpin2</tabstop>
+  <tabstop>outstate2</tabstop>
+  <tabstop>outinv2</tabstop>
+  <tabstop>outchk3</tabstop>
+  <tabstop>outtxt3</tabstop>
+  <tabstop>outpin3</tabstop>
+  <tabstop>outstate3</tabstop>
+  <tabstop>outinv3</tabstop>
+  <tabstop>outchk4</tabstop>
+  <tabstop>outtxt4</tabstop>
+  <tabstop>outpin4</tabstop>
+  <tabstop>outstate4</tabstop>
+  <tabstop>outinv4</tabstop>
+  <tabstop>outchk5</tabstop>
+  <tabstop>outtxt5</tabstop>
+  <tabstop>outpin5</tabstop>
+  <tabstop>outstate5</tabstop>
+  <tabstop>outinv5</tabstop>
+  <tabstop>outchk6</tabstop>
+  <tabstop>outtxt6</tabstop>
+  <tabstop>outpin6</tabstop>
+  <tabstop>outstate6</tabstop>
+  <tabstop>outinv6</tabstop>
+  <tabstop>outchk7</tabstop>
+  <tabstop>outtxt7</tabstop>
+  <tabstop>outpin7</tabstop>
+  <tabstop>outstate7</tabstop>
+  <tabstop>outinv7</tabstop>
+  <tabstop>inchk0</tabstop>
+  <tabstop>intxt0</tabstop>
+  <tabstop>inpin0</tabstop>
+  <tabstop>instate0</tabstop>
+  <tabstop>ininv0</tabstop>
+  <tabstop>inchk1</tabstop>
+  <tabstop>intxt1</tabstop>
+  <tabstop>inpin1</tabstop>
+  <tabstop>instate1</tabstop>
+  <tabstop>ininv1</tabstop>
+  <tabstop>inchk2</tabstop>
+  <tabstop>intxt2</tabstop>
+  <tabstop>inpin2</tabstop>
+  <tabstop>instate2</tabstop>
+  <tabstop>ininv2</tabstop>
+  <tabstop>inchk3</tabstop>
+  <tabstop>intxt3</tabstop>
+  <tabstop>inpin3</tabstop>
+  <tabstop>instate3</tabstop>
+  <tabstop>ininv3</tabstop>
+  <tabstop>inchk4</tabstop>
+  <tabstop>intxt4</tabstop>
+  <tabstop>inpin4</tabstop>
+  <tabstop>instate4</tabstop>
+  <tabstop>ininv4</tabstop>
+  <tabstop>inchk5</tabstop>
+  <tabstop>intxt5</tabstop>
+  <tabstop>inpin5</tabstop>
+  <tabstop>instate5</tabstop>
+  <tabstop>ininv5</tabstop>
+  <tabstop>inchk6</tabstop>
+  <tabstop>intxt6</tabstop>
+  <tabstop>inpin6</tabstop>
+  <tabstop>instate6</tabstop>
+  <tabstop>ininv6</tabstop>
+  <tabstop>inchk7</tabstop>
+  <tabstop>intxt7</tabstop>
+  <tabstop>inpin7</tabstop>
+  <tabstop>instate7</tabstop>
+  <tabstop>ininv7</tabstop>
+  <tabstop>estop</tabstop>
+  <tabstop>estoptxt</tabstop>
+  <tabstop>estoppin</tabstop>
+  <tabstop>reset</tabstop>
+  <tabstop>resettxt</tabstop>
+  <tabstop>resetpin</tabstop>
+  <tabstop>pwm0</tabstop>
+  <tabstop>pwmtxt0</tabstop>
+  <tabstop>pwmmax0</tabstop>
+  <tabstop>pwmpin0</tabstop>
+  <tabstop>pwmhw0</tabstop>
+  <tabstop>pwmvf0</tabstop>
+  <tabstop>pwmfreq0</tabstop>
+  <tabstop>pwmperiod0</tabstop>
+  <tabstop>pwmspi0</tabstop>
+  <tabstop>pwm1</tabstop>
+  <tabstop>pwmtxt1</tabstop>
+  <tabstop>pwmmax1</tabstop>
+  <tabstop>pwmpin1</tabstop>
+  <tabstop>pwmhw1</tabstop>
+  <tabstop>pwmvf1</tabstop>
+  <tabstop>pwmfreq1</tabstop>
+  <tabstop>pwmperiod1</tabstop>
+  <tabstop>pwmspi1</tabstop>
+  <tabstop>pwm2</tabstop>
+  <tabstop>pwmtxt2</tabstop>
+  <tabstop>pwmmax2</tabstop>
+  <tabstop>pwmpin2</tabstop>
+  <tabstop>pwmhw2</tabstop>
+  <tabstop>pwmvf2</tabstop>
+  <tabstop>pwmfreq2</tabstop>
+  <tabstop>pwmperiod2</tabstop>
+  <tabstop>pwmspi2</tabstop>
+  <tabstop>pwm3</tabstop>
+  <tabstop>pwmtxt3</tabstop>
+  <tabstop>pwmmax3</tabstop>
+  <tabstop>pwmpin3</tabstop>
+  <tabstop>pwmhw3</tabstop>
+  <tabstop>pwmvf3</tabstop>
+  <tabstop>pwmfreq3</tabstop>
+  <tabstop>pwmperiod3</tabstop>
+  <tabstop>pwmspi3</tabstop>
+  <tabstop>pwm4</tabstop>
+  <tabstop>pwmtxt4</tabstop>
+  <tabstop>pwmmax4</tabstop>
+  <tabstop>pwmpin4</tabstop>
+  <tabstop>pwmhw4</tabstop>
+  <tabstop>pwmvf4</tabstop>
+  <tabstop>pwmfreq4</tabstop>
+  <tabstop>pwmperiod4</tabstop>
+  <tabstop>pwmspi4</tabstop>
+  <tabstop>pwm5</tabstop>
+  <tabstop>pwmtxt5</tabstop>
+  <tabstop>pwmmax5</tabstop>
+  <tabstop>pwmpin5</tabstop>
+  <tabstop>pwmhw5</tabstop>
+  <tabstop>pwmvf5</tabstop>
+  <tabstop>pwmfreq5</tabstop>
+  <tabstop>pwmperiod5</tabstop>
+  <tabstop>pwmspi5</tabstop>
+  <tabstop>pwm6</tabstop>
+  <tabstop>pwmtxt6</tabstop>
+  <tabstop>pwmmax6</tabstop>
+  <tabstop>pwmpin6</tabstop>
+  <tabstop>pwmhw6</tabstop>
+  <tabstop>pwmvf6</tabstop>
+  <tabstop>pwmfreq6</tabstop>
+  <tabstop>pwmperiod6</tabstop>
+  <tabstop>pwmspi6</tabstop>
+  <tabstop>rcservo</tabstop>
+  <tabstop>rcservotxt</tabstop>
+  <tabstop>rcservopin</tabstop>
+  <tabstop>rcservospi</tabstop>
+  <tabstop>qem</tabstop>
+  <tabstop>qemtxt</tabstop>
+  <tabstop>qempv</tabstop>
+  <tabstop>qemapin</tabstop>
+  <tabstop>qembpin</tabstop>
+  <tabstop>qemipin</tabstop>
+  <tabstop>qeminput</tabstop>
+  <tabstop>qemstate</tabstop>
+  <tabstop>enc0</tabstop>
+  <tabstop>enctxt0</tabstop>
+  <tabstop>encpv0</tabstop>
+  <tabstop>encapin0</tabstop>
+  <tabstop>encbpin0</tabstop>
+  <tabstop>encipin0</tabstop>
+  <tabstop>encinput0</tabstop>
+  <tabstop>encstate0</tabstop>
+  <tabstop>enc1</tabstop>
+  <tabstop>enctxt1</tabstop>
+  <tabstop>encpv1</tabstop>
+  <tabstop>encapin1</tabstop>
+  <tabstop>encbpin1</tabstop>
+  <tabstop>encipin1</tabstop>
+  <tabstop>encinput1</tabstop>
+  <tabstop>encstate1</tabstop>
+  <tabstop>enc2</tabstop>
+  <tabstop>enctxt2</tabstop>
+  <tabstop>encpv2</tabstop>
+  <tabstop>encapin2</tabstop>
+  <tabstop>encbpin2</tabstop>
+  <tabstop>encipin2</tabstop>
+  <tabstop>encinput2</tabstop>
+  <tabstop>encstate2</tabstop>
+  <tabstop>enc3</tabstop>
+  <tabstop>enctxt3</tabstop>
+  <tabstop>encpv3</tabstop>
+  <tabstop>encapin3</tabstop>
+  <tabstop>encbpin3</tabstop>
+  <tabstop>encipin3</tabstop>
+  <tabstop>encinput3</tabstop>
+  <tabstop>encstate3</tabstop>
+  <tabstop>temp0</tabstop>
+  <tabstop>temptxt0</tabstop>
+  <tabstop>temppv0</tabstop>
+  <tabstop>temppin0</tabstop>
+  <tabstop>tempr0</tabstop>
+  <tabstop>tempt0</tabstop>
+  <tabstop>tempbeta0</tabstop>
+  <tabstop>temp1</tabstop>
+  <tabstop>temptxt1</tabstop>
+  <tabstop>temppv1</tabstop>
+  <tabstop>temppin1</tabstop>
+  <tabstop>tempr1</tabstop>
+  <tabstop>tempt1</tabstop>
+  <tabstop>tempbeta1</tabstop>
+  <tabstop>temp2</tabstop>
+  <tabstop>temptxt2</tabstop>
+  <tabstop>temppv2</tabstop>
+  <tabstop>temppin2</tabstop>
+  <tabstop>tempr2</tabstop>
+  <tabstop>tempt2</tabstop>
+  <tabstop>tempbeta2</tabstop>
+  <tabstop>temp3</tabstop>
+  <tabstop>temptxt3</tabstop>
+  <tabstop>temppv3</tabstop>
+  <tabstop>temppin3</tabstop>
+  <tabstop>tempr3</tabstop>
+  <tabstop>tempt3</tabstop>
+  <tabstop>tempbeta3</tabstop>
+  <tabstop>sw0</tabstop>
+  <tabstop>swtxt0</tabstop>
+  <tabstop>swpv0</tabstop>
+  <tabstop>swpin0</tabstop>
+  <tabstop>swsp0</tabstop>
+  <tabstop>swmode0</tabstop>
+  <tabstop>sw1</tabstop>
+  <tabstop>swtxt1</tabstop>
+  <tabstop>swpv1</tabstop>
+  <tabstop>swpin1</tabstop>
+  <tabstop>swsp1</tabstop>
+  <tabstop>swmode1</tabstop>
+  <tabstop>sw2</tabstop>
+  <tabstop>swtxt2</tabstop>
+  <tabstop>swpv2</tabstop>
+  <tabstop>swpin2</tabstop>
+  <tabstop>swsp2</tabstop>
+  <tabstop>swmode2</tabstop>
+  <tabstop>save</tabstop>
+  <tabstop>load</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
