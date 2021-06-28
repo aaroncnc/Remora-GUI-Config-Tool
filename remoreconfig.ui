@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -63,6 +63,59 @@
        <string>Select control board</string>
       </property>
      </widget>
+     <widget class="QComboBox" name="setup">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>210</y>
+        <width>351</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mill XYZ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mill XYZ +spindle encoder +VFD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>K40 Laser cutter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3D printer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3D printer + BL Touch</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Machine setup</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="axis">
      <attribute name="title">
@@ -94,7 +147,7 @@
        <string>0</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>0-4</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_105">
@@ -136,7 +189,7 @@
        <string>X-axis</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>comment</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_107">
@@ -264,7 +317,7 @@
        <string>Y-axis</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>comment</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="yaxisenable">
@@ -328,7 +381,7 @@
        <string>1</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>0-4</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="yaxisstep">
@@ -360,7 +413,7 @@
        <string>Z-axis</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>comment</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="zaxisenable">
@@ -424,7 +477,7 @@
        <string>2</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>0-4</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="zaxisstep">
@@ -456,7 +509,7 @@
        <string>E0-axis</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>comment</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="e0axisenable">
@@ -520,7 +573,7 @@
        <string>3</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>0-4</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="e0axisstep">
@@ -552,7 +605,7 @@
        <string>E1-axis</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>comment</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="e1axisenable">
@@ -616,7 +669,7 @@
        <string>4</string>
       </property>
       <property name="placeholderText">
-       <string/>
+       <string>0-4</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="e1axisstep">
@@ -6545,7 +6598,7 @@
      <x>0</x>
      <y>0</y>
      <width>1039</width>
-     <height>30</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menubeta">
