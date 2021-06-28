@@ -429,8 +429,8 @@ class Ui(QtWidgets.QMainWindow):
             self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
             self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
             self.zaxis.setChecked(0),self.zaxistxt.setText(""),self.zaxisjoint.setText(""),self.zaxisstep.setText(""),self.zaxisdir.setText(""),self.zaxisenable.setText("")
-            self.e0axis.setChecked(0)
-            self.e1axis.setChecked(0)
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("driver enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull Down"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(1),self.outtxt1.setText("Air Pump"),self.outpin1.setText("2.7"),self.outstate1.setCurrentText("Pull None"),self.outinv1.setChecked(0)
