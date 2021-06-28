@@ -382,47 +382,102 @@ class Ui(QtWidgets.QMainWindow):
             self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
             self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
             self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(0)
-            self.e1axis.setChecked(0)
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+
             #Output setup
-            self.outchk0.setChecked(1),self.outtxt0.setText("spindle relay"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None")
-            self.outinv0.setChecked(0),self.outchk1.setChecked(0),self.outchk2.setChecked(0),self.outchk3.setChecked(0),self.outchk4.setChecked(0),self.outchk5.setChecked(0),self.outchk6.setChecked(0),self.outchk7
+            self.outchk0.setChecked(1),self.outtxt0.setText("spindle relay"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
+            self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
+            self.outchk2.setChecked(0),self.outtxt2.setText(""),self.outpin2.setText(""),self.outstate2.setCurrentText("Pull None")
+            self.outchk3.setChecked(0),self.outtxt3.setText(""),self.outpin3.setText(""),self.outstate3.setCurrentText("Pull None")
+            self.outchk4.setChecked(0),self.outtxt4.setText(""),self.outpin4.setText(""),self.outstate4.setCurrentText("Pull None")
+            self.outchk5.setChecked(0),self.outtxt5.setText(""),self.outpin5.setText(""),self.outstate5.setCurrentText("Pull None")
+            self.outchk6.setChecked(0),self.outtxt6.setText(""),self.outpin6.setText(""),self.outstate6.setCurrentText("Pull None")
+            self.outchk7.setChecked(0),self.outtxt7.setText(""),self.outpin7.setText(""),self.outstate7.setCurrentText("Pull None")
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X - limit / home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y - limit / home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
             self.inchk2.setChecked(1),self.intxt2.setText("Z - limit / home"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(1),self.estoptxt.setText("E-stop"),self.estoppin.setText("1.0")
-            self.inchk3.setChecked(0),self.inchk4.setChecked(0),self.inchk5.setChecked(0),self.inchk6.setChecked(0),self.inchk7.setChecked(0)
+            self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
+            self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
+            self.inchk5.setChecked(0),self.intxt5.setText(""),self.inpin5.setText(""),self.instate5.setCurrentText("Pull None")
+            self.inchk6.setChecked(0),self.intxt6.setText(""),self.inpin6.setText(""),self.instate6.setCurrentText("Pull None")
+            self.inchk7.setChecked(0),self.intxt7.setText(""),self.inpin7.setText(""),self.instate7.setCurrentText("Pull None")
             #PWM setup
-            self.pwm0.setChecked(0),self.pwm1.setChecked(0),self.pwm2.setChecked(0),self.pwm3.setChecked(0),self.pwm4.setChecked(0),self.pwm5.setChecked(0),self.pwm6.setChecked(0),self.rcservo.setChecked(0)
+            self.pwm0.setChecked(0),self.pwmtxt0.setText(""),self.pwmmax0.setText(""),self.pwmpin0.setText(""),self.pwmhw0.setChecked(0),self.pwmvf0.setChecked(0),self.pwmperiod0.setText(""),self.pwmfreq0.setText("")
+            self.pwm1.setChecked(0),self.pwmtxt1.setText(""),self.pwmmax1.setText(""),self.pwmpin1.setText(""),self.pwmhw1.setChecked(0),self.pwmvf1.setChecked(0),self.pwmperiod1.setText(""),self.pwmfreq1.setText("")
+            self.pwm2.setChecked(0),self.pwmtxt2.setText(""),self.pwmmax2.setText(""),self.pwmpin2.setText(""),self.pwmhw2.setChecked(0),self.pwmvf2.setChecked(0),self.pwmperiod2.setText(""),self.pwmfreq2.setText("")
+            self.pwm3.setChecked(0),self.pwmtxt3.setText(""),self.pwmmax3.setText(""),self.pwmpin3.setText(""),self.pwmhw3.setChecked(0),self.pwmvf3.setChecked(0),self.pwmperiod3.setText(""),self.pwmfreq3.setText("")
+            self.pwm4.setChecked(0),self.pwmtxt4.setText(""),self.pwmmax4.setText(""),self.pwmpin4.setText(""),self.pwmhw4.setChecked(0),self.pwmvf4.setChecked(0),self.pwmperiod4.setText(""),self.pwmfreq4.setText("")
+            self.pwm5.setChecked(0),self.pwmtxt5.setText(""),self.pwmmax5.setText(""),self.pwmpin5.setText(""),self.pwmhw5.setChecked(0),self.pwmvf5.setChecked(0),self.pwmperiod5.setText(""),self.pwmfreq5.setText("")
+            self.pwm6.setChecked(0),self.pwmtxt6.setText(""),self.pwmmax6.setText(""),self.pwmpin6.setText(""),self.pwmhw6.setChecked(0),self.pwmvf6.setChecked(0),self.pwmperiod6.setText(""),self.pwmfreq6.setText("")
+            self.rcservo.setChecked(0),self.rcservotxt.setText(""),self.rcservopin.setText("")
             #Encoder setup
-            self.qem.setChecked(0),self.enc0.setChecked(0),self.enc1.setChecked(0),self.enc2.setChecked(0),self.enc3.setChecked(0)
+            self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText("Pull None"),self.qempv.setText("")
+            self.enc0.setChecked(0),self.enctxt0.setText(""),self.encapin0.setText(""),self.encbpin0.setText(""),self.encpv0.setText(""),self.encstate0.setCurrentText("Pull None"),self.encipin0.setText(""),self.encinput0.setText("")
+            self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
+            self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
+            self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
             #temp swtich setup
-            self.temp0.setChecked(0),self.temp1.setChecked(0),self.temp2.setChecked(0),self.temp3.setChecked(0),self.sw0.setChecked(0),self.sw1.setChecked(0),self.sw2.setChecked(0),
+            self.temp0.setChecked(0),self.temptxt0.setText(""),self.temppin0.setText(""),self.temppv0.setText(""),self.tempbeta0.setText(""),self.tempr0.setText(""),self.tempt0.setText("")
+            self.temp1.setChecked(0),self.temptxt1.setText(""),self.temppin1.setText(""),self.temppv1.setText(""),self.tempbeta1.setText(""),self.tempr1.setText(""),self.tempt1.setText("")
+            self.temp2.setChecked(0),self.temptxt2.setText(""),self.temppin2.setText(""),self.temppv2.setText(""),self.tempbeta2.setText(""),self.tempr2.setText(""),self.tempt2.setText("")
+            self.temp3.setChecked(0),self.temptxt3.setText(""),self.temppin3.setText(""),self.temppv3.setText(""),self.tempbeta3.setText(""),self.tempr3.setText(""),self.tempt3.setText("")
+            self.sw0.setChecked(0),self.swpin0.setText(""),self.swpv0.setText(""),self.swtxt0.setText(""),self.swsp0.setText(""),self.swmode0.setCurrentText("On")
+            self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
+            self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
             
         if self.setup.currentText() == "Mill XYZ +spindle encoder +VFD":
         #axis setup
             self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
             self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
             self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(0)
-            self.e1axis.setChecked(0)
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
             #Output setup
-            self.outchk0.setChecked(1),self.outtxt0.setText("spindle enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0),self.outchk1.setChecked(0),self.outchk2.setChecked(0),self.outchk3.setChecked(0),self.outchk4.setChecked(0),self.outchk5.setChecked(0),self.outchk6.setChecked(0),self.outchk7
+            self.outchk0.setChecked(1),self.outtxt0.setText("spindle enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
+            self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
+            self.outchk2.setChecked(0),self.outtxt2.setText(""),self.outpin2.setText(""),self.outstate2.setCurrentText("Pull None")
+            self.outchk3.setChecked(0),self.outtxt3.setText(""),self.outpin3.setText(""),self.outstate3.setCurrentText("Pull None")
+            self.outchk4.setChecked(0),self.outtxt4.setText(""),self.outpin4.setText(""),self.outstate4.setCurrentText("Pull None")
+            self.outchk5.setChecked(0),self.outtxt5.setText(""),self.outpin5.setText(""),self.outstate5.setCurrentText("Pull None")
+            self.outchk6.setChecked(0),self.outtxt6.setText(""),self.outpin6.setText(""),self.outstate6.setCurrentText("Pull None")
+            self.outchk7.setChecked(0),self.outtxt7.setText(""),self.outpin7.setText(""),self.outstate7.setCurrentText("Pull None")
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X - limit / home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y - limit / home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
             self.inchk2.setChecked(1),self.intxt2.setText("Z - limit / home"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(1),self.estoptxt.setText("E-stop"),self.estoppin.setText("1.0")
-            self.inchk3.setChecked(0),self.inchk4.setChecked(0),self.inchk5.setChecked(0),self.inchk6.setChecked(0),self.inchk7.setChecked(0)
+            self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
+            self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
+            self.inchk5.setChecked(0),self.intxt5.setText(""),self.inpin5.setText(""),self.instate5.setCurrentText("Pull None")
+            self.inchk6.setChecked(0),self.intxt6.setText(""),self.inpin6.setText(""),self.instate6.setCurrentText("Pull None")
+            self.inchk7.setChecked(0),self.intxt7.setText(""),self.inpin7.setText(""),self.instate7.setCurrentText("Pull None")
+            self.estop.setChecked(1),self.estoptxt.setText("E-stop"),self.estoppin.setText("1.0")
             #PWM setup
             self.pwm0.setChecked(1),self.pwmtxt0.setText("0-10v signal"),self.pwmmax0.setText("256"),self.pwmpin0.setText("1.24"),self.pwmhw0.setChecked(1),self.pwmvf0.setChecked(1),self.pwmperiod0.setText("1"),self.pwmfreq0.setText("200")
-            self.pwm1.setChecked(0),self.pwm2.setChecked(0),self.pwm3.setChecked(0),self.pwm4.setChecked(0),self.pwm5.setChecked(0),self.pwm6.setChecked(0),self.rcservo.setChecked(0)
+            self.pwm1.setChecked(0),self.pwmtxt1.setText(""),self.pwmmax1.setText(""),self.pwmpin1.setText(""),self.pwmhw1.setChecked(0),self.pwmvf1.setChecked(0),self.pwmperiod1.setText(""),self.pwmfreq1.setText("")
+            self.pwm2.setChecked(0),self.pwmtxt2.setText(""),self.pwmmax2.setText(""),self.pwmpin2.setText(""),self.pwmhw2.setChecked(0),self.pwmvf2.setChecked(0),self.pwmperiod2.setText(""),self.pwmfreq2.setText("")
+            self.pwm3.setChecked(0),self.pwmtxt3.setText(""),self.pwmmax3.setText(""),self.pwmpin3.setText(""),self.pwmhw3.setChecked(0),self.pwmvf3.setChecked(0),self.pwmperiod3.setText(""),self.pwmfreq3.setText("")
+            self.pwm4.setChecked(0),self.pwmtxt4.setText(""),self.pwmmax4.setText(""),self.pwmpin4.setText(""),self.pwmhw4.setChecked(0),self.pwmvf4.setChecked(0),self.pwmperiod4.setText(""),self.pwmfreq4.setText("")
+            self.pwm5.setChecked(0),self.pwmtxt5.setText(""),self.pwmmax5.setText(""),self.pwmpin5.setText(""),self.pwmhw5.setChecked(0),self.pwmvf5.setChecked(0),self.pwmperiod5.setText(""),self.pwmfreq5.setText("")
+            self.pwm6.setChecked(0),self.pwmtxt6.setText(""),self.pwmmax6.setText(""),self.pwmpin6.setText(""),self.pwmhw6.setChecked(0),self.pwmvf6.setChecked(0),self.pwmperiod6.setText(""),self.pwmfreq6.setText("")
+            self.rcservo.setChecked(0),self.rcservotxt.setText(""),self.rcservopin.setText("")
             #Encoder setup
             self.qem.setChecked(1),self.qemtxt.setText("Spindle encoder"),self.qeminput.setText("7"),self.qemstate.setCurrentText("Pull Up"),self.qempv.setText("0")
-            self.enc0.setChecked(0),self.enc1.setChecked(0),self.enc2.setChecked(0),self.enc3.setChecked(0)
+            self.enc0.setChecked(0),self.enctxt0.setText(""),self.encapin0.setText(""),self.encbpin0.setText(""),self.encpv0.setText(""),self.encstate0.setCurrentText("Pull None"),self.encipin0.setText(""),self.encinput0.setText("")
+            self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
+            self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
+            self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
             #temp swtich setup
-            self.temp0.setChecked(0),self.temp1.setChecked(0),self.temp2.setChecked(0),self.temp3.setChecked(0),self.sw0.setChecked(0),self.sw1.setChecked(0),self.sw2.setChecked(0),
+            self.temp0.setChecked(0),self.temptxt0.setText(""),self.temppin0.setText(""),self.temppv0.setText(""),self.tempbeta0.setText(""),self.tempr0.setText(""),self.tempt0.setText("")
+            self.temp1.setChecked(0),self.temptxt1.setText(""),self.temppin1.setText(""),self.temppv1.setText(""),self.tempbeta1.setText(""),self.tempr1.setText(""),self.tempt1.setText("")
+            self.temp2.setChecked(0),self.temptxt2.setText(""),self.temppin2.setText(""),self.temppv2.setText(""),self.tempbeta2.setText(""),self.tempr2.setText(""),self.tempt2.setText("")
+            self.temp3.setChecked(0),self.temptxt3.setText(""),self.temppin3.setText(""),self.temppv3.setText(""),self.tempbeta3.setText(""),self.tempr3.setText(""),self.tempt3.setText("")
+            self.sw0.setChecked(0),self.swpin0.setText(""),self.swpv0.setText(""),self.swtxt0.setText(""),self.swsp0.setText(""),self.swmode0.setCurrentText("On")
+            self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
+            self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
         
         if self.setup.currentText() == "K40 Laser cutter":
         #axis setup
@@ -434,21 +489,45 @@ class Ui(QtWidgets.QMainWindow):
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("driver enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull Down"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(1),self.outtxt1.setText("Air Pump"),self.outpin1.setText("2.7"),self.outstate1.setCurrentText("Pull None"),self.outinv1.setChecked(0)
-            self.outchk2.setChecked(0),self.outchk3.setChecked(0),self.outchk4.setChecked(0),self.outchk5.setChecked(0),self.outchk6.setChecked(0),self.outchk7
+            self.outchk2.setChecked(0),self.outtxt2.setText(""),self.outpin2.setText(""),self.outstate2.setCurrentText("Pull None")
+            self.outchk3.setChecked(0),self.outtxt3.setText(""),self.outpin3.setText(""),self.outstate3.setCurrentText("Pull None")
+            self.outchk4.setChecked(0),self.outtxt4.setText(""),self.outpin4.setText(""),self.outstate4.setCurrentText("Pull None")
+            self.outchk5.setChecked(0),self.outtxt5.setText(""),self.outpin5.setText(""),self.outstate5.setCurrentText("Pull None")
+            self.outchk6.setChecked(0),self.outtxt6.setText(""),self.outpin6.setText(""),self.outstate6.setCurrentText("Pull None")
+            self.outchk7.setChecked(0),self.outtxt7.setText(""),self.outpin7.setText(""),self.outstate7.setCurrentText("Pull None")
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X - limit / home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y - limit / home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
             self.inchk2.setChecked(1),self.intxt2.setText("Door Shut"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(1),self.estoptxt.setText("E-stop"),self.estoppin.setText("1.0")
-            self.inchk3.setChecked(0),self.inchk4.setChecked(0),self.inchk5.setChecked(0),self.inchk6.setChecked(0),self.inchk7.setChecked(0)
+            self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
+            self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
+            self.inchk5.setChecked(0),self.intxt5.setText(""),self.inpin5.setText(""),self.instate5.setCurrentText("Pull None")
+            self.inchk6.setChecked(0),self.intxt6.setText(""),self.inpin6.setText(""),self.instate6.setCurrentText("Pull None")
+            self.inchk7.setChecked(0),self.intxt7.setText(""),self.inpin7.setText(""),self.instate7.setCurrentText("Pull None")
             #PWM setup
             self.pwm0.setChecked(1),self.pwmtxt0.setText("Laser PWM"),self.pwmmax0.setText("256"),self.pwmpin0.setText("1.24"),self.pwmhw0.setChecked(1),self.pwmvf0.setChecked(1),self.pwmperiod0.setText("1"),self.pwmfreq0.setText("200")
-            self.pwm1.setChecked(0),self.pwm2.setChecked(0),self.pwm3.setChecked(0),self.pwm4.setChecked(0),self.pwm5.setChecked(0),self.pwm6.setChecked(0),self.rcservo.setChecked(0)
+            self.pwm1.setChecked(0),self.pwmtxt1.setText(""),self.pwmmax1.setText(""),self.pwmpin1.setText(""),self.pwmhw1.setChecked(0),self.pwmvf1.setChecked(0),self.pwmperiod1.setText(""),self.pwmfreq1.setText("")
+            self.pwm2.setChecked(0),self.pwmtxt2.setText(""),self.pwmmax2.setText(""),self.pwmpin2.setText(""),self.pwmhw2.setChecked(0),self.pwmvf2.setChecked(0),self.pwmperiod2.setText(""),self.pwmfreq2.setText("")
+            self.pwm3.setChecked(0),self.pwmtxt3.setText(""),self.pwmmax3.setText(""),self.pwmpin3.setText(""),self.pwmhw3.setChecked(0),self.pwmvf3.setChecked(0),self.pwmperiod3.setText(""),self.pwmfreq3.setText("")
+            self.pwm4.setChecked(0),self.pwmtxt4.setText(""),self.pwmmax4.setText(""),self.pwmpin4.setText(""),self.pwmhw4.setChecked(0),self.pwmvf4.setChecked(0),self.pwmperiod4.setText(""),self.pwmfreq4.setText("")
+            self.pwm5.setChecked(0),self.pwmtxt5.setText(""),self.pwmmax5.setText(""),self.pwmpin5.setText(""),self.pwmhw5.setChecked(0),self.pwmvf5.setChecked(0),self.pwmperiod5.setText(""),self.pwmfreq5.setText("")
+            self.pwm6.setChecked(0),self.pwmtxt6.setText(""),self.pwmmax6.setText(""),self.pwmpin6.setText(""),self.pwmhw6.setChecked(0),self.pwmvf6.setChecked(0),self.pwmperiod6.setText(""),self.pwmfreq6.setText("")
+            self.rcservo.setChecked(0),self.rcservotxt.setText(""),self.rcservopin.setText("")
             #Encoder setup
-            self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText(""),self.qempv.setText("")
-            self.enc0.setChecked(0),self.enc1.setChecked(0),self.enc2.setChecked(0),self.enc3.setChecked(0)
+            self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText("Pull None"),self.qempv.setText("")
+            self.enc0.setChecked(0),self.enctxt0.setText(""),self.encapin0.setText(""),self.encbpin0.setText(""),self.encpv0.setText(""),self.encstate0.setCurrentText("Pull None"),self.encipin0.setText(""),self.encinput0.setText("")
+            self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
+            self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
+            self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
             #temp swtich setup
-            self.temp0.setChecked(0),self.temp1.setChecked(0),self.temp2.setChecked(0),self.temp3.setChecked(0),self.sw0.setChecked(0),self.sw1.setChecked(0),self.sw2.setChecked(0),
+            self.temp0.setChecked(0),self.temptxt0.setText(""),self.temppin0.setText(""),self.temppv0.setText(""),self.tempbeta0.setText(""),self.tempr0.setText(""),self.tempt0.setText("")
+            self.temp1.setChecked(0),self.temptxt1.setText(""),self.temppin1.setText(""),self.temppv1.setText(""),self.tempbeta1.setText(""),self.tempr1.setText(""),self.tempt1.setText("")
+            self.temp2.setChecked(0),self.temptxt2.setText(""),self.temppin2.setText(""),self.temppv2.setText(""),self.tempbeta2.setText(""),self.tempr2.setText(""),self.tempt2.setText("")
+            self.temp3.setChecked(0),self.temptxt3.setText(""),self.temppin3.setText(""),self.temppv3.setText(""),self.tempbeta3.setText(""),self.tempr3.setText(""),self.tempt3.setText("")
+            self.sw0.setChecked(0),self.swpin0.setText(""),self.swpv0.setText(""),self.swtxt0.setText(""),self.swsp0.setText(""),self.swmode0.setCurrentText("On")
+            self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
+            self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
             
         if self.setup.currentText() == "3D printer":
         #axis setup
@@ -456,29 +535,49 @@ class Ui(QtWidgets.QMainWindow):
             self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
             self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
             self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12")
-            self.e1axis.setChecked(0)
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("Part Cooling Fan"),self.outpin0.setText("2.4"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
-            self.outchk1.setChecked(0),self.outchk2.setChecked(0),self.outchk3.setChecked(0),self.outchk4.setChecked(0),self.outchk5.setChecked(0),self.outchk6.setChecked(0),self.outchk7
+            self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
+            self.outchk2.setChecked(0),self.outtxt2.setText(""),self.outpin2.setText(""),self.outstate2.setCurrentText("Pull None")
+            self.outchk3.setChecked(0),self.outtxt3.setText(""),self.outpin3.setText(""),self.outstate3.setCurrentText("Pull None")
+            self.outchk4.setChecked(0),self.outtxt4.setText(""),self.outpin4.setText(""),self.outstate4.setCurrentText("Pull None")
+            self.outchk5.setChecked(0),self.outtxt5.setText(""),self.outpin5.setText(""),self.outstate5.setCurrentText("Pull None")
+            self.outchk6.setChecked(0),self.outtxt6.setText(""),self.outpin6.setText(""),self.outstate6.setCurrentText("Pull None")
+            self.outchk7.setChecked(0),self.outtxt7.setText(""),self.outpin7.setText(""),self.outstate7.setCurrentText("Pull None")
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X  home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
             self.inchk2.setChecked(1),self.intxt2.setText("Z home"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(0),self.estoptxt.setText(""),self.estoppin.setText("")
-            self.inchk3.setChecked(0),self.inchk4.setChecked(0),self.inchk5.setChecked(0),self.inchk6.setChecked(0),self.inchk7.setChecked(0)
+            self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
+            self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
+            self.inchk5.setChecked(0),self.intxt5.setText(""),self.inpin5.setText(""),self.instate5.setCurrentText("Pull None")
+            self.inchk6.setChecked(0),self.intxt6.setText(""),self.inpin6.setText(""),self.instate6.setCurrentText("Pull None")
+            self.inchk7.setChecked(0),self.intxt7.setText(""),self.inpin7.setText(""),self.instate7.setCurrentText("Pull None")
             #PWM setup
             self.pwm0.setChecked(1),self.pwmtxt0.setText("Hotend"),self.pwmmax0.setText("256"),self.pwmpin0.setText("2.7"),self.pwmhw0.setChecked(0),self.pwmvf0.setChecked(0),self.pwmperiod0.setText("1"),self.pwmfreq0.setText("200")
             self.pwm1.setChecked(1),self.pwmtxt1.setText("Heated Bed"),self.pwmmax1.setText("256"),self.pwmpin1.setText("2.5"),self.pwmhw1.setChecked(1),self.pwmvf1.setChecked(1),self.pwmperiod1.setText("1"),self.pwmfreq1.setText("200")
-            self.pwm2.setChecked(0),self.pwm3.setChecked(0),self.pwm4.setChecked(0),self.pwm5.setChecked(0),self.pwm6.setChecked(0),self.rcservo.setChecked(0)
+            self.pwm2.setChecked(0),self.pwmtxt2.setText(""),self.pwmmax2.setText(""),self.pwmpin2.setText(""),self.pwmhw2.setChecked(0),self.pwmvf2.setChecked(0),self.pwmperiod2.setText(""),self.pwmfreq2.setText("")
+            self.pwm3.setChecked(0),self.pwmtxt3.setText(""),self.pwmmax3.setText(""),self.pwmpin3.setText(""),self.pwmhw3.setChecked(0),self.pwmvf3.setChecked(0),self.pwmperiod3.setText(""),self.pwmfreq3.setText("")
+            self.pwm4.setChecked(0),self.pwmtxt4.setText(""),self.pwmmax4.setText(""),self.pwmpin4.setText(""),self.pwmhw4.setChecked(0),self.pwmvf4.setChecked(0),self.pwmperiod4.setText(""),self.pwmfreq4.setText("")
+            self.pwm5.setChecked(0),self.pwmtxt5.setText(""),self.pwmmax5.setText(""),self.pwmpin5.setText(""),self.pwmhw5.setChecked(0),self.pwmvf5.setChecked(0),self.pwmperiod5.setText(""),self.pwmfreq5.setText("")
+            self.pwm6.setChecked(0),self.pwmtxt6.setText(""),self.pwmmax6.setText(""),self.pwmpin6.setText(""),self.pwmhw6.setChecked(0),self.pwmvf6.setChecked(0),self.pwmperiod6.setText(""),self.pwmfreq6.setText("")
+            self.rcservo.setChecked(0),self.rcservotxt.setText(""),self.rcservopin.setText("")
             #Encoder setup
             self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText(""),self.qempv.setText("")
-            self.enc0.setChecked(0),self.enc1.setChecked(0),self.enc2.setChecked(0),self.enc3.setChecked(0)
+            self.enc0.setChecked(0),self.enctxt0.setText(""),self.encapin0.setText(""),self.encbpin0.setText(""),self.encpv0.setText(""),self.encstate0.setCurrentText("Pull None"),self.encipin0.setText(""),self.encinput0.setText("")
+            self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
+            self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
+            self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
             #temp swtich setup
             self.temp0.setChecked(1),self.temptxt0.setText("Hotend Thermistor"),self.temppin0.setText("0.23"),self.temppv0.setText("0"),self.tempbeta0.setText("3990"),self.tempr0.setText("100000"),self.tempt0.setText("25")
             self.temp1.setChecked(1),self.temptxt1.setText("Bed Thermistor"),self.temppin1.setText("0.25"),self.temppv1.setText("1"),self.tempbeta1.setText("3990"),self.tempr1.setText("100000"),self.tempt1.setText("25")
-            self.temp2.setChecked(0),self.temp3.setChecked(0)
+            self.temp2.setChecked(0),self.temptxt2.setText(""),self.temppin2.setText(""),self.temppv2.setText(""),self.tempbeta2.setText(""),self.tempr2.setText(""),self.tempt2.setText("")
+            self.temp3.setChecked(0),self.temptxt3.setText(""),self.temppin3.setText(""),self.temppv3.setText(""),self.tempbeta3.setText(""),self.tempr3.setText(""),self.tempt3.setText("")
             self.sw0.setChecked(1),self.swpin0.setText("2.3"),self.swpv0.setText("0"),self.swtxt0.setText("Hotend Fan"),self.swsp0.setText("25.5"),self.swmode0.setCurrentText("On"),
-            self.sw1.setChecked(0),self.sw2.setChecked(0),
+            self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
+            self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
         
         if self.setup.currentText() == "3D printer + BL Touch":
         #axis setup
@@ -486,31 +585,49 @@ class Ui(QtWidgets.QMainWindow):
             self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
             self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
             self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12")
-            self.e1axis.setChecked(0)
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("Part Cooling Fan"),self.outpin0.setText("2.4"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
-            self.outchk1.setChecked(0),self.outchk2.setChecked(0),self.outchk3.setChecked(0),self.outchk4.setChecked(0),self.outchk5.setChecked(0),self.outchk6.setChecked(0),self.outchk7
+            self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
+            self.outchk2.setChecked(0),self.outtxt2.setText(""),self.outpin2.setText(""),self.outstate2.setCurrentText("Pull None")
+            self.outchk3.setChecked(0),self.outtxt3.setText(""),self.outpin3.setText(""),self.outstate3.setCurrentText("Pull None")
+            self.outchk4.setChecked(0),self.outtxt4.setText(""),self.outpin4.setText(""),self.outstate4.setCurrentText("Pull None")
+            self.outchk5.setChecked(0),self.outtxt5.setText(""),self.outpin5.setText(""),self.outstate5.setCurrentText("Pull None")
+            self.outchk6.setChecked(0),self.outtxt6.setText(""),self.outpin6.setText(""),self.outstate6.setCurrentText("Pull None")
+            self.outchk7.setChecked(0),self.outtxt7.setText(""),self.outpin7.setText(""),self.outstate7.setCurrentText("Pull None")
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X  home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
             self.inchk2.setChecked(1),self.intxt2.setText("Z home"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(0),self.estoptxt.setText(""),self.estoppin.setText("")
-            self.inchk3.setChecked(0),self.inchk4.setChecked(0),self.inchk5.setChecked(0),self.inchk6.setChecked(0),self.inchk7.setChecked(0)
+            self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
+            self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
+            self.inchk5.setChecked(0),self.intxt5.setText(""),self.inpin5.setText(""),self.instate5.setCurrentText("Pull None")
+            self.inchk6.setChecked(0),self.intxt6.setText(""),self.inpin6.setText(""),self.instate6.setCurrentText("Pull None")
+            self.inchk7.setChecked(0),self.intxt7.setText(""),self.inpin7.setText(""),self.instate7.setCurrentText("Pull None")
             #PWM setup
             self.pwm0.setChecked(1),self.pwmtxt0.setText("Hotend"),self.pwmmax0.setText("256"),self.pwmpin0.setText("2.7"),self.pwmhw0.setChecked(0),self.pwmvf0.setChecked(0),self.pwmperiod0.setText("1"),self.pwmfreq0.setText("200")
             self.pwm1.setChecked(1),self.pwmtxt1.setText("Heated Bed"),self.pwmmax1.setText("256"),self.pwmpin1.setText("2.5"),self.pwmhw1.setChecked(1),self.pwmvf1.setChecked(1),self.pwmperiod1.setText("1"),self.pwmfreq1.setText("200")
-            self.pwm2.setChecked(0),self.pwm3.setChecked(0),self.pwm4.setChecked(0),self.pwm5.setChecked(0),self.pwm6.setChecked(0)
+            self.pwm2.setChecked(0),self.pwmtxt2.setText(""),self.pwmmax2.setText(""),self.pwmpin2.setText(""),self.pwmhw2.setChecked(0),self.pwmvf2.setChecked(0),self.pwmperiod2.setText(""),self.pwmfreq2.setText("")
+            self.pwm3.setChecked(0),self.pwmtxt3.setText(""),self.pwmmax3.setText(""),self.pwmpin3.setText(""),self.pwmhw3.setChecked(0),self.pwmvf3.setChecked(0),self.pwmperiod3.setText(""),self.pwmfreq3.setText("")
+            self.pwm4.setChecked(0),self.pwmtxt4.setText(""),self.pwmmax4.setText(""),self.pwmpin4.setText(""),self.pwmhw4.setChecked(0),self.pwmvf4.setChecked(0),self.pwmperiod4.setText(""),self.pwmfreq4.setText("")
+            self.pwm5.setChecked(0),self.pwmtxt5.setText(""),self.pwmmax5.setText(""),self.pwmpin5.setText(""),self.pwmhw5.setChecked(0),self.pwmvf5.setChecked(0),self.pwmperiod5.setText(""),self.pwmfreq5.setText("")
+            self.pwm6.setChecked(0),self.pwmtxt6.setText(""),self.pwmmax6.setText(""),self.pwmpin6.setText(""),self.pwmhw6.setChecked(0),self.pwmvf6.setChecked(0),self.pwmperiod6.setText(""),self.pwmfreq6.setText("")
             self.rcservo.setChecked(1),self.rcservotxt.setText("BL Touch"),self.rcservopin.setText("2.0"),self.rcservospi.setText("7"),
             #Encoder setup
             self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText(""),self.qempv.setText("")
             self.enc0.setChecked(1),self.enctxt0.setText("BL Encoder"),self.encapin0.setText("1.20"),self.encbpin0.setText("1.22"),self.encpv0.setText("2")
-            self.enc1.setChecked(0),self.enc2.setChecked(0),self.enc3.setChecked(0)
+            self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
+            self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
+            self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
             #temp swtich setup
             self.temp0.setChecked(1),self.temptxt0.setText("Hotend Thermistor"),self.temppin0.setText("0.23"),self.temppv0.setText("0"),self.tempbeta0.setText("3990"),self.tempr0.setText("100000"),self.tempt0.setText("25")
             self.temp1.setChecked(1),self.temptxt1.setText("Bed Thermistor"),self.temppin1.setText("0.25"),self.temppv1.setText("1"),self.tempbeta1.setText("3990"),self.tempr1.setText("100000"),self.tempt1.setText("25")
-            self.temp2.setChecked(0),self.temp3.setChecked(0)
+            self.temp2.setChecked(0),self.temptxt2.setText(""),self.temppin2.setText(""),self.temppv2.setText(""),self.tempbeta2.setText(""),self.tempr2.setText(""),self.tempt2.setText("")
+            self.temp3.setChecked(0),self.temptxt3.setText(""),self.temppin3.setText(""),self.temppv3.setText(""),self.tempbeta3.setText(""),self.tempr3.setText(""),self.tempt3.setText("")
             self.sw0.setChecked(1),self.swpin0.setText("2.3"),self.swpv0.setText("0"),self.swtxt0.setText("Hotend Fan"),self.swsp0.setText("25.5"),self.swmode0.setCurrentText("On"),
-            self.sw1.setChecked(0),self.sw2.setChecked(0),
+            self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
+            self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
         
             
     def printButtonPressed(self):
