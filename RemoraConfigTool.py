@@ -598,7 +598,7 @@ class Ui(QtWidgets.QMainWindow):
             #Input Setup
             self.inchk0.setChecked(1),self.intxt0.setText("X  home"),self.inpin0.setText("1.29"),self.instate0.setCurrentText("Pull Up"),self.ininv0.setChecked(0)
             self.inchk1.setChecked(1),self.intxt1.setText("Y home"),self.inpin1.setText("1.28"),self.instate1.setCurrentText("Pull Up"),self.ininv1.setChecked(0)
-            self.inchk2.setChecked(1),self.intxt2.setText("Z home"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
+            self.inchk2.setChecked(1),self.intxt2.setText("BL Touch Z"),self.inpin2.setText("1.27"),self.instate2.setCurrentText("Pull Up"),self.ininv2.setChecked(0)
             self.estop.setChecked(0),self.estoptxt.setText(""),self.estoppin.setText("")
             self.inchk3.setChecked(0),self.intxt3.setText(""),self.inpin3.setText(""),self.instate3.setCurrentText("Pull None")
             self.inchk4.setChecked(0),self.intxt4.setText(""),self.inpin4.setText(""),self.instate4.setCurrentText("Pull None")
@@ -616,7 +616,7 @@ class Ui(QtWidgets.QMainWindow):
             self.rcservo.setChecked(1),self.rcservotxt.setText("BL Touch"),self.rcservopin.setText("2.0"),self.rcservospi.setText("7"),
             #Encoder setup
             self.qem.setChecked(0),self.qemtxt.setText(""),self.qeminput.setText(""),self.qemstate.setCurrentText(""),self.qempv.setText("")
-            self.enc0.setChecked(1),self.enctxt0.setText("BL Encoder"),self.encapin0.setText("1.20"),self.encbpin0.setText("1.22"),self.encpv0.setText("2")
+            self.enc0.setChecked(0),self.enctxt0.setText(""),self.encapin0.setText(""),self.encbpin0.setText(""),self.encpv0.setText(""),self.encstate0.setCurrentText("Pull None"),self.encipin0.setText(""),self.encinput0.setText("")
             self.enc1.setChecked(0),self.enctxt1.setText(""),self.encapin1.setText(""),self.encbpin1.setText(""),self.encpv1.setText(""),self.encstate1.setCurrentText("Pull None"),self.encipin1.setText(""),self.encinput1.setText("")
             self.enc2.setChecked(0),self.enctxt2.setText(""),self.encapin2.setText(""),self.encbpin2.setText(""),self.encpv2.setText(""),self.encstate2.setCurrentText("Pull None"),self.encipin2.setText(""),self.encinput2.setText("")
             self.enc3.setChecked(0),self.enctxt3.setText(""),self.encapin3.setText(""),self.encbpin3.setText(""),self.encpv3.setText(""),self.encstate3.setCurrentText("Pull None"),self.encipin3.setText(""),self.encinput3.setText("")
