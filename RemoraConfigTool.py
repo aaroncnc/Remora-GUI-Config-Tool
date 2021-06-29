@@ -9,8 +9,12 @@ class Ui(QtWidgets.QMainWindow):
         self.button = self.findChild(QtWidgets.QPushButton, 'save')
         self.button.clicked.connect(self.printButtonPressed) # action
         
+        self.button2 = self.findChild(QtWidgets.QPushButton, 'load')
+        self.button2.clicked.connect(self.printButtonPressed2) # action
+        
         self.setup = self.findChild(QtWidgets.QComboBox, 'setup') 
         self.setup.activated.connect(self.comboboxselected) # action
+        
 
         self.resettxt = self.findChild(QtWidgets.QLineEdit, 'resettxt')
         self.resetpin = self.findChild(QtWidgets.QLineEdit, 'resetpin')
@@ -229,8 +233,8 @@ class Ui(QtWidgets.QMainWindow):
         self.qem = self.findChild(QtWidgets.QCheckBox, 'qem')
         self.qemtxt = self.findChild(QtWidgets.QLineEdit, 'qemtxt')
         self.qempv = self.findChild(QtWidgets.QLineEdit, 'qempv')
-        self.qemcha = self.findChild(QtWidgets.QLineEdit, 'qemcha')
-        self.qemchb = self.findChild(QtWidgets.QLineEdit, 'qemchb')
+        self.qemcha = self.findChild(QtWidgets.QLineEdit, 'qemapin')
+        self.qemchb = self.findChild(QtWidgets.QLineEdit, 'qembpin')
         self.qemipin = self.findChild(QtWidgets.QLineEdit, 'qemipin')
         self.qeminput = self.findChild(QtWidgets.QLineEdit, 'qeminput')
         self.qemstate = self.findChild(QtWidgets.QComboBox, 'qemstate')
@@ -629,7 +633,316 @@ class Ui(QtWidgets.QMainWindow):
             self.sw1.setChecked(0),self.swpin1.setText(""),self.swpv1.setText(""),self.swtxt1.setText(""),self.swsp1.setText(""),self.swmode1.setCurrentText("On")
             self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
         
+    def printButtonPressed2(self):
+        # This is executed when the button is pressed)
+        with open("save.txt","r") as infile:
+        #boards
+            a, b = map(str,infile.readline().split("|"))
+            self.boards.setCurrentText(str(a))
+            #X axis
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.xaxistxt.setText(b),self.xaxisjoint.setText(c),self.xaxisstep.setText(d),self.xaxisdir.setText(e),self.xaxisenable.setText(f)
+            if a == "True": self.xaxis.setChecked(1)
+            else: self.xaxis.setChecked(0)
+            #Y axis
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.yaxistxt.setText(b),self.yaxisjoint.setText(c),self.yaxisstep.setText(d),self.yaxisdir.setText(e),self.yaxisenable.setText(f)
+            if a == "True": self.yaxis.setChecked(1)
+            else: self.yaxis.setChecked(0)
+            #Z axis
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.zaxistxt.setText(b),self.zaxisjoint.setText(c),self.zaxisstep.setText(d),self.zaxisdir.setText(e),self.zaxisenable.setText(f)
+            if a == "True": self.zaxis.setChecked(1)
+            else: self.zaxis.setChecked(0)
+            #E0 axis
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.e0axistxt.setText(b),self.e0axisjoint.setText(c),self.e0axisstep.setText(d),self.e0axisdir.setText(e),self.e0axisenable.setText(f)
+            if a == "True": self.e0axis.setChecked(1)
+            else: self.e0axis.setChecked(0)
+            #E1 axis
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.e1axistxt.setText(b),self.e1axisjoint.setText(c),self.e1axisstep.setText(d),self.e1axisdir.setText(e),self.e1axisenable.setText(f)
+            if a == "True": self.e1axis.setChecked(1)
+            else: self.e1axis.setChecked(0)
             
+            #output 0
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt0.setText(b),self.outpin0.setText(c),self.outstate0.setCurrentText(d)
+            if a == "True": 
+                self.outchk0.setChecked(1)
+            else: self.outchk0.setChecked(0)
+            if e == "True": self.outinv0.setChecked(1)
+            else: self.outinv0.setChecked(0)
+            #output 1
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt1.setText(b),self.outpin1.setText(c),self.outstate1.setCurrentText(d)
+            if a == "True": 
+                self.outchk1.setChecked(1)
+            else: self.outchk1.setChecked(0)
+            if e == "True": self.outinv1.setChecked(1)
+            else: self.outinv1.setChecked(0)
+            #output 2
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt2.setText(b),self.outpin2.setText(c),self.outstate2.setCurrentText(d)
+            if a == "True": 
+                self.outchk2.setChecked(1)
+            else: self.outchk2.setChecked(0)
+            if e == "True": self.outinv2.setChecked(1)
+            else: self.outinv2.setChecked(0)
+            #output 3
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt3.setText(b),self.outpin3.setText(c),self.outstate3.setCurrentText(d)
+            if a == "True": 
+                self.outchk3.setChecked(1)
+            else: self.outchk3.setChecked(0)
+            if e == "True": self.outinv3.setChecked(1)
+            else: self.outinv3.setChecked(0)
+            #output 4
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt4.setText(b),self.outpin4.setText(c),self.outstate4.setCurrentText(d)
+            if a == "True": 
+                self.outchk4.setChecked(1)
+            else: self.outchk4.setChecked(0)
+            if e == "True": self.outinv4.setChecked(1)
+            else: self.outinv4.setChecked(0)
+            #output 5
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt5.setText(b),self.outpin5.setText(c),self.outstate5.setCurrentText(d)
+            if a == "True": 
+                self.outchk5.setChecked(1)
+            else: self.outchk5.setChecked(0)
+            if e == "True": self.outinv5.setChecked(1)
+            else: self.outinv5.setChecked(0)
+            #output 6
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt6.setText(b),self.outpin6.setText(c),self.outstate6.setCurrentText(d)
+            if a == "True": 
+                self.outchk6.setChecked(1)
+            else: self.outchk6.setChecked(0)
+            if e == "True": self.outinv6.setChecked(1)
+            else: self.outinv6.setChecked(0)
+            #output 7
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.outtxt7.setText(b),self.outpin7.setText(c),self.outstate7.setCurrentText(d)
+            if a == "True": 
+                self.outchk7.setChecked(1)
+            else: self.outchk7.setChecked(0)
+            if e == "True": self.outinv7.setChecked(1)
+            else: self.outinv7.setChecked(0)
+
+            
+            #input 0
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt0.setText(b),self.inpin0.setText(c),self.instate0.setCurrentText(d)
+            if a == "True": self.inchk0.setChecked(1)
+            else: self.inchk0.setChecked(0)
+            if e == "True": self.ininv0.setChecked(1)
+            else: self.ininv0.setChecked(0)
+            #input 1
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt1.setText(b),self.inpin1.setText(c),self.instate1.setCurrentText(d)
+            if a == "True": self.inchk1.setChecked(1)
+            else: self.inchk1.setChecked(0)
+            if e == "True": self.ininv1.setChecked(1)
+            else: self.ininv1.setChecked(0)
+            #input 2
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt2.setText(b),self.inpin2.setText(c),self.instate2.setCurrentText(d)
+            if a == "True": self.inchk2.setChecked(1)
+            else: self.inchk2.setChecked(0)
+            if e == "True": self.ininv2.setChecked(1)
+            else: self.ininv2.setChecked(0)
+            #input 3
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt3.setText(b),self.inpin3.setText(c),self.instate3.setCurrentText(d)
+            if a == "True": self.inchk3.setChecked(1)
+            else: self.inchk3.setChecked(0)
+            if e == "True": self.ininv3.setChecked(1)
+            else: self.ininv3.setChecked(0)
+            #input 4
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt4.setText(b),self.inpin4.setText(c),self.instate4.setCurrentText(d)
+            if a == "True": self.inchk4.setChecked(1)
+            else: self.inchk4.setChecked(0)
+            if e == "True": self.ininv4.setChecked(1)
+            else: self.ininv4.setChecked(0)
+            #input 5
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt5.setText(b),self.inpin5.setText(c),self.instate5.setCurrentText(d)
+            if a == "True": self.inchk5.setChecked(1)
+            else: self.inchk5.setChecked(0)
+            if e == "True": self.ininv5.setChecked(1)
+            else: self.ininv5.setChecked(0)
+            #input 6
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt6.setText(b),self.inpin6.setText(c),self.instate6.setCurrentText(d)
+            if a == "True": self.inchk6.setChecked(1)
+            else: self.inchk6.setChecked(0)
+            if e == "True": self.ininv6.setChecked(1)
+            else: self.ininv6.setChecked(0)
+            #input 7
+            a, b, c, d, e, f = map(str,infile.readline().split("|"))
+            self.intxt7.setText(b),self.inpin7.setText(c),self.instate7.setCurrentText(d)
+            if a == "True": self.inchk7.setChecked(1)
+            else: self.inchk7.setChecked(0)
+            if e == "True": self.ininv7.setChecked(1)
+            else: self.ininv7.setChecked(0)
+            
+            #E stop
+            a, b, c, d = map(str,infile.readline().split("|"))
+            self.estoptxt.setText(b),self.estoppin.setText(c)
+            if a == "True": self.estop.setChecked(1)
+            else: self.estop.setChecked(0)
+            #reset
+            a, b, c, d = map(str,infile.readline().split("|"))
+            self.resettxt.setText(b),self.resetpin.setText(c)
+            if a == "True": self.reset.setChecked(1)
+            else: self.reset.setChecked(0)
+            
+            #PWM 0
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt0.setText(b),self.pwmmax0.setText(c),self.pwmpin0.setText(d),self.pwmfreq0.setText(g),self.pwmperiod0.setText(h)
+            if a == "True": self.pwm0.setChecked(1)
+            else: self.pwm0.setChecked(0)
+            if e == "True": self.pwmhw0.setChecked(1)
+            else: self.pwmhw0.setChecked(0)
+            if f == "True": self.pwmvf0.setChecked(1)
+            else: self.pwmvf0.setChecked(0)
+            #PWM 1
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt1.setText(b),self.pwmmax1.setText(c),self.pwmpin1.setText(d),self.pwmfreq1.setText(g),self.pwmperiod1.setText(h)
+            if a == "True": self.pwm1.setChecked(1)
+            else: self.pwm1.setChecked(0)
+            if e == "True": self.pwmhw1.setChecked(1)
+            else: self.pwmhw1.setChecked(0)
+            if f == "True": self.pwmvf1.setChecked(1)
+            else: self.pwmvf1.setChecked(0)
+            #PWM 2
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt2.setText(b),self.pwmmax2.setText(c),self.pwmpin2.setText(d),self.pwmfreq2.setText(g),self.pwmperiod2.setText(h)
+            if a == "True": self.pwm2.setChecked(1)
+            else: self.pwm2.setChecked(0)
+            if e == "True": self.pwmhw2.setChecked(1)
+            else: self.pwmhw2.setChecked(0)
+            if f == "True": self.pwmvf2.setChecked(1)
+            else: self.pwmvf2.setChecked(0)
+            #PWM 3
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt3.setText(b),self.pwmmax3.setText(c),self.pwmpin3.setText(d),self.pwmfreq3.setText(g),self.pwmperiod3.setText(h)
+            if a == "True": self.pwm3.setChecked(1)
+            else: self.pwm3.setChecked(0)
+            if e == "True": self.pwmhw3.setChecked(1)
+            else: self.pwmhw3.setChecked(0)
+            if f == "True": self.pwmvf3.setChecked(1)
+            else: self.pwmvf3.setChecked(0)
+            #PWM 4
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt4.setText(b),self.pwmmax4.setText(c),self.pwmpin4.setText(d),self.pwmfreq4.setText(g),self.pwmperiod4.setText(h)
+            if a == "True": self.pwm4.setChecked(1)
+            else: self.pwm4.setChecked(0)
+            if e == "True": self.pwmhw4.setChecked(1)
+            else: self.pwmhw4.setChecked(0)
+            if f == "True": self.pwmvf4.setChecked(1)
+            else: self.pwmvf4.setChecked(0)
+            #PWM 5
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt5.setText(b),self.pwmmax5.setText(c),self.pwmpin5.setText(d),self.pwmfreq5.setText(g),self.pwmperiod5.setText(h)
+            if a == "True": self.pwm5.setChecked(1)
+            else: self.pwm5.setChecked(0)
+            if e == "True": self.pwmhw5.setChecked(1)
+            else: self.pwmhw5.setChecked(0)
+            if f == "True": self.pwmvf5.setChecked(1)
+            else: self.pwmvf5.setChecked(0)
+            #PWM 6
+            a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
+            self.pwmtxt6.setText(b),self.pwmmax6.setText(c),self.pwmpin6.setText(d),self.pwmfreq6.setText(g),self.pwmperiod6.setText(h)
+            if a == "True": self.pwm6.setChecked(1)
+            else: self.pwm6.setChecked(0)
+            if e == "True": self.pwmhw6.setChecked(1)
+            else: self.pwmhw6.setChecked(0)
+            if f == "True": self.pwmvf6.setChecked(1)
+            else: self.pwmvf6.setChecked(0)
+           
+            #rc servo
+            a, b, c, d, e = map(str,infile.readline().split("|"))
+            self.rcservotxt.setText(b),self.rcservopin.setText(c)
+            if a == "True": self.rcservo.setChecked(1)
+            else: self.rcservo.setChecked(0)
+            
+            #QEM
+            a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
+            self.qemtxt.setText(b),self.qempv.setText(c),self.qeminput.setText(g),self.qemstate.setCurrentText(h)
+            if a == "True": 
+                self.qem.setChecked(1),
+            else: self.qem.setChecked(0)
+            #encoder 0
+            a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
+            self.enctxt0.setText(b),self.encpv0.setText(c),self.encapin0.setText(d),self.encbpin0.setText(e),self.encipin0.setText(f),self.encinput0.setText(g),self.encstate0.setCurrentText(h)
+            if a == "True": 
+                self.enc0.setChecked(1),
+            else: self.enc0.setChecked(0)
+            #encoder 1
+            a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
+            self.enctxt1.setText(b),self.encpv1.setText(c),self.encapin1.setText(d),self.encbpin1.setText(e),self.encipin1.setText(f),self.encinput1.setText(g),self.encstate1.setCurrentText(h)
+            if a == "True": 
+                self.enc1.setChecked(1),
+            else: self.enc1.setChecked(0)
+            #encoder 2
+            a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
+            self.enctxt2.setText(b),self.encpv2.setText(c),self.encapin2.setText(d),self.encbpin2.setText(e),self.encipin2.setText(f),self.encinput2.setText(g),self.encstate2.setCurrentText(h)
+            if a == "True": 
+                self.enc2.setChecked(1),
+            else: self.enc2.setChecked(0)
+            #encoder 3
+            a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
+            self.enctxt3.setText(b),self.encpv3.setText(c),self.encapin3.setText(d),self.encbpin3.setText(e),self.encipin3.setText(f),self.encinput3.setText(g),self.encstate3.setCurrentText(h)
+            if a == "True": 
+                self.enc3.setChecked(1),
+            else: self.enc3.setChecked(0)
+            
+            #temp 0
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.temptxt0.setText(b),self.temppv0.setText(c),self.temppin0.setText(d),self.tempr0.setText(e),self.tempt0.setText(f),self.tempbeta0.setText(g)
+            if a == "True": 
+                self.temp0.setChecked(1),
+            else: self.temp0.setChecked(0)
+            #temp 1
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.temptxt1.setText(b),self.temppv1.setText(c),self.temppin1.setText(d),self.tempr1.setText(e),self.tempt1.setText(f),self.tempbeta1.setText(g)
+            if a == "True": 
+                self.temp1.setChecked(1),
+            else: self.temp1.setChecked(0)
+            #temp 2
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.temptxt2.setText(b),self.temppv2.setText(c),self.temppin2.setText(d),self.tempr2.setText(e),self.tempt2.setText(f),self.tempbeta2.setText(g)
+            if a == "True": 
+                self.temp2.setChecked(1),
+            else: self.temp2.setChecked(0)
+            #temp 3
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.temptxt3.setText(b),self.temppv3.setText(c),self.temppin3.setText(d),self.tempr3.setText(e),self.tempt3.setText(f),self.tempbeta3.setText(g)
+            if a == "True": 
+                self.temp3.setChecked(1),
+            else: self.temp3.setChecked(0)
+            #switch 0
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.swtxt0.setText(b),self.swpv0.setText(c),self.swpin0.setText(d),self.swsp0.setText(e),self.swmode0.setCurrentText(f)
+            if a == "True": 
+                self.sw0.setChecked(1),
+            else: self.sw0.setChecked(0)
+            #switch 1
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.swtxt1.setText(b),self.swpv1.setText(c),self.swpin1.setText(d),self.swsp1.setText(e),self.swmode1.setCurrentText(f)
+            if a == "True": 
+                self.sw1.setChecked(1),
+            else: self.sw1.setChecked(0)
+            #switch 2
+            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
+            self.swtxt2.setText(b),self.swpv2.setText(c),self.swpin2.setText(d),self.swsp2.setText(e),self.swmode2.setCurrentText(f)
+            if a == "True": 
+                self.sw2.setChecked(1),
+            else: self.sw2.setChecked(0)
+        
     def printButtonPressed(self):
         # This is executed when the button is pressed
         with open('config.txt', 'w') as f:
@@ -760,6 +1073,97 @@ class Ui(QtWidgets.QMainWindow):
             f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Reset Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.resettxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+'"'+ self.resetpin.text() +'"' +'\n'+'\t'+'}'+'\n')
             # ending format
             f.write('\t'+']'+'\n'+'}')
+            
+            
+            with open('save.txt', 'w') as s:
+                #boards line 1
+                s.write(str(self.boards.currentText())+'|'+'\n')
+                #Xaxis line 2
+                s.write(str(self.xaxis.isChecked())+'|'+ self.xaxistxt.text()+'|'+self.xaxisjoint.text()+'|'+self.xaxisstep.text()+'|'+self.xaxisdir.text()+'|'+self.xaxisenable.text()+'|'+'\n')
+                #Yaxis line 3
+                s.write(str(self.yaxis.isChecked())+'|'+ self.yaxistxt.text()+'|'+self.yaxisjoint.text()+'|'+self.yaxisstep.text()+'|'+self.yaxisdir.text()+'|'+self.yaxisenable.text()+'|'+'\n')
+                #Zaxis line 4
+                s.write(str(self.zaxis.isChecked())+'|'+ self.zaxistxt.text()+'|'+self.zaxisjoint.text()+'|'+self.zaxisstep.text()+'|'+self.zaxisdir.text()+'|'+self.zaxisenable.text()+'|'+'\n')
+                #E0axis line 5
+                s.write(str(self.e0axis.isChecked())+'|'+ self.e0axistxt.text()+'|'+self.e0axisjoint.text()+'|'+self.e0axisstep.text()+'|'+self.e0axisdir.text()+'|'+self.e0axisenable.text()+'|'+'\n')
+                #E1axis line 6
+                s.write(str(self.e1axis.isChecked())+'|'+ self.e1axistxt.text()+'|'+self.e1axisjoint.text()+'|'+self.e1axisstep.text()+'|'+self.e1axisdir.text()+'|'+self.e1axisenable.text()+'|'+'\n')
+                #output0 line 7
+                s.write(str(self.outchk0.isChecked())+'|'+ self.outtxt0.text()+'|'+self.outpin0.text()+'|'+self.outstate0.currentText()+'|'+str(self.outinv0.isChecked())+'|'+'\n')
+                #output1 line 8
+                s.write(str(self.outchk1.isChecked())+'|'+ self.outtxt1.text()+'|'+self.outpin1.text()+'|'+self.outstate1.currentText()+'|'+str(self.outinv1.isChecked())+'|'+'\n')
+                #output2 line 9
+                s.write(str(self.outchk2.isChecked())+'|'+ self.outtxt2.text()+'|'+self.outpin2.text()+'|'+self.outstate2.currentText()+'|'+str(self.outinv2.isChecked())+'|'+'\n')
+                #output3 line 10
+                s.write(str(self.outchk3.isChecked())+'|'+ self.outtxt3.text()+'|'+self.outpin3.text()+'|'+self.outstate3.currentText()+'|'+str(self.outinv3.isChecked())+'|'+'\n')
+                #output4 line 11
+                s.write(str(self.outchk4.isChecked())+'|'+ self.outtxt4.text()+'|'+self.outpin4.text()+'|'+self.outstate4.currentText()+'|'+str(self.outinv4.isChecked())+'|'+'\n')
+                #output5 line 12
+                s.write(str(self.outchk5.isChecked())+'|'+ self.outtxt5.text()+'|'+self.outpin5.text()+'|'+self.outstate5.currentText()+'|'+str(self.outinv5.isChecked())+'|'+'\n')
+                #output6 line 13
+                s.write(str(self.outchk6.isChecked())+'|'+ self.outtxt6.text()+'|'+self.outpin6.text()+'|'+self.outstate6.currentText()+'|'+str(self.outinv6.isChecked())+'|'+'\n')
+                #output7 line 14
+                s.write(str(self.outchk7.isChecked())+'|'+ self.outtxt7.text()+'|'+self.outpin7.text()+'|'+self.outstate7.currentText()+'|'+str(self.outinv7.isChecked())+'|'+'\n')
+                #input0 line 15
+                s.write(str(self.inchk0.isChecked())+'|'+ self.intxt0.text()+'|'+self.inpin0.text()+'|'+self.instate0.currentText()+'|'+str(self.ininv0.isChecked())+'|'+'\n')
+                #input1 line 16
+                s.write(str(self.inchk1.isChecked())+'|'+ self.intxt1.text()+'|'+self.inpin1.text()+'|'+self.instate1.currentText()+'|'+str(self.ininv1.isChecked())+'|'+'\n')
+                #input2 line 17
+                s.write(str(self.inchk2.isChecked())+'|'+ self.intxt2.text()+'|'+self.inpin2.text()+'|'+self.instate2.currentText()+'|'+str(self.ininv2.isChecked())+'|'+'\n')
+                #input3 line 18
+                s.write(str(self.inchk3.isChecked())+'|'+ self.intxt3.text()+'|'+self.inpin3.text()+'|'+self.instate3.currentText()+'|'+str(self.ininv3.isChecked())+'|'+'\n')
+                #input4 line 19
+                s.write(str(self.inchk4.isChecked())+'|'+ self.intxt4.text()+'|'+self.inpin4.text()+'|'+self.instate4.currentText()+'|'+str(self.ininv4.isChecked())+'|'+'\n')
+                #input5 line 20
+                s.write(str(self.inchk5.isChecked())+'|'+ self.intxt5.text()+'|'+self.inpin5.text()+'|'+self.instate5.currentText()+'|'+str(self.ininv5.isChecked())+'|'+'\n')
+                #input6 line 21
+                s.write(str(self.inchk6.isChecked())+'|'+ self.intxt6.text()+'|'+self.inpin6.text()+'|'+self.instate6.currentText()+'|'+str(self.ininv6.isChecked())+'|'+'\n')
+                #input7 line 22
+                s.write(str(self.inchk7.isChecked())+'|'+ self.intxt7.text()+'|'+self.inpin7.text()+'|'+self.instate7.currentText()+'|'+str(self.ininv7.isChecked())+'|'+'\n')
+                #reset pin line 23
+                s.write(str(self.estop.isChecked())+'|'+ self.estoptxt.text()+'|'+self.estoppin.text()+'|'+'\n')
+                #reset pin line 24
+                s.write(str(self.reset.isChecked())+'|'+ self.resettxt.text()+'|'+self.resetpin.text()+'|'+'\n')
+                #PWM0 line 25
+                s.write(str(self.pwm0.isChecked())+'|'+ self.pwmtxt0.text()+'|'+self.pwmmax0.text()+'|'+self.pwmpin0.text()+'|'+str(self.pwmhw0.isChecked())+'|'+str(self.pwmvf0.isChecked())+'|'+self.pwmfreq0.text()+'|'+self.pwmperiod0.text()+'|'+self.pwmspi0.text()+'|'+'\n')
+                #PWM1 line 26
+                s.write(str(self.pwm1.isChecked())+'|'+ self.pwmtxt1.text()+'|'+self.pwmmax1.text()+'|'+self.pwmpin1.text()+'|'+str(self.pwmhw1.isChecked())+'|'+str(self.pwmvf1.isChecked())+'|'+self.pwmfreq1.text()+'|'+self.pwmperiod1.text()+'|'+self.pwmspi1.text()+'|'+'\n')
+                #PWM2 line 27
+                s.write(str(self.pwm2.isChecked())+'|'+ self.pwmtxt2.text()+'|'+self.pwmmax2.text()+'|'+self.pwmpin2.text()+'|'+str(self.pwmhw2.isChecked())+'|'+str(self.pwmvf2.isChecked())+'|'+self.pwmfreq2.text()+'|'+self.pwmperiod2.text()+'|'+self.pwmspi2.text()+'|'+'\n')
+                #PWM3 line 28
+                s.write(str(self.pwm3.isChecked())+'|'+ self.pwmtxt3.text()+'|'+self.pwmmax3.text()+'|'+self.pwmpin3.text()+'|'+str(self.pwmhw3.isChecked())+'|'+str(self.pwmvf3.isChecked())+'|'+self.pwmfreq3.text()+'|'+self.pwmperiod3.text()+'|'+self.pwmspi3.text()+'|'+'\n')
+                #PWM4 line 29
+                s.write(str(self.pwm4.isChecked())+'|'+ self.pwmtxt4.text()+'|'+self.pwmmax4.text()+'|'+self.pwmpin4.text()+'|'+str(self.pwmhw4.isChecked())+'|'+str(self.pwmvf4.isChecked())+'|'+self.pwmfreq4.text()+'|'+self.pwmperiod4.text()+'|'+self.pwmspi4.text()+'|'+'\n')
+                #PWM5 line 30
+                s.write(str(self.pwm5.isChecked())+'|'+ self.pwmtxt5.text()+'|'+self.pwmmax5.text()+'|'+self.pwmpin5.text()+'|'+str(self.pwmhw5.isChecked())+'|'+str(self.pwmvf5.isChecked())+'|'+self.pwmfreq5.text()+'|'+self.pwmperiod5.text()+'|'+self.pwmspi5.text()+'|'+'\n')
+                #PWM6 line 31
+                s.write(str(self.pwm6.isChecked())+'|'+ self.pwmtxt6.text()+'|'+self.pwmmax6.text()+'|'+self.pwmpin6.text()+'|'+str(self.pwmhw6.isChecked())+'|'+str(self.pwmvf6.isChecked())+'|'+self.pwmfreq6.text()+'|'+self.pwmperiod6.text()+'|'+self.pwmspi6.text()+'|'+'\n')
+                #rc Servo line 32
+                s.write(str(self.rcservo.isChecked())+'|'+ self.rcservotxt.text()+'|'+self.rcservopin.text()+'|'+self.rcservospi.text()+'|'+'\n')
+                #QEM line 33
+                s.write(str(self.qem.isChecked())+'|'+ self.qemtxt.text()+'|'+self.qempv.text()+'|'+self.qemcha.text()+'|'+self.qemchb.text()+'|'+self.qemipin.text()+'|'+self.qeminput.text()+'|'+str(self.qemstate.currentText())+'|'+'\n')
+                #Encoder 0 line 33
+                s.write(str(self.enc0.isChecked())+'|'+ self.enctxt0.text()+'|'+self.encpv0.text()+'|'+self.encapin0.text()+'|'+self.encbpin0.text()+'|'+self.encipin0.text()+'|'+self.encinput0.text()+'|'+str(self.encstate0.currentText())+'|'+'\n')
+                #Encoder 1 line 34
+                s.write(str(self.enc1.isChecked())+'|'+ self.enctxt1.text()+'|'+self.encpv1.text()+'|'+self.encapin1.text()+'|'+self.encbpin1.text()+'|'+self.encipin1.text()+'|'+self.encinput1.text()+'|'+str(self.encstate1.currentText())+'|'+'\n')
+                #Encoder 2 line 35
+                s.write(str(self.enc2.isChecked())+'|'+ self.enctxt2.text()+'|'+self.encpv2.text()+'|'+self.encapin2.text()+'|'+self.encbpin2.text()+'|'+self.encipin2.text()+'|'+self.encinput2.text()+'|'+str(self.encstate2.currentText())+'|'+'\n')
+                #Encoder 3 line 36
+                s.write(str(self.enc3.isChecked())+'|'+ self.enctxt3.text()+'|'+self.encpv3.text()+'|'+self.encapin3.text()+'|'+self.encbpin3.text()+'|'+self.encipin3.text()+'|'+self.encinput3.text()+'|'+str(self.encstate3.currentText())+'|'+'\n')
+                #temp 0 line 37
+                s.write(str(self.temp0.isChecked())+'|'+ self.temptxt0.text()+'|'+self.temppv0.text()+'|'+self.temppin0.text()+'|'+self.tempr0.text()+'|'+self.tempt0.text()+'|'+self.tempbeta0.text()+'|'+'\n')
+                #temp 1 line 38
+                s.write(str(self.temp1.isChecked())+'|'+ self.temptxt1.text()+'|'+self.temppv1.text()+'|'+self.temppin1.text()+'|'+self.tempr1.text()+'|'+self.tempt1.text()+'|'+self.tempbeta1.text()+'|'+'\n')
+                #temp 2 line 39
+                s.write(str(self.temp2.isChecked())+'|'+ self.temptxt2.text()+'|'+self.temppv2.text()+'|'+self.temppin2.text()+'|'+self.tempr2.text()+'|'+self.tempt2.text()+'|'+self.tempbeta2.text()+'|'+'\n')
+                #temp 3 line 40
+                s.write(str(self.temp3.isChecked())+'|'+ self.temptxt3.text()+'|'+self.temppv3.text()+'|'+self.temppin3.text()+'|'+self.tempr3.text()+'|'+self.tempt3.text()+'|'+self.tempbeta3.text()+'|'+'\n')
+                #swtich 0 line 41
+                s.write(str(self.sw0.isChecked())+'|'+ self.swtxt0.text()+'|'+self.swpv0.text()+'|'+self.swpin0.text()+'|'+self.swsp0.text()+'|'+self.swmode0.currentText()+'|'+'\n')
+                #swtich 1 line 42
+                s.write(str(self.sw1.isChecked())+'|'+ self.swtxt1.text()+'|'+self.swpv1.text()+'|'+self.swpin1.text()+'|'+self.swsp1.text()+'|'+self.swmode1.currentText()+'|'+'\n')
+                #swtich 2 line 43
+                s.write(str(self.sw2.isChecked())+'|'+ self.swtxt2.text()+'|'+self.swpv2.text()+'|'+self.swpin2.text()+'|'+self.swsp2.text()+'|'+self.swmode2.currentText()+'|'+'\n')
 
 
 app = QtWidgets.QApplication(sys.argv)
