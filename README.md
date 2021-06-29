@@ -12,7 +12,7 @@ python -m pip install PyQt5
 
 To run the tool you must have both the .py and .ui file in the same folder and then run the .py file
 
-The load config button is disabled as i have not worked out the best way to reload a config.
 
-If you find any errors or feed back please create a issue. 
+
+If you find any errors or feed back please create an issue. 
 
