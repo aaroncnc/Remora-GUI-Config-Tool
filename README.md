@@ -13,6 +13,14 @@ python -m pip install PyQt5
 To run the tool you must have both the .py and .ui file in the same folder and then run the .py file
 
 
+The tool will generate 2 file with the save button is selected.
+
+A config.txt and save.txt
+
+The config.txt file is put on the micro sd card and inserted into your main board.
+
+The save.txt is used to save the gui config so it can be reloaded via the load config button.
+
 
 If you find any errors or feed back please create an issue. 
 
