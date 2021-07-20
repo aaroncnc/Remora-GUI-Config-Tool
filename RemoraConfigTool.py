@@ -15,6 +15,8 @@ class Ui(QtWidgets.QMainWindow):
         self.setup = self.findChild(QtWidgets.QComboBox, 'setup') 
         self.setup.activated.connect(self.comboboxselected) # action
         
+        self.current = self.findChild(QtWidgets.QComboBox, 'boards') 
+        self.current.activated.connect(self.comboboxselected2) # action
 
         self.resettxt = self.findChild(QtWidgets.QLineEdit, 'resettxt')
         self.resetpin = self.findChild(QtWidgets.QLineEdit, 'resetpin')
@@ -26,6 +28,7 @@ class Ui(QtWidgets.QMainWindow):
         self.xaxisstep = self.findChild(QtWidgets.QLineEdit, 'xaxisstep')
         self.xaxisdir = self.findChild(QtWidgets.QLineEdit, 'xaxisdir')
         self.xaxisenable = self.findChild(QtWidgets.QLineEdit, 'xaxisenable')
+        self.xaxiscur = self.findChild(QtWidgets.QLineEdit, 'xaxiscur')
         #y axis
         self.yaxis = self.findChild(QtWidgets.QCheckBox, 'yaxis')
         self.yaxistxt = self.findChild(QtWidgets.QLineEdit, 'yaxistxt')
@@ -33,6 +36,7 @@ class Ui(QtWidgets.QMainWindow):
         self.yaxisstep = self.findChild(QtWidgets.QLineEdit, 'yaxisstep')
         self.yaxisdir = self.findChild(QtWidgets.QLineEdit, 'yaxisdir')
         self.yaxisenable = self.findChild(QtWidgets.QLineEdit, 'yaxisenable')
+        self.yaxiscur = self.findChild(QtWidgets.QLineEdit, 'yaxiscur')
         #z axis
         self.zaxis = self.findChild(QtWidgets.QCheckBox, 'zaxis')
         self.zaxistxt = self.findChild(QtWidgets.QLineEdit, 'zaxistxt')
@@ -40,6 +44,7 @@ class Ui(QtWidgets.QMainWindow):
         self.zaxisstep = self.findChild(QtWidgets.QLineEdit, 'zaxisstep')
         self.zaxisdir = self.findChild(QtWidgets.QLineEdit, 'zaxisdir')
         self.zaxisenable = self.findChild(QtWidgets.QLineEdit, 'zaxisenable')
+        self.zaxiscur = self.findChild(QtWidgets.QLineEdit, 'zaxiscur')
         #e0 axis
         self.e0axis = self.findChild(QtWidgets.QCheckBox, 'e0axis')
         self.e0axistxt = self.findChild(QtWidgets.QLineEdit, 'e0axistxt')
@@ -47,6 +52,7 @@ class Ui(QtWidgets.QMainWindow):
         self.e0axisstep = self.findChild(QtWidgets.QLineEdit, 'e0axisstep')
         self.e0axisdir = self.findChild(QtWidgets.QLineEdit, 'e0axisdir')
         self.e0axisenable = self.findChild(QtWidgets.QLineEdit, 'e0axisenable')
+        self.e0axiscur = self.findChild(QtWidgets.QLineEdit, 'e0axiscur')
         #e1 axis
         self.e1axis = self.findChild(QtWidgets.QCheckBox, 'e1axis')
         self.e1axistxt = self.findChild(QtWidgets.QLineEdit, 'e1axistxt')
@@ -54,6 +60,7 @@ class Ui(QtWidgets.QMainWindow):
         self.e1axisstep = self.findChild(QtWidgets.QLineEdit, 'e1axisstep')
         self.e1axisdir = self.findChild(QtWidgets.QLineEdit, 'e1axisdir')
         self.e1axisenable = self.findChild(QtWidgets.QLineEdit, 'e1axisenable')
+        self.e1axiscur = self.findChild(QtWidgets.QLineEdit, 'e1axiscur')
         #Output 0
         self.outchk0 = self.findChild(QtWidgets.QCheckBox, 'outchk0')
         self.outtxt0 = self.findChild(QtWidgets.QLineEdit, 'outtxt0')
@@ -329,6 +336,41 @@ class Ui(QtWidgets.QMainWindow):
         self.swmode2 = self.findChild(QtWidgets.QComboBox, 'swmode2')
 
         self.show()
+        
+        self.xaxiscur.setEnabled(0)
+        self.xaxiscur.setVisible(0)
+        self.yaxiscur.setEnabled(0)
+        self.yaxiscur.setVisible(0)
+        self.zaxiscur.setEnabled(0)
+        self.zaxiscur.setVisible(0)
+        self.e0axiscur.setEnabled(0)
+        self.e0axiscur.setVisible(0)
+        self.e1axiscur.setEnabled(0)
+        self.e1axiscur.setVisible(0)
+        
+    def comboboxselected2(self):
+        if self.boards.currentText() == "MKS SBASE v1.3":
+            self.xaxiscur.setEnabled(1)
+            self.xaxiscur.setVisible(1)
+            self.yaxiscur.setEnabled(1)
+            self.yaxiscur.setVisible(1)
+            self.zaxiscur.setEnabled(1)
+            self.zaxiscur.setVisible(1)
+            self.e0axiscur.setEnabled(1)
+            self.e0axiscur.setVisible(1)
+            self.e1axiscur.setEnabled(1)
+            self.e1axiscur.setVisible(1)
+        else:
+            self.xaxiscur.setEnabled(0)
+            self.xaxiscur.setVisible(0)
+            self.yaxiscur.setEnabled(0)
+            self.yaxiscur.setVisible(0)
+            self.zaxiscur.setEnabled(0)
+            self.zaxiscur.setVisible(0)
+            self.e0axiscur.setEnabled(0)
+            self.e0axiscur.setVisible(0)
+            self.e1axiscur.setEnabled(0)
+            self.e1axiscur.setVisible(0)
         
     def comboboxselected(self):
         if self.setup.currentText() == "None":
@@ -640,28 +682,28 @@ class Ui(QtWidgets.QMainWindow):
             a, b = map(str,infile.readline().split("|"))
             self.boards.setCurrentText(str(a))
             #X axis
-            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-            self.xaxistxt.setText(b),self.xaxisjoint.setText(c),self.xaxisstep.setText(d),self.xaxisdir.setText(e),self.xaxisenable.setText(f)
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.xaxistxt.setText(b),self.xaxisjoint.setText(c),self.xaxisstep.setText(d),self.xaxisdir.setText(e),self.xaxisenable.setText(f),self.xaxiscur.setText(g)
             if a == "True": self.xaxis.setChecked(1)
             else: self.xaxis.setChecked(0)
             #Y axis
-            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-            self.yaxistxt.setText(b),self.yaxisjoint.setText(c),self.yaxisstep.setText(d),self.yaxisdir.setText(e),self.yaxisenable.setText(f)
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.yaxistxt.setText(b),self.yaxisjoint.setText(c),self.yaxisstep.setText(d),self.yaxisdir.setText(e),self.yaxisenable.setText(f),self.yaxiscur.setText(g)
             if a == "True": self.yaxis.setChecked(1)
             else: self.yaxis.setChecked(0)
             #Z axis
-            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-            self.zaxistxt.setText(b),self.zaxisjoint.setText(c),self.zaxisstep.setText(d),self.zaxisdir.setText(e),self.zaxisenable.setText(f)
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.zaxistxt.setText(b),self.zaxisjoint.setText(c),self.zaxisstep.setText(d),self.zaxisdir.setText(e),self.zaxisenable.setText(f),self.zaxiscur.setText(g)
             if a == "True": self.zaxis.setChecked(1)
             else: self.zaxis.setChecked(0)
             #E0 axis
-            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-            self.e0axistxt.setText(b),self.e0axisjoint.setText(c),self.e0axisstep.setText(d),self.e0axisdir.setText(e),self.e0axisenable.setText(f)
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.e0axistxt.setText(b),self.e0axisjoint.setText(c),self.e0axisstep.setText(d),self.e0axisdir.setText(e),self.e0axisenable.setText(f),self.e0axiscur.setText(g)
             if a == "True": self.e0axis.setChecked(1)
             else: self.e0axis.setChecked(0)
             #E1 axis
-            a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-            self.e1axistxt.setText(b),self.e1axisjoint.setText(c),self.e1axisstep.setText(d),self.e1axisdir.setText(e),self.e1axisenable.setText(f)
+            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
+            self.e1axistxt.setText(b),self.e1axisjoint.setText(c),self.e1axisstep.setText(d),self.e1axisdir.setText(e),self.e1axisenable.setText(f),self.e1axiscur.setText(g)
             if a == "True": self.e1axis.setChecked(1)
             else: self.e1axis.setChecked(0)
             
@@ -948,8 +990,14 @@ class Ui(QtWidgets.QMainWindow):
         with open('config.txt', 'w') as f:
             f.write('{'+'\n')
             #Boards
-            f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n' )
-            f.write('\t'+'"Modules":['+'\n')
+            if self.boards.currentText() == "MKS SBASE v1.3":
+                f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n' )
+                f.write('\t'+'"Modules":['+'\n')
+                f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 0 - 3",'+'\n'+'\t'+'\t'+'"I2C SDA pin": "0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin": "0.1",'+'\n'+'\t'+'\t'+'"I2C address": 0,'+'\n'+'\t'+'\t'+'"Max current": 2.0,'+'\n'+'\t'+'\t'+'"Factor": 113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+self.xaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+self.yaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+self.zaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+self.e0axiscur.text()+'\n'+'\t'+'},'+'\n')
+                f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 4 - 7",'+'\n'+'\t'+'\t'+'"I2C SDA pin": "0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin": "0.1",'+'\n'+'\t'+'\t'+'"I2C address": 2,'+'\n'+'\t'+'\t'+'"Max current": 2.0,'+'\n'+'\t'+'\t'+'"Factor": 113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+self.e1axiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+'0.0'+'\n'+'\t'+'},'+'\n')
+            else:
+                f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n' )
+                f.write('\t'+'"Modules":['+'\n')
             #E-stop
             if self.estop.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "eStop",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.estoptxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + self.estoppin.text()+'"'+'\n'+'\t'+'},'+'\n')
             #X axis
@@ -1079,15 +1127,15 @@ class Ui(QtWidgets.QMainWindow):
                 #boards line 1
                 s.write(str(self.boards.currentText())+'|'+'\n')
                 #Xaxis line 2
-                s.write(str(self.xaxis.isChecked())+'|'+ self.xaxistxt.text()+'|'+self.xaxisjoint.text()+'|'+self.xaxisstep.text()+'|'+self.xaxisdir.text()+'|'+self.xaxisenable.text()+'|'+'\n')
+                s.write(str(self.xaxis.isChecked())+'|'+ self.xaxistxt.text()+'|'+self.xaxisjoint.text()+'|'+self.xaxisstep.text()+'|'+self.xaxisdir.text()+'|'+self.xaxisenable.text()+'|'+self.xaxiscur.text()+'|'+'\n')
                 #Yaxis line 3
-                s.write(str(self.yaxis.isChecked())+'|'+ self.yaxistxt.text()+'|'+self.yaxisjoint.text()+'|'+self.yaxisstep.text()+'|'+self.yaxisdir.text()+'|'+self.yaxisenable.text()+'|'+'\n')
+                s.write(str(self.yaxis.isChecked())+'|'+ self.yaxistxt.text()+'|'+self.yaxisjoint.text()+'|'+self.yaxisstep.text()+'|'+self.yaxisdir.text()+'|'+self.yaxisenable.text()+'|'+self.yaxiscur.text()+'|'+'\n')
                 #Zaxis line 4
-                s.write(str(self.zaxis.isChecked())+'|'+ self.zaxistxt.text()+'|'+self.zaxisjoint.text()+'|'+self.zaxisstep.text()+'|'+self.zaxisdir.text()+'|'+self.zaxisenable.text()+'|'+'\n')
+                s.write(str(self.zaxis.isChecked())+'|'+ self.zaxistxt.text()+'|'+self.zaxisjoint.text()+'|'+self.zaxisstep.text()+'|'+self.zaxisdir.text()+'|'+self.zaxisenable.text()+'|'+self.zaxiscur.text()+'|'+'\n')
                 #E0axis line 5
-                s.write(str(self.e0axis.isChecked())+'|'+ self.e0axistxt.text()+'|'+self.e0axisjoint.text()+'|'+self.e0axisstep.text()+'|'+self.e0axisdir.text()+'|'+self.e0axisenable.text()+'|'+'\n')
+                s.write(str(self.e0axis.isChecked())+'|'+ self.e0axistxt.text()+'|'+self.e0axisjoint.text()+'|'+self.e0axisstep.text()+'|'+self.e0axisdir.text()+'|'+self.e0axisenable.text()+'|'+self.e0axiscur.text()+'|'+'\n')
                 #E1axis line 6
-                s.write(str(self.e1axis.isChecked())+'|'+ self.e1axistxt.text()+'|'+self.e1axisjoint.text()+'|'+self.e1axisstep.text()+'|'+self.e1axisdir.text()+'|'+self.e1axisenable.text()+'|'+'\n')
+                s.write(str(self.e1axis.isChecked())+'|'+ self.e1axistxt.text()+'|'+self.e1axisjoint.text()+'|'+self.e1axisstep.text()+'|'+self.e1axisdir.text()+'|'+self.e1axisenable.text()+'|'+self.e1axiscur.text()+'|'+'\n')
                 #output0 line 7
                 s.write(str(self.outchk0.isChecked())+'|'+ self.outtxt0.text()+'|'+self.outpin0.text()+'|'+self.outstate0.currentText()+'|'+str(self.outinv0.isChecked())+'|'+'\n')
                 #output1 line 8
@@ -1142,27 +1190,27 @@ class Ui(QtWidgets.QMainWindow):
                 s.write(str(self.rcservo.isChecked())+'|'+ self.rcservotxt.text()+'|'+self.rcservopin.text()+'|'+self.rcservospi.text()+'|'+'\n')
                 #QEM line 33
                 s.write(str(self.qem.isChecked())+'|'+ self.qemtxt.text()+'|'+self.qempv.text()+'|'+self.qemcha.text()+'|'+self.qemchb.text()+'|'+self.qemipin.text()+'|'+self.qeminput.text()+'|'+str(self.qemstate.currentText())+'|'+'\n')
-                #Encoder 0 line 33
+                #Encoder 0 line 34
                 s.write(str(self.enc0.isChecked())+'|'+ self.enctxt0.text()+'|'+self.encpv0.text()+'|'+self.encapin0.text()+'|'+self.encbpin0.text()+'|'+self.encipin0.text()+'|'+self.encinput0.text()+'|'+str(self.encstate0.currentText())+'|'+'\n')
-                #Encoder 1 line 34
+                #Encoder 1 line 35
                 s.write(str(self.enc1.isChecked())+'|'+ self.enctxt1.text()+'|'+self.encpv1.text()+'|'+self.encapin1.text()+'|'+self.encbpin1.text()+'|'+self.encipin1.text()+'|'+self.encinput1.text()+'|'+str(self.encstate1.currentText())+'|'+'\n')
-                #Encoder 2 line 35
+                #Encoder 2 line 36
                 s.write(str(self.enc2.isChecked())+'|'+ self.enctxt2.text()+'|'+self.encpv2.text()+'|'+self.encapin2.text()+'|'+self.encbpin2.text()+'|'+self.encipin2.text()+'|'+self.encinput2.text()+'|'+str(self.encstate2.currentText())+'|'+'\n')
-                #Encoder 3 line 36
+                #Encoder 3 line 37
                 s.write(str(self.enc3.isChecked())+'|'+ self.enctxt3.text()+'|'+self.encpv3.text()+'|'+self.encapin3.text()+'|'+self.encbpin3.text()+'|'+self.encipin3.text()+'|'+self.encinput3.text()+'|'+str(self.encstate3.currentText())+'|'+'\n')
-                #temp 0 line 37
+                #temp 0 line 38
                 s.write(str(self.temp0.isChecked())+'|'+ self.temptxt0.text()+'|'+self.temppv0.text()+'|'+self.temppin0.text()+'|'+self.tempr0.text()+'|'+self.tempt0.text()+'|'+self.tempbeta0.text()+'|'+'\n')
-                #temp 1 line 38
+                #temp 1 line 39
                 s.write(str(self.temp1.isChecked())+'|'+ self.temptxt1.text()+'|'+self.temppv1.text()+'|'+self.temppin1.text()+'|'+self.tempr1.text()+'|'+self.tempt1.text()+'|'+self.tempbeta1.text()+'|'+'\n')
-                #temp 2 line 39
+                #temp 2 line 40
                 s.write(str(self.temp2.isChecked())+'|'+ self.temptxt2.text()+'|'+self.temppv2.text()+'|'+self.temppin2.text()+'|'+self.tempr2.text()+'|'+self.tempt2.text()+'|'+self.tempbeta2.text()+'|'+'\n')
-                #temp 3 line 40
+                #temp 3 line 41
                 s.write(str(self.temp3.isChecked())+'|'+ self.temptxt3.text()+'|'+self.temppv3.text()+'|'+self.temppin3.text()+'|'+self.tempr3.text()+'|'+self.tempt3.text()+'|'+self.tempbeta3.text()+'|'+'\n')
-                #swtich 0 line 41
+                #swtich 0 line 42
                 s.write(str(self.sw0.isChecked())+'|'+ self.swtxt0.text()+'|'+self.swpv0.text()+'|'+self.swpin0.text()+'|'+self.swsp0.text()+'|'+self.swmode0.currentText()+'|'+'\n')
-                #swtich 1 line 42
+                #swtich 1 line 43
                 s.write(str(self.sw1.isChecked())+'|'+ self.swtxt1.text()+'|'+self.swpv1.text()+'|'+self.swpin1.text()+'|'+self.swsp1.text()+'|'+self.swmode1.currentText()+'|'+'\n')
-                #swtich 2 line 43
+                #swtich 2 line 44
                 s.write(str(self.sw2.isChecked())+'|'+ self.swtxt2.text()+'|'+self.swpv2.text()+'|'+self.swpin2.text()+'|'+self.swsp2.text()+'|'+self.swmode2.currentText()+'|'+'\n')
 
 
