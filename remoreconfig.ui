@@ -19,12 +19,12 @@
      <rect>
       <x>0</x>
       <y>50</y>
-      <width>1001</width>
+      <width>1011</width>
       <height>701</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -124,9 +124,9 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>30</x>
         <y>20</y>
-        <width>91</width>
+        <width>61</width>
         <height>22</height>
        </rect>
       </property>
@@ -137,9 +137,9 @@
      <widget class="QLineEdit" name="xaxisjoint">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>60</y>
-        <width>41</width>
+        <width>31</width>
         <height>34</height>
        </rect>
       </property>
@@ -153,7 +153,7 @@
      <widget class="QLabel" name="label_105">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>20</y>
         <width>68</width>
         <height>22</height>
@@ -166,7 +166,7 @@
      <widget class="QLabel" name="label_106">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>20</y>
         <width>51</width>
         <height>22</height>
@@ -179,7 +179,7 @@
      <widget class="QLineEdit" name="xaxistxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>60</y>
         <width>81</width>
         <height>34</height>
@@ -195,7 +195,7 @@
      <widget class="QLabel" name="label_107">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>10</y>
         <width>61</width>
         <height>41</height>
@@ -211,7 +211,7 @@
      <widget class="QLineEdit" name="xaxisstep">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>60</y>
         <width>41</width>
         <height>34</height>
@@ -227,7 +227,7 @@
      <widget class="QLineEdit" name="xaxisdir">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>60</y>
         <width>41</width>
         <height>34</height>
@@ -243,7 +243,7 @@
      <widget class="QLabel" name="label_108">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>380</x>
         <y>10</y>
         <width>81</width>
         <height>41</height>
@@ -259,7 +259,7 @@
      <widget class="QLineEdit" name="xaxisenable">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>380</x>
         <y>60</y>
         <width>41</width>
         <height>34</height>
@@ -275,7 +275,7 @@
      <widget class="QLabel" name="label_109">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>10</y>
         <width>61</width>
         <height>41</height>
@@ -291,9 +291,9 @@
      <widget class="QCheckBox" name="xaxis">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>60</y>
-        <width>101</width>
+        <width>71</width>
         <height>27</height>
        </rect>
       </property>
@@ -307,7 +307,7 @@
      <widget class="QLineEdit" name="yaxistxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>110</y>
         <width>81</width>
         <height>34</height>
@@ -323,7 +323,7 @@
      <widget class="QLineEdit" name="yaxisenable">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>380</x>
         <y>110</y>
         <width>41</width>
         <height>34</height>
@@ -339,9 +339,9 @@
      <widget class="QCheckBox" name="yaxis">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>110</y>
-        <width>101</width>
+        <width>71</width>
         <height>27</height>
        </rect>
       </property>
@@ -355,7 +355,7 @@
      <widget class="QLineEdit" name="yaxisdir">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>110</y>
         <width>41</width>
         <height>34</height>
@@ -371,9 +371,9 @@
      <widget class="QLineEdit" name="yaxisjoint">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>110</y>
-        <width>41</width>
+        <width>31</width>
         <height>34</height>
        </rect>
       </property>
@@ -387,7 +387,7 @@
      <widget class="QLineEdit" name="yaxisstep">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>110</y>
         <width>41</width>
         <height>34</height>
@@ -403,7 +403,7 @@
      <widget class="QLineEdit" name="zaxistxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>160</y>
         <width>81</width>
         <height>34</height>
@@ -419,7 +419,7 @@
      <widget class="QLineEdit" name="zaxisenable">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>380</x>
         <y>160</y>
         <width>41</width>
         <height>34</height>
@@ -435,9 +435,9 @@
      <widget class="QCheckBox" name="zaxis">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>160</y>
-        <width>101</width>
+        <width>71</width>
         <height>27</height>
        </rect>
       </property>
@@ -451,7 +451,7 @@
      <widget class="QLineEdit" name="zaxisdir">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>160</y>
         <width>41</width>
         <height>34</height>
@@ -467,9 +467,9 @@
      <widget class="QLineEdit" name="zaxisjoint">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>160</y>
-        <width>41</width>
+        <width>31</width>
         <height>34</height>
        </rect>
       </property>
@@ -483,7 +483,7 @@
      <widget class="QLineEdit" name="zaxisstep">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>160</y>
         <width>41</width>
         <height>34</height>
@@ -499,7 +499,7 @@
      <widget class="QLineEdit" name="e0axistxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>210</y>
         <width>81</width>
         <height>34</height>
@@ -515,7 +515,7 @@
      <widget class="QLineEdit" name="e0axisenable">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>380</x>
         <y>210</y>
         <width>41</width>
         <height>34</height>
@@ -531,9 +531,9 @@
      <widget class="QCheckBox" name="e0axis">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>210</y>
-        <width>101</width>
+        <width>71</width>
         <height>27</height>
        </rect>
       </property>
@@ -547,7 +547,7 @@
      <widget class="QLineEdit" name="e0axisdir">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>210</y>
         <width>41</width>
         <height>34</height>
@@ -563,9 +563,9 @@
      <widget class="QLineEdit" name="e0axisjoint">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>210</y>
-        <width>41</width>
+        <width>31</width>
         <height>34</height>
        </rect>
       </property>
@@ -579,7 +579,7 @@
      <widget class="QLineEdit" name="e0axisstep">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>210</y>
         <width>41</width>
         <height>34</height>
@@ -595,7 +595,7 @@
      <widget class="QLineEdit" name="e1axistxt">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>110</x>
         <y>260</y>
         <width>81</width>
         <height>34</height>
@@ -611,7 +611,7 @@
      <widget class="QLineEdit" name="e1axisenable">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>380</x>
         <y>260</y>
         <width>41</width>
         <height>34</height>
@@ -627,9 +627,9 @@
      <widget class="QCheckBox" name="e1axis">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>260</y>
-        <width>101</width>
+        <width>71</width>
         <height>27</height>
        </rect>
       </property>
@@ -643,7 +643,7 @@
      <widget class="QLineEdit" name="e1axisdir">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>320</x>
         <y>260</y>
         <width>41</width>
         <height>34</height>
@@ -659,9 +659,9 @@
      <widget class="QLineEdit" name="e1axisjoint">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>210</x>
         <y>260</y>
-        <width>41</width>
+        <width>31</width>
         <height>34</height>
        </rect>
       </property>
@@ -675,7 +675,7 @@
      <widget class="QLineEdit" name="e1axisstep">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>260</y>
         <width>41</width>
         <height>34</height>
@@ -691,7 +691,7 @@
      <widget class="Line" name="line_75">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>90</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -704,9 +704,9 @@
      <widget class="Line" name="line_76">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>-40</x>
         <y>40</y>
-        <width>631</width>
+        <width>861</width>
         <height>16</height>
        </rect>
       </property>
@@ -717,9 +717,9 @@
      <widget class="Line" name="line_77">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>-40</x>
         <y>90</y>
-        <width>631</width>
+        <width>861</width>
         <height>16</height>
        </rect>
       </property>
@@ -730,9 +730,9 @@
      <widget class="Line" name="line_78">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>-40</x>
         <y>140</y>
-        <width>641</width>
+        <width>861</width>
         <height>16</height>
        </rect>
       </property>
@@ -743,9 +743,9 @@
      <widget class="Line" name="line_79">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>-40</x>
         <y>190</y>
-        <width>641</width>
+        <width>861</width>
         <height>16</height>
        </rect>
       </property>
@@ -756,9 +756,9 @@
      <widget class="Line" name="line_80">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>-40</x>
         <y>240</y>
-        <width>631</width>
+        <width>861</width>
         <height>16</height>
        </rect>
       </property>
@@ -769,10 +769,10 @@
      <widget class="Line" name="line_81">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>-40</x>
         <y>290</y>
-        <width>641</width>
-        <height>16</height>
+        <width>861</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="orientation">
@@ -782,7 +782,7 @@
      <widget class="Line" name="line_82">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>190</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -795,7 +795,7 @@
      <widget class="Line" name="line_83">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>240</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -808,7 +808,7 @@
      <widget class="Line" name="line_84">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>300</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -821,7 +821,7 @@
      <widget class="Line" name="line_85">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>360</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -834,7 +834,7 @@
      <widget class="Line" name="line_94">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>430</x>
         <y>20</y>
         <width>20</width>
         <height>281</height>
@@ -847,7 +847,7 @@
      <widget class="QLabel" name="label_110">
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>10</y>
         <width>81</width>
         <height>41</height>
@@ -866,7 +866,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>60</y>
         <width>71</width>
         <height>34</height>
@@ -885,7 +885,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>110</y>
         <width>71</width>
         <height>34</height>
@@ -904,7 +904,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>160</y>
         <width>71</width>
         <height>34</height>
@@ -923,7 +923,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>210</y>
         <width>71</width>
         <height>34</height>
@@ -942,7 +942,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>540</x>
         <y>260</y>
         <width>71</width>
         <height>34</height>
@@ -953,6 +953,552 @@
       </property>
       <property name="placeholderText">
        <string>0 - 2500 ma</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_111">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>10</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TMC driver</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_95">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="xaxistmc">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>60</y>
+        <width>71</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2208</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2209</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="yaxistmc">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>110</y>
+        <width>71</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2208</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2209</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="zaxistmc">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>160</y>
+        <width>71</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2208</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2209</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="e0axistmc">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>210</y>
+        <width>71</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2208</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2209</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="e1axistmc">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>260</y>
+        <width>71</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2208</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TMC2209</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_112">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>10</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rsense</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_113">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>10</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Microsteps</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_114">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>10</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>stealth chop</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="line_96">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_97">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_98">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>20</y>
+        <width>20</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxiscursense">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>ohms</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="xaxismicrostep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>60</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="xaxisstealthcop">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>60</y>
+        <width>41</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="yaxisstealthcop">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>110</y>
+        <width>41</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="yaxiscursense">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>ohms</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="yaxismicrostep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>110</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="zaxisstealthcop">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>160</y>
+        <width>41</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="zaxiscursense">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>ohms</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="zaxismicrostep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>160</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="e0axisstealthcop">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>210</y>
+        <width>41</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="e0axiscursense">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>ohms</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e0axismicrostep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>210</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="e1axisstealthcop">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>260</y>
+        <width>41</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>off</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="e1axiscursense">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>ohms</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="e1axismicrostep">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>260</y>
+        <width>41</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0-256</string>
       </property>
      </widget>
     </widget>

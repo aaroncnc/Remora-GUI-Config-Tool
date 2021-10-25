@@ -17,6 +17,21 @@ class Ui(QtWidgets.QMainWindow):
         
         self.current = self.findChild(QtWidgets.QComboBox, 'boards') 
         self.current.activated.connect(self.comboboxselected2) # action
+        
+        self.current = self.findChild(QtWidgets.QComboBox, 'xaxistmc') 
+        self.current.activated.connect(self.comboboxselected3) # action
+        
+        self.current = self.findChild(QtWidgets.QComboBox, 'yaxistmc') 
+        self.current.activated.connect(self.comboboxselected4) # action
+        
+        self.current = self.findChild(QtWidgets.QComboBox, 'zaxistmc') 
+        self.current.activated.connect(self.comboboxselected5) # action
+        
+        self.current = self.findChild(QtWidgets.QComboBox, 'e0axistmc') 
+        self.current.activated.connect(self.comboboxselected6) # action
+        
+        self.current = self.findChild(QtWidgets.QComboBox, 'e1axistmc') 
+        self.current.activated.connect(self.comboboxselected7) # action
 
         self.resettxt = self.findChild(QtWidgets.QLineEdit, 'resettxt')
         self.resetpin = self.findChild(QtWidgets.QLineEdit, 'resetpin')
@@ -29,6 +44,10 @@ class Ui(QtWidgets.QMainWindow):
         self.xaxisdir = self.findChild(QtWidgets.QLineEdit, 'xaxisdir')
         self.xaxisenable = self.findChild(QtWidgets.QLineEdit, 'xaxisenable')
         self.xaxiscur = self.findChild(QtWidgets.QLineEdit, 'xaxiscur')
+        self.xaxistmc = self.findChild(QtWidgets.QComboBox, 'xaxistmc')
+        self.xaxiscursense = self.findChild(QtWidgets.QLineEdit, 'xaxiscursense')
+        self.xaxismicrostep = self.findChild(QtWidgets.QLineEdit, 'xaxismicrostep')
+        self.xaxisstealthcop = self.findChild(QtWidgets.QComboBox, 'xaxisstealthcop')      
         #y axis
         self.yaxis = self.findChild(QtWidgets.QCheckBox, 'yaxis')
         self.yaxistxt = self.findChild(QtWidgets.QLineEdit, 'yaxistxt')
@@ -37,6 +56,10 @@ class Ui(QtWidgets.QMainWindow):
         self.yaxisdir = self.findChild(QtWidgets.QLineEdit, 'yaxisdir')
         self.yaxisenable = self.findChild(QtWidgets.QLineEdit, 'yaxisenable')
         self.yaxiscur = self.findChild(QtWidgets.QLineEdit, 'yaxiscur')
+        self.yaxistmc = self.findChild(QtWidgets.QComboBox, 'yaxistmc')
+        self.yaxiscursense = self.findChild(QtWidgets.QLineEdit, 'yaxiscursense')
+        self.yaxismicrostep = self.findChild(QtWidgets.QLineEdit, 'yaxismicrostep')
+        self.yaxisstealthcop = self.findChild(QtWidgets.QComboBox, 'yaxisstealthcop')   
         #z axis
         self.zaxis = self.findChild(QtWidgets.QCheckBox, 'zaxis')
         self.zaxistxt = self.findChild(QtWidgets.QLineEdit, 'zaxistxt')
@@ -45,6 +68,10 @@ class Ui(QtWidgets.QMainWindow):
         self.zaxisdir = self.findChild(QtWidgets.QLineEdit, 'zaxisdir')
         self.zaxisenable = self.findChild(QtWidgets.QLineEdit, 'zaxisenable')
         self.zaxiscur = self.findChild(QtWidgets.QLineEdit, 'zaxiscur')
+        self.zaxistmc = self.findChild(QtWidgets.QComboBox, 'zaxistmc')
+        self.zaxiscursense = self.findChild(QtWidgets.QLineEdit, 'zaxiscursense')
+        self.zaxismicrostep = self.findChild(QtWidgets.QLineEdit, 'zaxismicrostep')
+        self.zaxisstealthcop = self.findChild(QtWidgets.QComboBox, 'zaxisstealthcop')   
         #e0 axis
         self.e0axis = self.findChild(QtWidgets.QCheckBox, 'e0axis')
         self.e0axistxt = self.findChild(QtWidgets.QLineEdit, 'e0axistxt')
@@ -53,6 +80,10 @@ class Ui(QtWidgets.QMainWindow):
         self.e0axisdir = self.findChild(QtWidgets.QLineEdit, 'e0axisdir')
         self.e0axisenable = self.findChild(QtWidgets.QLineEdit, 'e0axisenable')
         self.e0axiscur = self.findChild(QtWidgets.QLineEdit, 'e0axiscur')
+        self.e0axistmc = self.findChild(QtWidgets.QComboBox, 'e0axistmc')
+        self.e0axiscursense = self.findChild(QtWidgets.QLineEdit, 'e0axiscursense')
+        self.e0axismicrostep = self.findChild(QtWidgets.QLineEdit, 'e0axismicrostep')
+        self.e0axisstealthcop = self.findChild(QtWidgets.QComboBox, 'e0axisstealthcop')   
         #e1 axis
         self.e1axis = self.findChild(QtWidgets.QCheckBox, 'e1axis')
         self.e1axistxt = self.findChild(QtWidgets.QLineEdit, 'e1axistxt')
@@ -61,6 +92,10 @@ class Ui(QtWidgets.QMainWindow):
         self.e1axisdir = self.findChild(QtWidgets.QLineEdit, 'e1axisdir')
         self.e1axisenable = self.findChild(QtWidgets.QLineEdit, 'e1axisenable')
         self.e1axiscur = self.findChild(QtWidgets.QLineEdit, 'e1axiscur')
+        self.e1axistmc = self.findChild(QtWidgets.QComboBox, 'e1axistmc')
+        self.e1axiscursense = self.findChild(QtWidgets.QLineEdit, 'e1axiscursense')
+        self.e1axismicrostep = self.findChild(QtWidgets.QLineEdit, 'e1axismicrostep')
+        self.e1axisstealthcop = self.findChild(QtWidgets.QComboBox, 'e1axisstealthcop')   
         #Output 0
         self.outchk0 = self.findChild(QtWidgets.QCheckBox, 'outchk0')
         self.outtxt0 = self.findChild(QtWidgets.QLineEdit, 'outtxt0')
@@ -336,17 +371,52 @@ class Ui(QtWidgets.QMainWindow):
         self.swmode2 = self.findChild(QtWidgets.QComboBox, 'swmode2')
 
         self.show()
-        
+        #hide elements not needed on startup
+        #X axis
         self.xaxiscur.setEnabled(0)
         self.xaxiscur.setVisible(0)
+        self.xaxiscursense.setEnabled(0)
+        self.xaxiscursense.setVisible(0)
+        self.xaxismicrostep.setEnabled(0)
+        self.xaxismicrostep.setVisible(0)
+        self.xaxisstealthcop.setEnabled(0)
+        self.xaxisstealthcop.setVisible(0)
+        #y axis
         self.yaxiscur.setEnabled(0)
         self.yaxiscur.setVisible(0)
+        self.yaxiscursense.setEnabled(0)
+        self.yaxiscursense.setVisible(0)
+        self.yaxismicrostep.setEnabled(0)
+        self.yaxismicrostep.setVisible(0)
+        self.yaxisstealthcop.setEnabled(0)
+        self.yaxisstealthcop.setVisible(0)
+        #Z axis
         self.zaxiscur.setEnabled(0)
         self.zaxiscur.setVisible(0)
+        self.zaxiscursense.setEnabled(0)
+        self.zaxiscursense.setVisible(0)
+        self.zaxismicrostep.setEnabled(0)
+        self.zaxismicrostep.setVisible(0)
+        self.zaxisstealthcop.setEnabled(0)
+        self.zaxisstealthcop.setVisible(0)
+        #e0 axis
         self.e0axiscur.setEnabled(0)
         self.e0axiscur.setVisible(0)
+        self.e0axiscursense.setEnabled(0)
+        self.e0axiscursense.setVisible(0)
+        self.e0axismicrostep.setEnabled(0)
+        self.e0axismicrostep.setVisible(0)
+        self.e0axisstealthcop.setEnabled(0)
+        self.e0axisstealthcop.setVisible(0)
+        #e1 axis
         self.e1axiscur.setEnabled(0)
         self.e1axiscur.setVisible(0)
+        self.e1axiscursense.setEnabled(0)
+        self.e1axiscursense.setVisible(0)
+        self.e1axismicrostep.setEnabled(0)
+        self.e1axismicrostep.setVisible(0)
+        self.e1axisstealthcop.setEnabled(0)
+        self.e1axisstealthcop.setVisible(0)
         
     def comboboxselected2(self):
         if self.boards.currentText() == "MKS SBASE v1.3":
@@ -371,15 +441,120 @@ class Ui(QtWidgets.QMainWindow):
             self.e0axiscur.setVisible(0)
             self.e1axiscur.setEnabled(0)
             self.e1axiscur.setVisible(0)
+            
+    def comboboxselected3(self): # x axis hide 
+        if self.xaxistmc.currentText() == "None":
+            self.xaxiscur.setEnabled(0)
+            self.xaxiscur.setVisible(0)
+            self.xaxiscursense.setEnabled(0)
+            self.xaxiscursense.setVisible(0)
+            self.xaxismicrostep.setEnabled(0)
+            self.xaxismicrostep.setVisible(0)
+            self.xaxisstealthcop.setEnabled(0)
+            self.xaxisstealthcop.setVisible(0)
+ 
+        else:
+            self.xaxiscur.setEnabled(1)
+            self.xaxiscur.setVisible(1)
+            self.xaxiscursense.setEnabled(1)
+            self.xaxiscursense.setVisible(1)
+            self.xaxismicrostep.setEnabled(1)
+            self.xaxismicrostep.setVisible(1)
+            self.xaxisstealthcop.setEnabled(1)
+            self.xaxisstealthcop.setVisible(1)
+            
+    def comboboxselected4(self): # y axis hide
+        if self.yaxistmc.currentText() == "None":
+            self.yaxiscur.setEnabled(0)
+            self.yaxiscur.setVisible(0)
+            self.yaxiscursense.setEnabled(0)
+            self.yaxiscursense.setVisible(0)
+            self.yaxismicrostep.setEnabled(0)
+            self.yaxismicrostep.setVisible(0)
+            self.yaxisstealthcop.setEnabled(0)
+            self.yaxisstealthcop.setVisible(0)
+ 
+        else:
+            self.yaxiscur.setEnabled(1)
+            self.yaxiscur.setVisible(1)
+            self.yaxiscursense.setEnabled(1)
+            self.yaxiscursense.setVisible(1)
+            self.yaxismicrostep.setEnabled(1)
+            self.yaxismicrostep.setVisible(1)
+            self.yaxisstealthcop.setEnabled(1)
+            self.yaxisstealthcop.setVisible(1)
+            
+    def comboboxselected5(self): # z axis hide
+        if self.zaxistmc.currentText() == "None":
+            self.zaxiscur.setEnabled(0)
+            self.zaxiscur.setVisible(0)
+            self.zaxiscursense.setEnabled(0)
+            self.zaxiscursense.setVisible(0)
+            self.zaxismicrostep.setEnabled(0)
+            self.zaxismicrostep.setVisible(0)
+            self.zaxisstealthcop.setEnabled(0)
+            self.zaxisstealthcop.setVisible(0)
+ 
+        else:
+            self.zaxiscur.setEnabled(1)
+            self.zaxiscur.setVisible(1)
+            self.zaxiscursense.setEnabled(1)
+            self.zaxiscursense.setVisible(1)
+            self.zaxismicrostep.setEnabled(1)
+            self.zaxismicrostep.setVisible(1)
+            self.zaxisstealthcop.setEnabled(1)
+            self.zaxisstealthcop.setVisible(1)
+            
+    def comboboxselected6(self): # e0 axis hide
+        if self.e0axistmc.currentText() == "None":
+            self.e0axiscur.setEnabled(0)
+            self.e0axiscur.setVisible(0)
+            self.e0axiscursense.setEnabled(0)
+            self.e0axiscursense.setVisible(0)
+            self.e0axismicrostep.setEnabled(0)
+            self.e0axismicrostep.setVisible(0)
+            self.e0axisstealthcop.setEnabled(0)
+            self.e0axisstealthcop.setVisible(0)
+ 
+        else:
+            self.e0axiscur.setEnabled(1)
+            self.e0axiscur.setVisible(1)
+            self.e0axiscursense.setEnabled(1)
+            self.e0axiscursense.setVisible(1)
+            self.e0axismicrostep.setEnabled(1)
+            self.e0axismicrostep.setVisible(1)
+            self.e0axisstealthcop.setEnabled(1)
+            self.e0axisstealthcop.setVisible(1)
+            
+    def comboboxselected7(self): # e1 axis hide
+        if self.e1axistmc.currentText() == "None":
+            self.e1axiscur.setEnabled(0)
+            self.e1axiscur.setVisible(0)
+            self.e1axiscursense.setEnabled(0)
+            self.e1axiscursense.setVisible(0)
+            self.e1axismicrostep.setEnabled(0)
+            self.e1axismicrostep.setVisible(0)
+            self.e1axisstealthcop.setEnabled(0)
+            self.e1axisstealthcop.setVisible(0)
+ 
+        else:
+            self.e1axiscur.setEnabled(1)
+            self.e1axiscur.setVisible(1)
+            self.e1axiscursense.setEnabled(1)
+            self.e1axiscursense.setVisible(1)
+            self.e1axismicrostep.setEnabled(1)
+            self.e1axismicrostep.setVisible(1)
+            self.e1axisstealthcop.setEnabled(1)
+            self.e1axisstealthcop.setVisible(1)            
         
     def comboboxselected(self):
         if self.setup.currentText() == "None":
         #axis setup
-            self.xaxis.setChecked(0),self.xaxistxt.setText(""),self.xaxisjoint.setText(""),self.xaxisstep.setText(""),self.xaxisdir.setText(""),self.xaxisenable.setText("")
-            self.yaxis.setChecked(0),self.yaxistxt.setText(""),self.yaxisjoint.setText(""),self.yaxisstep.setText(""),self.yaxisdir.setText(""),self.yaxisenable.setText("")
-            self.zaxis.setChecked(0),self.zaxistxt.setText(""),self.zaxisjoint.setText(""),self.zaxisstep.setText(""),self.zaxisdir.setText(""),self.zaxisenable.setText("")
-            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(0),self.xaxistxt.setText(""),self.xaxisjoint.setText(""),self.xaxisstep.setText(""),self.xaxisdir.setText(""),self.xaxisenable.setText("") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(0),self.yaxistxt.setText(""),self.yaxisjoint.setText(""),self.yaxisstep.setText(""),self.yaxisdir.setText(""),self.yaxisenable.setText("") ,self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(0),self.zaxistxt.setText(""),self.zaxisjoint.setText(""),self.zaxisstep.setText(""),self.zaxisdir.setText(""),self.zaxisenable.setText(""),self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
             #output setup
             self.outchk0.setChecked(0),self.outtxt0.setText(""),self.outpin0.setText(""),self.outstate0.setCurrentText("Pull None")
             self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
@@ -425,11 +600,11 @@ class Ui(QtWidgets.QMainWindow):
             
         if self.setup.currentText() == "Mill XYZ":
         #axis setup
-            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
-            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
-            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8"),self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21") ,self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
 
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("spindle relay"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
@@ -476,11 +651,11 @@ class Ui(QtWidgets.QMainWindow):
             
         if self.setup.currentText() == "Mill XYZ +spindle encoder +VFD":
         #axis setup
-            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
-            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
-            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8") ,self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21") ,self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("spindle enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
@@ -527,11 +702,11 @@ class Ui(QtWidgets.QMainWindow):
         
         if self.setup.currentText() == "K40 Laser cutter":
         #axis setup
-            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
-            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
-            self.zaxis.setChecked(0),self.zaxistxt.setText(""),self.zaxisjoint.setText(""),self.zaxisstep.setText(""),self.zaxisdir.setText(""),self.zaxisenable.setText("")
-            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8") ,self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(0),self.zaxistxt.setText(""),self.zaxisjoint.setText(""),self.zaxisstep.setText(""),self.zaxisdir.setText(""),self.zaxisenable.setText("") ,self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(0),self.e0axistxt.setText(""),self.e0axisjoint.setText(""),self.e0axisstep.setText(""),self.e0axisdir.setText(""),self.e0axisenable.setText("") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("driver enable"),self.outpin0.setText("2.5"),self.outstate0.setCurrentText("Pull Down"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(1),self.outtxt1.setText("Air Pump"),self.outpin1.setText("2.7"),self.outstate1.setCurrentText("Pull None"),self.outinv1.setChecked(0)
@@ -577,11 +752,11 @@ class Ui(QtWidgets.QMainWindow):
             
         if self.setup.currentText() == "3D printer":
         #axis setup
-            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
-            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
-            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8") ,self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21") ,self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("Part Cooling Fan"),self.outpin0.setText("2.4"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
@@ -627,11 +802,11 @@ class Ui(QtWidgets.QMainWindow):
         
         if self.setup.currentText() == "3D printer + BL Touch":
         #axis setup
-            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1")
-            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8")
-            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21")
-            self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12")
-            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("")
+            self.xaxis.setChecked(1),self.xaxistxt.setText("x axis"),self.xaxisjoint.setText("0"),self.xaxisstep.setText("2.2"),self.xaxisdir.setText("2.6"),self.xaxisenable.setText("2.1") ,self.xaxistmc.setCurrentText("None")
+            self.yaxis.setChecked(1),self.yaxistxt.setText("y axis"),self.yaxisjoint.setText("1"),self.yaxisstep.setText("0.19"),self.yaxisdir.setText("0.20"),self.yaxisenable.setText("2.8") ,self.yaxistmc.setCurrentText("None")
+            self.zaxis.setChecked(1),self.zaxistxt.setText("z axis"),self.zaxisjoint.setText("2"),self.zaxisstep.setText("0.22"),self.zaxisdir.setText("2.11"),self.zaxisenable.setText("0.21") ,self.zaxistmc.setCurrentText("None")
+            self.e0axis.setChecked(1),self.e0axistxt.setText("E0 axis"),self.e0axisjoint.setText("3"),self.e0axisstep.setText("2.13"),self.e0axisdir.setText("0.11"),self.e0axisenable.setText("2.12") ,self.e0axistmc.setCurrentText("None")
+            self.e1axis.setChecked(0),self.e1axistxt.setText(""),self.e1axisjoint.setText(""),self.e1axisstep.setText(""),self.e1axisdir.setText(""),self.e1axisenable.setText("") ,self.e1axistmc.setCurrentText("None")
             #Output setup
             self.outchk0.setChecked(1),self.outtxt0.setText("Part Cooling Fan"),self.outpin0.setText("2.4"),self.outstate0.setCurrentText("Pull None"),self.outinv0.setChecked(0)
             self.outchk1.setChecked(0),self.outtxt1.setText(""),self.outpin1.setText(""),self.outstate1.setCurrentText("Pull None")
@@ -676,34 +851,34 @@ class Ui(QtWidgets.QMainWindow):
             self.sw2.setChecked(0),self.swpin2.setText(""),self.swpv2.setText(""),self.swtxt2.setText(""),self.swsp2.setText(""),self.swmode2.setCurrentText("On")
         
     def printButtonPressed2(self):
-        # This is executed when the button is pressed)
+        # Import save data into hmi
         with open("save.txt","r") as infile:
-        #boards
+            #boards
             a, b = map(str,infile.readline().split("|"))
             self.boards.setCurrentText(str(a))
             #X axis
-            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-            self.xaxistxt.setText(b),self.xaxisjoint.setText(c),self.xaxisstep.setText(d),self.xaxisdir.setText(e),self.xaxisenable.setText(f),self.xaxiscur.setText(g)
+            a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
+            self.xaxistxt.setText(b),self.xaxisjoint.setText(c),self.xaxisstep.setText(d),self.xaxisdir.setText(e),self.xaxisenable.setText(f),self.xaxiscur.setText(g) ,self.xaxistmc.setCurrentText(h) ,self.xaxiscursense.setText(i) ,self.xaxismicrostep.setText(j) ,self.xaxisstealthcop.setCurrentText(k)
             if a == "True": self.xaxis.setChecked(1)
             else: self.xaxis.setChecked(0)
             #Y axis
-            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-            self.yaxistxt.setText(b),self.yaxisjoint.setText(c),self.yaxisstep.setText(d),self.yaxisdir.setText(e),self.yaxisenable.setText(f),self.yaxiscur.setText(g)
+            a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
+            self.yaxistxt.setText(b),self.yaxisjoint.setText(c),self.yaxisstep.setText(d),self.yaxisdir.setText(e),self.yaxisenable.setText(f),self.yaxiscur.setText(g)  ,self.yaxistmc.setCurrentText(h) ,self.yaxiscursense.setText(i) ,self.yaxismicrostep.setText(j) ,self.yaxisstealthcop.setCurrentText(k)
             if a == "True": self.yaxis.setChecked(1)
             else: self.yaxis.setChecked(0)
             #Z axis
-            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-            self.zaxistxt.setText(b),self.zaxisjoint.setText(c),self.zaxisstep.setText(d),self.zaxisdir.setText(e),self.zaxisenable.setText(f),self.zaxiscur.setText(g)
+            a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
+            self.zaxistxt.setText(b),self.zaxisjoint.setText(c),self.zaxisstep.setText(d),self.zaxisdir.setText(e),self.zaxisenable.setText(f),self.zaxiscur.setText(g) ,self.zaxistmc.setCurrentText(h) ,self.zaxiscursense.setText(i) ,self.zaxismicrostep.setText(j) ,self.zaxisstealthcop.setCurrentText(k)
             if a == "True": self.zaxis.setChecked(1)
             else: self.zaxis.setChecked(0)
             #E0 axis
-            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-            self.e0axistxt.setText(b),self.e0axisjoint.setText(c),self.e0axisstep.setText(d),self.e0axisdir.setText(e),self.e0axisenable.setText(f),self.e0axiscur.setText(g)
+            a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
+            self.e0axistxt.setText(b),self.e0axisjoint.setText(c),self.e0axisstep.setText(d),self.e0axisdir.setText(e),self.e0axisenable.setText(f),self.e0axiscur.setText(g) ,self.e0axistmc.setCurrentText(h) ,self.e0axiscursense.setText(i) ,self.e0axismicrostep.setText(j) ,self.e0axisstealthcop.setCurrentText(k)
             if a == "True": self.e0axis.setChecked(1)
             else: self.e0axis.setChecked(0)
             #E1 axis
-            a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-            self.e1axistxt.setText(b),self.e1axisjoint.setText(c),self.e1axisstep.setText(d),self.e1axisdir.setText(e),self.e1axisenable.setText(f),self.e1axiscur.setText(g)
+            a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
+            self.e1axistxt.setText(b),self.e1axisjoint.setText(c),self.e1axisstep.setText(d),self.e1axisdir.setText(e),self.e1axisenable.setText(f),self.e1axiscur.setText(g) ,self.e1axistmc.setCurrentText(h) ,self.e1axiscursense.setText(i) ,self.e1axismicrostep.setText(j) ,self.e1axisstealthcop.setCurrentText(k)
             if a == "True": self.e1axis.setChecked(1)
             else: self.e1axis.setChecked(0)
             
@@ -986,7 +1161,7 @@ class Ui(QtWidgets.QMainWindow):
             else: self.sw2.setChecked(0)
         
     def printButtonPressed(self):
-        # This is executed when the button is pressed
+        # Write data out to the config file for the board
         with open('config.txt', 'w') as f:
             f.write('{'+'\n')
             #Boards
@@ -1002,14 +1177,24 @@ class Ui(QtWidgets.QMainWindow):
             if self.estop.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "eStop",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.estoptxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + self.estoppin.text()+'"'+'\n'+'\t'+'},'+'\n')
             #X axis
             if self.xaxis.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.xaxistxt.text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+'\t'+ self.xaxisjoint.text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + self.xaxisstep.text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t'+'\t' +'"' + self.xaxisdir.text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t'+'\t' +'"' + self.xaxisenable.text()+'"' +'\n'+'\t'+'},'+'\n')
+            #X axis TMC
+            if self.xaxistmc.currentText() != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + self.xaxistmc.currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.xaxistxt.text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.10" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + self.xaxiscursense.text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t' +'"' + self.xaxiscur.text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t'+'\t' +'"' + self.xaxismicrostep.text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t'+'\t' +'"' + self.xaxisstealthcop.currentText()+'"' +'\n'+'\t'+'},'+'\n')
             #y axis
             if self.yaxis.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.yaxistxt.text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+'\t'+ self.yaxisjoint.text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + self.yaxisstep.text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t'+'\t' +'"' + self.yaxisdir.text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t'+'\t' +'"' + self.yaxisenable.text()+'"' +'\n'+'\t'+'},'+'\n')
+            #y axis TMC
+            if self.yaxistmc.currentText() != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + self.yaxistmc.currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.yaxistxt.text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.9" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + self.yaxiscursense.text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t' +'"' + self.yaxiscur.text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t'+'\t' +'"' + self.yaxismicrostep.text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t'+'\t' +'"' + self.yaxisstealthcop.currentText()+'"' +'\n'+'\t'+'},'+'\n')
             #z axis
             if self.zaxis.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.zaxistxt.text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+'\t'+ self.zaxisjoint.text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + self.zaxisstep.text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t'+'\t' +'"' + self.zaxisdir.text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t'+'\t' +'"' + self.zaxisenable.text()+'"' +'\n'+'\t'+'},'+'\n')
+            #Z axis TMC
+            if self.zaxistmc.currentText() != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + self.zaxistmc.currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.zaxistxt.text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.8" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + self.zaxiscursense.text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t' +'"' + self.zaxiscur.text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t'+'\t' +'"' + self.zaxismicrostep.text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t'+'\t' +'"' + self.zaxisstealthcop.currentText()+'"' +'\n'+'\t'+'},'+'\n')
             #e0 axis
             if self.e0axis.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.e0axistxt.text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+'\t'+ self.e0axisjoint.text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + self.e0axisstep.text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t'+'\t' +'"' + self.e0axisdir.text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t'+'\t' +'"' + self.e0axisenable.text()+'"' +'\n'+'\t'+'},'+'\n')
+            #E0 axis TMC
+            if self.e0axistmc.currentText() != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + self.e0axistmc.currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.e0axistxt.text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.4" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + self.e0axiscursense.text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t' +'"' + self.e0axiscur.text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t'+'\t' +'"' + self.e0axismicrostep.text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t'+'\t' +'"' + self.e0axisstealthcop.currentText()+'"' +'\n'+'\t'+'},'+'\n')
             #e1 axis
             if self.e1axis.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.e1axistxt.text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+'\t'+ self.e1axisjoint.text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + self.e1axisstep.text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t'+'\t' +'"' + self.e1axisdir.text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t'+'\t' +'"' + self.e1axisenable.text()+'"' +'\n'+'\t'+'},'+'\n')
+            #e1 axis TMC
+            if self.e1axistmc.currentText() != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + self.e1axistmc.currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.e1axistxt.text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.1" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + self.e1axiscursense.text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t' +'"' + self.e1axiscur.text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t'+'\t' +'"' + self.e1axismicrostep.text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t'+'\t' +'"' + self.e1axisstealthcop.currentText()+'"' +'\n'+'\t'+'},'+'\n')
             #output 0
             if self.outchk0.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Digital Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.outtxt0.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + self.outpin0.text()+'"'+','+'\n'+'\t'+'\t'+'"Mode":'+'\t'+'\t'+'\t'+'\t' +'"Output",'+'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+ self.outstate0.currentText()+ '"'+','+'\n'+'\t'+'\t'+'"Invert":'+'\t'+'\t'+'\t' + '"'+ str(self.outinv0.isChecked())+'",' +'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' +'0'+'\n'+'\t'+'},'+'\n')
             #output 1
@@ -1122,20 +1307,20 @@ class Ui(QtWidgets.QMainWindow):
             # ending format
             f.write('\t'+']'+'\n'+'}')
             
-            
+            #write out data to save file for hmi
             with open('save.txt', 'w') as s:
                 #boards line 1
                 s.write(str(self.boards.currentText())+'|'+'\n')
                 #Xaxis line 2
-                s.write(str(self.xaxis.isChecked())+'|'+ self.xaxistxt.text()+'|'+self.xaxisjoint.text()+'|'+self.xaxisstep.text()+'|'+self.xaxisdir.text()+'|'+self.xaxisenable.text()+'|'+self.xaxiscur.text()+'|'+'\n')
+                s.write(str(self.xaxis.isChecked())+'|'+ self.xaxistxt.text()+'|'+self.xaxisjoint.text()+'|'+self.xaxisstep.text()+'|'+self.xaxisdir.text()+'|'+self.xaxisenable.text()+'|'+self.xaxiscur.text()+'|'+self.xaxistmc.currentText()+'|'+self.xaxiscursense.text()+'|'+self.xaxismicrostep.text()+'|'+self.xaxisstealthcop.currentText()+'|'+'\n')
                 #Yaxis line 3
-                s.write(str(self.yaxis.isChecked())+'|'+ self.yaxistxt.text()+'|'+self.yaxisjoint.text()+'|'+self.yaxisstep.text()+'|'+self.yaxisdir.text()+'|'+self.yaxisenable.text()+'|'+self.yaxiscur.text()+'|'+'\n')
+                s.write(str(self.yaxis.isChecked())+'|'+ self.yaxistxt.text()+'|'+self.yaxisjoint.text()+'|'+self.yaxisstep.text()+'|'+self.yaxisdir.text()+'|'+self.yaxisenable.text()+'|'+self.yaxiscur.text()+'|'+self.yaxistmc.currentText()+'|'+self.yaxiscursense.text()+'|'+self.yaxismicrostep.text()+'|'+self.yaxisstealthcop.currentText()+'|'+'\n')
                 #Zaxis line 4
-                s.write(str(self.zaxis.isChecked())+'|'+ self.zaxistxt.text()+'|'+self.zaxisjoint.text()+'|'+self.zaxisstep.text()+'|'+self.zaxisdir.text()+'|'+self.zaxisenable.text()+'|'+self.zaxiscur.text()+'|'+'\n')
+                s.write(str(self.zaxis.isChecked())+'|'+ self.zaxistxt.text()+'|'+self.zaxisjoint.text()+'|'+self.zaxisstep.text()+'|'+self.zaxisdir.text()+'|'+self.zaxisenable.text()+'|'+self.zaxiscur.text()+'|'+self.zaxistmc.currentText()+'|'+self.zaxiscursense.text()+'|'+self.zaxismicrostep.text()+'|'+self.zaxisstealthcop.currentText()+'|'+'\n')
                 #E0axis line 5
-                s.write(str(self.e0axis.isChecked())+'|'+ self.e0axistxt.text()+'|'+self.e0axisjoint.text()+'|'+self.e0axisstep.text()+'|'+self.e0axisdir.text()+'|'+self.e0axisenable.text()+'|'+self.e0axiscur.text()+'|'+'\n')
+                s.write(str(self.e0axis.isChecked())+'|'+ self.e0axistxt.text()+'|'+self.e0axisjoint.text()+'|'+self.e0axisstep.text()+'|'+self.e0axisdir.text()+'|'+self.e0axisenable.text()+'|'+self.e0axiscur.text()+'|'+self.e0axistmc.currentText()+'|'+self.e0axiscursense.text()+'|'+self.e0axismicrostep.text()+'|'+self.e0axisstealthcop.currentText()+'|'+'\n')
                 #E1axis line 6
-                s.write(str(self.e1axis.isChecked())+'|'+ self.e1axistxt.text()+'|'+self.e1axisjoint.text()+'|'+self.e1axisstep.text()+'|'+self.e1axisdir.text()+'|'+self.e1axisenable.text()+'|'+self.e1axiscur.text()+'|'+'\n')
+                s.write(str(self.e1axis.isChecked())+'|'+ self.e1axistxt.text()+'|'+self.e1axisjoint.text()+'|'+self.e1axisstep.text()+'|'+self.e1axisdir.text()+'|'+self.e1axisenable.text()+'|'+self.e1axiscur.text()+'|'+self.e1axistmc.currentText()+'|'+self.e1axiscursense.text()+'|'+self.e1axismicrostep.text()+'|'+self.e1axisstealthcop.currentText()+'|'+'\n')
                 #output0 line 7
                 s.write(str(self.outchk0.isChecked())+'|'+ self.outtxt0.text()+'|'+self.outpin0.text()+'|'+self.outstate0.currentText()+'|'+str(self.outinv0.isChecked())+'|'+'\n')
                 #output1 line 8
