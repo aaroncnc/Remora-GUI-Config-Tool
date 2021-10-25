@@ -20,7 +20,8 @@ A config.txt and save.txt
 
 The config.txt file is put on the micro sd card and inserted into your main board.
 
-The save.txt is used to save the gui config so it can be reloaded via the load config button.
+The save.txt is used to save the gui config so it can be reloaded via the load config button, the save.txt must be in the same folder as the program.
+
 
 
 .
