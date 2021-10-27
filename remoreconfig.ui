@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -61,59 +61,6 @@
       </property>
       <property name="text">
        <string>Select control board</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="setup">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>210</y>
-        <width>351</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>None</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mill XYZ</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mill XYZ +spindle encoder +VFD</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>K40 Laser cutter</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>3D printer</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>3D printer + BL Touch</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_15">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>160</y>
-        <width>161</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Machine setup</string>
       </property>
      </widget>
     </widget>
@@ -1506,7 +1453,7 @@
      <attribute name="title">
       <string>outputs</string>
      </attribute>
-     <widget class="QCheckBox" name="outchk0">
+     <widget class="QCheckBox" name="out0chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1522,7 +1469,7 @@
        <string>Output 0</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk1">
+     <widget class="QCheckBox" name="out1chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1538,7 +1485,7 @@
        <string>Output 1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk3">
+     <widget class="QCheckBox" name="out3chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1554,7 +1501,7 @@
        <string>Output 3</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk2">
+     <widget class="QCheckBox" name="out2chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1570,7 +1517,7 @@
        <string>Output 2</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk4">
+     <widget class="QCheckBox" name="out4chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1586,7 +1533,7 @@
        <string>Output 4</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk5">
+     <widget class="QCheckBox" name="out5chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1602,7 +1549,7 @@
        <string>Output 5</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk6">
+     <widget class="QCheckBox" name="out6chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1618,7 +1565,7 @@
        <string>Output 6</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outchk7">
+     <widget class="QCheckBox" name="out7chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -1634,7 +1581,7 @@
        <string>Output 7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt0">
+     <widget class="QLineEdit" name="out0txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1650,7 +1597,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin0">
+     <widget class="QLineEdit" name="out0pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1663,7 +1610,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin1">
+     <widget class="QLineEdit" name="out1pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1676,7 +1623,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt1">
+     <widget class="QLineEdit" name="out1txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1692,7 +1639,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin2">
+     <widget class="QLineEdit" name="out2pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1705,7 +1652,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt2">
+     <widget class="QLineEdit" name="out2txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1721,7 +1668,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin3">
+     <widget class="QLineEdit" name="out3pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1734,7 +1681,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt3">
+     <widget class="QLineEdit" name="out3txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1750,7 +1697,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin4">
+     <widget class="QLineEdit" name="out4pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1763,7 +1710,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt4">
+     <widget class="QLineEdit" name="out4txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1779,7 +1726,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin5">
+     <widget class="QLineEdit" name="out5pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1792,7 +1739,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt5">
+     <widget class="QLineEdit" name="out5txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1808,7 +1755,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin6">
+     <widget class="QLineEdit" name="out6pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1821,7 +1768,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt6">
+     <widget class="QLineEdit" name="out6txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1837,7 +1784,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outpin7">
+     <widget class="QLineEdit" name="out7pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -1850,7 +1797,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="outtxt7">
+     <widget class="QLineEdit" name="out7txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1918,7 +1865,7 @@
        <string>Pin State</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="outstate3">
+     <widget class="QComboBox" name="out3state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -1948,7 +1895,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate0">
+     <widget class="QComboBox" name="out0state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -1978,7 +1925,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate4">
+     <widget class="QComboBox" name="out4state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2008,7 +1955,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate1">
+     <widget class="QComboBox" name="out1state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2038,7 +1985,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate2">
+     <widget class="QComboBox" name="out2state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2068,7 +2015,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate7">
+     <widget class="QComboBox" name="out7state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2098,7 +2045,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate5">
+     <widget class="QComboBox" name="out5state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2128,7 +2075,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="outstate6">
+     <widget class="QComboBox" name="out6state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2171,7 +2118,7 @@
        <string>Invert output</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv0">
+     <widget class="QCheckBox" name="out0inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2184,7 +2131,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv1">
+     <widget class="QCheckBox" name="out1inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2197,7 +2144,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv2">
+     <widget class="QCheckBox" name="out2inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2210,7 +2157,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv3">
+     <widget class="QCheckBox" name="out3inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2223,7 +2170,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv4">
+     <widget class="QCheckBox" name="out4inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2236,7 +2183,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv5">
+     <widget class="QCheckBox" name="out5inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2249,7 +2196,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv6">
+     <widget class="QCheckBox" name="out6inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2262,7 +2209,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="outinv7">
+     <widget class="QCheckBox" name="out7inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -2449,7 +2396,7 @@
      <attribute name="title">
       <string>inputs</string>
      </attribute>
-     <widget class="QLineEdit" name="intxt3">
+     <widget class="QLineEdit" name="in3txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2465,7 +2412,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk7">
+     <widget class="QCheckBox" name="in7chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2481,7 +2428,7 @@
        <string>Input 7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt2">
+     <widget class="QLineEdit" name="in2txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2497,7 +2444,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk2">
+     <widget class="QCheckBox" name="in2chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2513,7 +2460,7 @@
        <string>Input 2</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt7">
+     <widget class="QLineEdit" name="in7txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2542,7 +2489,7 @@
        <string>Name</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin4">
+     <widget class="QLineEdit" name="in4pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2558,7 +2505,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt1">
+     <widget class="QLineEdit" name="in1txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2574,7 +2521,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin7">
+     <widget class="QLineEdit" name="in7pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2616,7 +2563,7 @@
        <string>Enable Inputs</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk6">
+     <widget class="QCheckBox" name="in6chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2632,7 +2579,7 @@
        <string>Input 6</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin5">
+     <widget class="QLineEdit" name="in5pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2648,7 +2595,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk4">
+     <widget class="QCheckBox" name="in4chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2664,7 +2611,7 @@
        <string>Input 4</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt6">
+     <widget class="QLineEdit" name="in6txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2680,7 +2627,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin1">
+     <widget class="QLineEdit" name="in1pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2696,7 +2643,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt5">
+     <widget class="QLineEdit" name="in5txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2712,7 +2659,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk5">
+     <widget class="QCheckBox" name="in5chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2728,7 +2675,7 @@
        <string>Input 5</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin2">
+     <widget class="QLineEdit" name="in2pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2744,7 +2691,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin6">
+     <widget class="QLineEdit" name="in6pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2760,7 +2707,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt0">
+     <widget class="QLineEdit" name="in0txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2776,7 +2723,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk3">
+     <widget class="QCheckBox" name="in3chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2792,7 +2739,7 @@
        <string>Input 3</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk0">
+     <widget class="QCheckBox" name="in0chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2808,7 +2755,7 @@
        <string>Input 0</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin3">
+     <widget class="QLineEdit" name="in3pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2824,7 +2771,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="intxt4">
+     <widget class="QLineEdit" name="in4txt">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -2840,7 +2787,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="inpin0">
+     <widget class="QLineEdit" name="in0pin">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -2856,7 +2803,7 @@
        <string>Pin Number</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="inchk1">
+     <widget class="QCheckBox" name="in1chk">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -2872,7 +2819,7 @@
        <string>Input 1</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="instate0">
+     <widget class="QComboBox" name="in0state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2915,7 +2862,7 @@
        <string>Pin State</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="instate1">
+     <widget class="QComboBox" name="in1state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2945,7 +2892,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate2">
+     <widget class="QComboBox" name="in2state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -2975,7 +2922,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate3">
+     <widget class="QComboBox" name="in3state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3005,7 +2952,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate4">
+     <widget class="QComboBox" name="in4state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3035,7 +2982,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate5">
+     <widget class="QComboBox" name="in5state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3065,7 +3012,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate6">
+     <widget class="QComboBox" name="in6state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3095,7 +3042,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="instate7">
+     <widget class="QComboBox" name="in7state">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3125,7 +3072,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QCheckBox" name="ininv7">
+     <widget class="QCheckBox" name="in7inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3138,7 +3085,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv1">
+     <widget class="QCheckBox" name="in1inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3164,7 +3111,7 @@
        <string>Invert Input</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv5">
+     <widget class="QCheckBox" name="in5inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3177,7 +3124,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv4">
+     <widget class="QCheckBox" name="in4inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3190,7 +3137,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv3">
+     <widget class="QCheckBox" name="in3inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3203,7 +3150,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv2">
+     <widget class="QCheckBox" name="in2inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3216,7 +3163,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv6">
+     <widget class="QCheckBox" name="in6inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3229,7 +3176,7 @@
        <string>Invert enable</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="ininv0">
+     <widget class="QCheckBox" name="in0inv">
       <property name="geometry">
        <rect>
         <x>590</x>
@@ -3660,7 +3607,7 @@
        <string>Period</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt0">
+     <widget class="QLineEdit" name="pwm0txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -3673,7 +3620,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax0">
+     <widget class="QLineEdit" name="pwm0max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -3686,7 +3633,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin0">
+     <widget class="QLineEdit" name="pwm0pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -3699,7 +3646,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw0">
+     <widget class="QCheckBox" name="pwm0hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3712,7 +3659,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf0">
+     <widget class="QCheckBox" name="pwm0vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -3725,7 +3672,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq0">
+     <widget class="QLineEdit" name="pwm0freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -3738,7 +3685,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod0">
+     <widget class="QLineEdit" name="pwm0period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -3842,7 +3789,7 @@
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw1">
+     <widget class="QCheckBox" name="pwm1hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3855,7 +3802,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq1">
+     <widget class="QLineEdit" name="pwm1freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -3868,7 +3815,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin1">
+     <widget class="QLineEdit" name="pwm1pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -3881,7 +3828,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod1">
+     <widget class="QLineEdit" name="pwm1period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -3894,7 +3841,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf1">
+     <widget class="QCheckBox" name="pwm1vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -3923,7 +3870,7 @@
        <string>PWM 1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt1">
+     <widget class="QLineEdit" name="pwm1txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -3936,7 +3883,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax1">
+     <widget class="QLineEdit" name="pwm1max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -3949,7 +3896,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw2">
+     <widget class="QCheckBox" name="pwm2hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -3962,7 +3909,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq2">
+     <widget class="QLineEdit" name="pwm2freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -3975,7 +3922,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin2">
+     <widget class="QLineEdit" name="pwm2pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -3988,7 +3935,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod2">
+     <widget class="QLineEdit" name="pwm2period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -4001,7 +3948,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf2">
+     <widget class="QCheckBox" name="pwm2vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -4030,7 +3977,7 @@
        <string>PWM 2</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt2">
+     <widget class="QLineEdit" name="pwm2txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -4043,7 +3990,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax2">
+     <widget class="QLineEdit" name="pwm2max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4056,7 +4003,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw3">
+     <widget class="QCheckBox" name="pwm3hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -4069,7 +4016,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq3">
+     <widget class="QLineEdit" name="pwm3freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -4082,7 +4029,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin3">
+     <widget class="QLineEdit" name="pwm3pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -4095,7 +4042,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod3">
+     <widget class="QLineEdit" name="pwm3period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -4108,7 +4055,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf3">
+     <widget class="QCheckBox" name="pwm3vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -4137,7 +4084,7 @@
        <string>PWM 3</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt3">
+     <widget class="QLineEdit" name="pwm3txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -4150,7 +4097,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax3">
+     <widget class="QLineEdit" name="pwm3max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4163,7 +4110,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw4">
+     <widget class="QCheckBox" name="pwm4hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -4176,7 +4123,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq4">
+     <widget class="QLineEdit" name="pwm4freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -4189,7 +4136,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin4">
+     <widget class="QLineEdit" name="pwm4pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -4202,7 +4149,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod4">
+     <widget class="QLineEdit" name="pwm4period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -4215,7 +4162,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf4">
+     <widget class="QCheckBox" name="pwm4vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -4244,7 +4191,7 @@
        <string>PWM 4</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt4">
+     <widget class="QLineEdit" name="pwm4txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -4257,7 +4204,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax4">
+     <widget class="QLineEdit" name="pwm4max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4270,7 +4217,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw5">
+     <widget class="QCheckBox" name="pwm5hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -4283,7 +4230,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq5">
+     <widget class="QLineEdit" name="pwm5freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -4296,7 +4243,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin5">
+     <widget class="QLineEdit" name="pwm5pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -4309,7 +4256,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod5">
+     <widget class="QLineEdit" name="pwm5period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -4322,7 +4269,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf5">
+     <widget class="QCheckBox" name="pwm5vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -4351,7 +4298,7 @@
        <string>PWM 5</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt5">
+     <widget class="QLineEdit" name="pwm5txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -4364,7 +4311,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax5">
+     <widget class="QLineEdit" name="pwm5max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4377,7 +4324,7 @@
        <string>0-256</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmhw6">
+     <widget class="QCheckBox" name="pwm6hw">
       <property name="geometry">
        <rect>
         <x>460</x>
@@ -4390,7 +4337,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmfreq6">
+     <widget class="QLineEdit" name="pwm6freq">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -4403,7 +4350,7 @@
        <string>200</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmpin6">
+     <widget class="QLineEdit" name="pwm6pin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -4416,7 +4363,7 @@
        <string>pin #</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmperiod6">
+     <widget class="QLineEdit" name="pwm6period">
       <property name="geometry">
        <rect>
         <x>730</x>
@@ -4429,7 +4376,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="pwmvf6">
+     <widget class="QCheckBox" name="pwm6vf">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -4458,7 +4405,7 @@
        <string>PWM 6</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmtxt6">
+     <widget class="QLineEdit" name="pwm6txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -4471,7 +4418,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmmax6">
+     <widget class="QLineEdit" name="pwm6max">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -4630,7 +4577,7 @@
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi4">
+     <widget class="QLineEdit" name="pwm4spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4649,7 +4596,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi6">
+     <widget class="QLineEdit" name="pwm6spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4668,7 +4615,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi2">
+     <widget class="QLineEdit" name="pwm2spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4687,7 +4634,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi0">
+     <widget class="QLineEdit" name="pwm0spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4706,7 +4653,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi5">
+     <widget class="QLineEdit" name="pwm5spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4725,7 +4672,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi1">
+     <widget class="QLineEdit" name="pwm1spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -4744,7 +4691,7 @@
        <string>1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="pwmspi3">
+     <widget class="QLineEdit" name="pwm3spi">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -5051,7 +4998,7 @@
        <string>Encoder 0</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="enctxt0">
+     <widget class="QLineEdit" name="enc0txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -5064,7 +5011,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encpv0">
+     <widget class="QLineEdit" name="enc0pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -5077,7 +5024,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encapin0">
+     <widget class="QLineEdit" name="enc0apin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -5093,7 +5040,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encbpin0">
+     <widget class="QLineEdit" name="enc0bpin">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -5109,7 +5056,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encipin0">
+     <widget class="QLineEdit" name="enc0ipin">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -5125,7 +5072,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="encstate0">
+     <widget class="QComboBox" name="enc0state">
       <property name="geometry">
        <rect>
         <x>630</x>
@@ -5155,7 +5102,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="encpv1">
+     <widget class="QLineEdit" name="enc1pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -5168,7 +5115,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="enctxt1">
+     <widget class="QLineEdit" name="enc1txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -5181,7 +5128,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="encstate1">
+     <widget class="QComboBox" name="enc1state">
       <property name="geometry">
        <rect>
         <x>630</x>
@@ -5211,7 +5158,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="encapin1">
+     <widget class="QLineEdit" name="enc1apin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -5227,7 +5174,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encbpin1">
+     <widget class="QLineEdit" name="enc1bpin">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -5243,7 +5190,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encipin1">
+     <widget class="QLineEdit" name="enc1ipin">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -5275,7 +5222,7 @@
        <string>Encoder 1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encpv2">
+     <widget class="QLineEdit" name="enc2pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -5288,7 +5235,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="enctxt2">
+     <widget class="QLineEdit" name="enc2txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -5301,7 +5248,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="encstate2">
+     <widget class="QComboBox" name="enc2state">
       <property name="geometry">
        <rect>
         <x>630</x>
@@ -5331,7 +5278,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="encapin2">
+     <widget class="QLineEdit" name="enc2apin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -5347,7 +5294,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encbpin2">
+     <widget class="QLineEdit" name="enc2bpin">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -5363,7 +5310,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encipin2">
+     <widget class="QLineEdit" name="enc2ipin">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -5395,7 +5342,7 @@
        <string>Encoder 2</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encpv3">
+     <widget class="QLineEdit" name="enc3pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -5408,7 +5355,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="enctxt3">
+     <widget class="QLineEdit" name="enc3txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -5421,7 +5368,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="encstate3">
+     <widget class="QComboBox" name="enc3state">
       <property name="geometry">
        <rect>
         <x>630</x>
@@ -5451,7 +5398,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="encapin3">
+     <widget class="QLineEdit" name="enc3apin">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -5467,7 +5414,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encbpin3">
+     <widget class="QLineEdit" name="enc3bpin">
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -5483,7 +5430,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encipin3">
+     <widget class="QLineEdit" name="enc3ipin">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -5658,7 +5605,7 @@
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encinput0">
+     <widget class="QLineEdit" name="enc0input">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -5674,7 +5621,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encinput1">
+     <widget class="QLineEdit" name="enc1input">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -5690,7 +5637,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encinput2">
+     <widget class="QLineEdit" name="enc2input">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -5706,7 +5653,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="encinput3">
+     <widget class="QLineEdit" name="enc3input">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -6052,7 +5999,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppv0">
+     <widget class="QLineEdit" name="temp0pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6078,7 +6025,7 @@
        <string>Name</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temptxt0">
+     <widget class="QLineEdit" name="temp0txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6120,7 +6067,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppin0">
+     <widget class="QLineEdit" name="temp0pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6136,7 +6083,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempr0">
+     <widget class="QLineEdit" name="temp0r">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6168,7 +6115,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempt0">
+     <widget class="QLineEdit" name="temp0t">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -6200,7 +6147,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempbeta0">
+     <widget class="QLineEdit" name="temp0beta">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -6232,7 +6179,7 @@
        <string>Thermistor0</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swsp0">
+     <widget class="QLineEdit" name="sw0sp">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6264,7 +6211,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpin0">
+     <widget class="QLineEdit" name="sw0pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6296,7 +6243,7 @@
        <string>Switch 0</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpv0">
+     <widget class="QLineEdit" name="sw0pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6309,7 +6256,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swtxt0">
+     <widget class="QLineEdit" name="sw0txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6322,7 +6269,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="swmode0">
+     <widget class="QComboBox" name="sw0mode">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -6342,7 +6289,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="tempr1">
+     <widget class="QLineEdit" name="temp1r">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6358,7 +6305,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppin1">
+     <widget class="QLineEdit" name="temp1pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6390,7 +6337,7 @@
        <string>Thermistor1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempt1">
+     <widget class="QLineEdit" name="temp1t">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -6406,7 +6353,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppv1">
+     <widget class="QLineEdit" name="temp1pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6419,7 +6366,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temptxt1">
+     <widget class="QLineEdit" name="temp1txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6432,7 +6379,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempbeta1">
+     <widget class="QLineEdit" name="temp1beta">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -6448,7 +6395,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempr2">
+     <widget class="QLineEdit" name="temp2r">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6464,7 +6411,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppin2">
+     <widget class="QLineEdit" name="temp2pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6496,7 +6443,7 @@
        <string>Thermistor2</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempt2">
+     <widget class="QLineEdit" name="temp2t">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -6512,7 +6459,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppv2">
+     <widget class="QLineEdit" name="temp2pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6525,7 +6472,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temptxt2">
+     <widget class="QLineEdit" name="temp2txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6538,7 +6485,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempbeta2">
+     <widget class="QLineEdit" name="temp2beta">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -6554,7 +6501,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempr3">
+     <widget class="QLineEdit" name="temp3r">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6570,7 +6517,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppin3">
+     <widget class="QLineEdit" name="temp3pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6602,7 +6549,7 @@
        <string>Thermistor3</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempt3">
+     <widget class="QLineEdit" name="temp3t">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -6618,7 +6565,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temppv3">
+     <widget class="QLineEdit" name="temp3pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6631,7 +6578,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="temptxt3">
+     <widget class="QLineEdit" name="temp3txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6644,7 +6591,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tempbeta3">
+     <widget class="QLineEdit" name="temp3beta">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -6660,7 +6607,7 @@
        <string>#</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swsp1">
+     <widget class="QLineEdit" name="sw1sp">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6692,7 +6639,7 @@
        <string>Switch 1</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swtxt1">
+     <widget class="QLineEdit" name="sw1txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6705,7 +6652,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpv1">
+     <widget class="QLineEdit" name="sw1pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6718,7 +6665,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpin1">
+     <widget class="QLineEdit" name="sw1pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6734,7 +6681,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="swmode1">
+     <widget class="QComboBox" name="sw1mode">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -6754,7 +6701,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLineEdit" name="swsp2">
+     <widget class="QLineEdit" name="sw2sp">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -6786,7 +6733,7 @@
        <string>Switch 2</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swtxt2">
+     <widget class="QLineEdit" name="sw2txt">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -6799,7 +6746,7 @@
        <string>comment</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpv2">
+     <widget class="QLineEdit" name="sw2pv">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -6812,7 +6759,7 @@
        <string>0-7</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="swpin2">
+     <widget class="QLineEdit" name="sw2pin">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -6828,7 +6775,7 @@
        <string>Pin#</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="swmode2">
+     <widget class="QComboBox" name="sw2mode">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -7316,86 +7263,86 @@
   <tabstop>e1axisstep</tabstop>
   <tabstop>e1axisdir</tabstop>
   <tabstop>e1axisenable</tabstop>
-  <tabstop>outchk0</tabstop>
-  <tabstop>outtxt0</tabstop>
-  <tabstop>outpin0</tabstop>
-  <tabstop>outstate0</tabstop>
-  <tabstop>outinv0</tabstop>
-  <tabstop>outchk1</tabstop>
-  <tabstop>outtxt1</tabstop>
-  <tabstop>outpin1</tabstop>
-  <tabstop>outstate1</tabstop>
-  <tabstop>outinv1</tabstop>
-  <tabstop>outchk2</tabstop>
-  <tabstop>outtxt2</tabstop>
-  <tabstop>outpin2</tabstop>
-  <tabstop>outstate2</tabstop>
-  <tabstop>outinv2</tabstop>
-  <tabstop>outchk3</tabstop>
-  <tabstop>outtxt3</tabstop>
-  <tabstop>outpin3</tabstop>
-  <tabstop>outstate3</tabstop>
-  <tabstop>outinv3</tabstop>
-  <tabstop>outchk4</tabstop>
-  <tabstop>outtxt4</tabstop>
-  <tabstop>outpin4</tabstop>
-  <tabstop>outstate4</tabstop>
-  <tabstop>outinv4</tabstop>
-  <tabstop>outchk5</tabstop>
-  <tabstop>outtxt5</tabstop>
-  <tabstop>outpin5</tabstop>
-  <tabstop>outstate5</tabstop>
-  <tabstop>outinv5</tabstop>
-  <tabstop>outchk6</tabstop>
-  <tabstop>outtxt6</tabstop>
-  <tabstop>outpin6</tabstop>
-  <tabstop>outstate6</tabstop>
-  <tabstop>outinv6</tabstop>
-  <tabstop>outchk7</tabstop>
-  <tabstop>outtxt7</tabstop>
-  <tabstop>outpin7</tabstop>
-  <tabstop>outstate7</tabstop>
-  <tabstop>outinv7</tabstop>
-  <tabstop>inchk0</tabstop>
-  <tabstop>intxt0</tabstop>
-  <tabstop>inpin0</tabstop>
-  <tabstop>instate0</tabstop>
-  <tabstop>ininv0</tabstop>
-  <tabstop>inchk1</tabstop>
-  <tabstop>intxt1</tabstop>
-  <tabstop>inpin1</tabstop>
-  <tabstop>instate1</tabstop>
-  <tabstop>ininv1</tabstop>
-  <tabstop>inchk2</tabstop>
-  <tabstop>intxt2</tabstop>
-  <tabstop>inpin2</tabstop>
-  <tabstop>instate2</tabstop>
-  <tabstop>ininv2</tabstop>
-  <tabstop>inchk3</tabstop>
-  <tabstop>intxt3</tabstop>
-  <tabstop>inpin3</tabstop>
-  <tabstop>instate3</tabstop>
-  <tabstop>ininv3</tabstop>
-  <tabstop>inchk4</tabstop>
-  <tabstop>intxt4</tabstop>
-  <tabstop>inpin4</tabstop>
-  <tabstop>instate4</tabstop>
-  <tabstop>ininv4</tabstop>
-  <tabstop>inchk5</tabstop>
-  <tabstop>intxt5</tabstop>
-  <tabstop>inpin5</tabstop>
-  <tabstop>instate5</tabstop>
-  <tabstop>ininv5</tabstop>
-  <tabstop>inchk6</tabstop>
-  <tabstop>intxt6</tabstop>
-  <tabstop>inpin6</tabstop>
-  <tabstop>instate6</tabstop>
-  <tabstop>ininv6</tabstop>
-  <tabstop>inchk7</tabstop>
-  <tabstop>intxt7</tabstop>
-  <tabstop>inpin7</tabstop>
-  <tabstop>instate7</tabstop>
-  <tabstop>ininv7</tabstop>
+  <tabstop>out0chk</tabstop>
+  <tabstop>out0txt</tabstop>
+  <tabstop>out0pin</tabstop>
+  <tabstop>out0state</tabstop>
+  <tabstop>out0inv</tabstop>
+  <tabstop>out1chk</tabstop>
+  <tabstop>out1txt</tabstop>
+  <tabstop>out1pin</tabstop>
+  <tabstop>out1state</tabstop>
+  <tabstop>out1inv</tabstop>
+  <tabstop>out2chk</tabstop>
+  <tabstop>out2txt</tabstop>
+  <tabstop>out2pin</tabstop>
+  <tabstop>out2state</tabstop>
+  <tabstop>out2inv</tabstop>
+  <tabstop>out3chk</tabstop>
+  <tabstop>out3txt</tabstop>
+  <tabstop>out3pin</tabstop>
+  <tabstop>out3state</tabstop>
+  <tabstop>out3inv</tabstop>
+  <tabstop>out4chk</tabstop>
+  <tabstop>out4txt</tabstop>
+  <tabstop>out4pin</tabstop>
+  <tabstop>out4state</tabstop>
+  <tabstop>out4inv</tabstop>
+  <tabstop>out5chk</tabstop>
+  <tabstop>out5txt</tabstop>
+  <tabstop>out5pin</tabstop>
+  <tabstop>out5state</tabstop>
+  <tabstop>out5inv</tabstop>
+  <tabstop>out6chk</tabstop>
+  <tabstop>out6txt</tabstop>
+  <tabstop>out6pin</tabstop>
+  <tabstop>out6state</tabstop>
+  <tabstop>out6inv</tabstop>
+  <tabstop>out7chk</tabstop>
+  <tabstop>out7txt</tabstop>
+  <tabstop>out7pin</tabstop>
+  <tabstop>out7state</tabstop>
+  <tabstop>out7inv</tabstop>
+  <tabstop>in0chk</tabstop>
+  <tabstop>in0txt</tabstop>
+  <tabstop>in0pin</tabstop>
+  <tabstop>in0state</tabstop>
+  <tabstop>in0inv</tabstop>
+  <tabstop>in1chk</tabstop>
+  <tabstop>in1txt</tabstop>
+  <tabstop>in1pin</tabstop>
+  <tabstop>in1state</tabstop>
+  <tabstop>in1inv</tabstop>
+  <tabstop>in2chk</tabstop>
+  <tabstop>in2txt</tabstop>
+  <tabstop>in2pin</tabstop>
+  <tabstop>in2state</tabstop>
+  <tabstop>in2inv</tabstop>
+  <tabstop>in3chk</tabstop>
+  <tabstop>in3txt</tabstop>
+  <tabstop>in3pin</tabstop>
+  <tabstop>in3state</tabstop>
+  <tabstop>in3inv</tabstop>
+  <tabstop>in4chk</tabstop>
+  <tabstop>in4txt</tabstop>
+  <tabstop>in4pin</tabstop>
+  <tabstop>in4state</tabstop>
+  <tabstop>in4inv</tabstop>
+  <tabstop>in5chk</tabstop>
+  <tabstop>in5txt</tabstop>
+  <tabstop>in5pin</tabstop>
+  <tabstop>in5state</tabstop>
+  <tabstop>in5inv</tabstop>
+  <tabstop>in6chk</tabstop>
+  <tabstop>in6txt</tabstop>
+  <tabstop>in6pin</tabstop>
+  <tabstop>in6state</tabstop>
+  <tabstop>in6inv</tabstop>
+  <tabstop>in7chk</tabstop>
+  <tabstop>in7txt</tabstop>
+  <tabstop>in7pin</tabstop>
+  <tabstop>in7state</tabstop>
+  <tabstop>in7inv</tabstop>
   <tabstop>estop</tabstop>
   <tabstop>estoptxt</tabstop>
   <tabstop>estoppin</tabstop>
@@ -7403,68 +7350,68 @@
   <tabstop>resettxt</tabstop>
   <tabstop>resetpin</tabstop>
   <tabstop>pwm0</tabstop>
-  <tabstop>pwmtxt0</tabstop>
-  <tabstop>pwmmax0</tabstop>
-  <tabstop>pwmpin0</tabstop>
-  <tabstop>pwmhw0</tabstop>
-  <tabstop>pwmvf0</tabstop>
-  <tabstop>pwmfreq0</tabstop>
-  <tabstop>pwmperiod0</tabstop>
-  <tabstop>pwmspi0</tabstop>
+  <tabstop>pwm0txt</tabstop>
+  <tabstop>pwm0max</tabstop>
+  <tabstop>pwm0pin</tabstop>
+  <tabstop>pwm0hw</tabstop>
+  <tabstop>pwm0vf</tabstop>
+  <tabstop>pwm0freq</tabstop>
+  <tabstop>pwm0period</tabstop>
+  <tabstop>pwm0spi</tabstop>
   <tabstop>pwm1</tabstop>
-  <tabstop>pwmtxt1</tabstop>
-  <tabstop>pwmmax1</tabstop>
-  <tabstop>pwmpin1</tabstop>
-  <tabstop>pwmhw1</tabstop>
-  <tabstop>pwmvf1</tabstop>
-  <tabstop>pwmfreq1</tabstop>
-  <tabstop>pwmperiod1</tabstop>
-  <tabstop>pwmspi1</tabstop>
+  <tabstop>pwm1txt</tabstop>
+  <tabstop>pwm1max</tabstop>
+  <tabstop>pwm1pin</tabstop>
+  <tabstop>pwm1hw</tabstop>
+  <tabstop>pwm1vf</tabstop>
+  <tabstop>pwm1freq</tabstop>
+  <tabstop>pwm1period</tabstop>
+  <tabstop>pwm1spi</tabstop>
   <tabstop>pwm2</tabstop>
-  <tabstop>pwmtxt2</tabstop>
-  <tabstop>pwmmax2</tabstop>
-  <tabstop>pwmpin2</tabstop>
-  <tabstop>pwmhw2</tabstop>
-  <tabstop>pwmvf2</tabstop>
-  <tabstop>pwmfreq2</tabstop>
-  <tabstop>pwmperiod2</tabstop>
-  <tabstop>pwmspi2</tabstop>
+  <tabstop>pwm2txt</tabstop>
+  <tabstop>pwm2max</tabstop>
+  <tabstop>pwm2pin</tabstop>
+  <tabstop>pwm2hw</tabstop>
+  <tabstop>pwm2vf</tabstop>
+  <tabstop>pwm2freq</tabstop>
+  <tabstop>pwm2period</tabstop>
+  <tabstop>pwm2spi</tabstop>
   <tabstop>pwm3</tabstop>
-  <tabstop>pwmtxt3</tabstop>
-  <tabstop>pwmmax3</tabstop>
-  <tabstop>pwmpin3</tabstop>
-  <tabstop>pwmhw3</tabstop>
-  <tabstop>pwmvf3</tabstop>
-  <tabstop>pwmfreq3</tabstop>
-  <tabstop>pwmperiod3</tabstop>
-  <tabstop>pwmspi3</tabstop>
+  <tabstop>pwm3txt</tabstop>
+  <tabstop>pwm3max</tabstop>
+  <tabstop>pwm3pin</tabstop>
+  <tabstop>pwm3hw</tabstop>
+  <tabstop>pwm3vf</tabstop>
+  <tabstop>pwm3freq</tabstop>
+  <tabstop>pwm3period</tabstop>
+  <tabstop>pwm3spi</tabstop>
   <tabstop>pwm4</tabstop>
-  <tabstop>pwmtxt4</tabstop>
-  <tabstop>pwmmax4</tabstop>
-  <tabstop>pwmpin4</tabstop>
-  <tabstop>pwmhw4</tabstop>
-  <tabstop>pwmvf4</tabstop>
-  <tabstop>pwmfreq4</tabstop>
-  <tabstop>pwmperiod4</tabstop>
-  <tabstop>pwmspi4</tabstop>
+  <tabstop>pwm4txt</tabstop>
+  <tabstop>pwm4max</tabstop>
+  <tabstop>pwm4pin</tabstop>
+  <tabstop>pwm4hw</tabstop>
+  <tabstop>pwm4vf</tabstop>
+  <tabstop>pwm4freq</tabstop>
+  <tabstop>pwm4period</tabstop>
+  <tabstop>pwm4spi</tabstop>
   <tabstop>pwm5</tabstop>
-  <tabstop>pwmtxt5</tabstop>
-  <tabstop>pwmmax5</tabstop>
-  <tabstop>pwmpin5</tabstop>
-  <tabstop>pwmhw5</tabstop>
-  <tabstop>pwmvf5</tabstop>
-  <tabstop>pwmfreq5</tabstop>
-  <tabstop>pwmperiod5</tabstop>
-  <tabstop>pwmspi5</tabstop>
+  <tabstop>pwm5txt</tabstop>
+  <tabstop>pwm5max</tabstop>
+  <tabstop>pwm5pin</tabstop>
+  <tabstop>pwm5hw</tabstop>
+  <tabstop>pwm5vf</tabstop>
+  <tabstop>pwm5freq</tabstop>
+  <tabstop>pwm5period</tabstop>
+  <tabstop>pwm5spi</tabstop>
   <tabstop>pwm6</tabstop>
-  <tabstop>pwmtxt6</tabstop>
-  <tabstop>pwmmax6</tabstop>
-  <tabstop>pwmpin6</tabstop>
-  <tabstop>pwmhw6</tabstop>
-  <tabstop>pwmvf6</tabstop>
-  <tabstop>pwmfreq6</tabstop>
-  <tabstop>pwmperiod6</tabstop>
-  <tabstop>pwmspi6</tabstop>
+  <tabstop>pwm6txt</tabstop>
+  <tabstop>pwm6max</tabstop>
+  <tabstop>pwm6pin</tabstop>
+  <tabstop>pwm6hw</tabstop>
+  <tabstop>pwm6vf</tabstop>
+  <tabstop>pwm6freq</tabstop>
+  <tabstop>pwm6period</tabstop>
+  <tabstop>pwm6spi</tabstop>
   <tabstop>rcservo</tabstop>
   <tabstop>rcservotxt</tabstop>
   <tabstop>rcservopin</tabstop>
@@ -7478,83 +7425,83 @@
   <tabstop>qeminput</tabstop>
   <tabstop>qemstate</tabstop>
   <tabstop>enc0</tabstop>
-  <tabstop>enctxt0</tabstop>
-  <tabstop>encpv0</tabstop>
-  <tabstop>encapin0</tabstop>
-  <tabstop>encbpin0</tabstop>
-  <tabstop>encipin0</tabstop>
-  <tabstop>encinput0</tabstop>
-  <tabstop>encstate0</tabstop>
+  <tabstop>enc0txt</tabstop>
+  <tabstop>enc0pv</tabstop>
+  <tabstop>enc0apin</tabstop>
+  <tabstop>enc0bpin</tabstop>
+  <tabstop>enc0ipin</tabstop>
+  <tabstop>enc0input</tabstop>
+  <tabstop>enc0state</tabstop>
   <tabstop>enc1</tabstop>
-  <tabstop>enctxt1</tabstop>
-  <tabstop>encpv1</tabstop>
-  <tabstop>encapin1</tabstop>
-  <tabstop>encbpin1</tabstop>
-  <tabstop>encipin1</tabstop>
-  <tabstop>encinput1</tabstop>
-  <tabstop>encstate1</tabstop>
+  <tabstop>enc1txt</tabstop>
+  <tabstop>enc1pv</tabstop>
+  <tabstop>enc1apin</tabstop>
+  <tabstop>enc1bpin</tabstop>
+  <tabstop>enc1ipin</tabstop>
+  <tabstop>enc1input</tabstop>
+  <tabstop>enc1state</tabstop>
   <tabstop>enc2</tabstop>
-  <tabstop>enctxt2</tabstop>
-  <tabstop>encpv2</tabstop>
-  <tabstop>encapin2</tabstop>
-  <tabstop>encbpin2</tabstop>
-  <tabstop>encipin2</tabstop>
-  <tabstop>encinput2</tabstop>
-  <tabstop>encstate2</tabstop>
+  <tabstop>enc2txt</tabstop>
+  <tabstop>enc2pv</tabstop>
+  <tabstop>enc2apin</tabstop>
+  <tabstop>enc2bpin</tabstop>
+  <tabstop>enc2ipin</tabstop>
+  <tabstop>enc2input</tabstop>
+  <tabstop>enc2state</tabstop>
   <tabstop>enc3</tabstop>
-  <tabstop>enctxt3</tabstop>
-  <tabstop>encpv3</tabstop>
-  <tabstop>encapin3</tabstop>
-  <tabstop>encbpin3</tabstop>
-  <tabstop>encipin3</tabstop>
-  <tabstop>encinput3</tabstop>
-  <tabstop>encstate3</tabstop>
+  <tabstop>enc3txt</tabstop>
+  <tabstop>enc3pv</tabstop>
+  <tabstop>enc3apin</tabstop>
+  <tabstop>enc3bpin</tabstop>
+  <tabstop>enc3ipin</tabstop>
+  <tabstop>enc3input</tabstop>
+  <tabstop>enc3state</tabstop>
   <tabstop>temp0</tabstop>
-  <tabstop>temptxt0</tabstop>
-  <tabstop>temppv0</tabstop>
-  <tabstop>temppin0</tabstop>
-  <tabstop>tempr0</tabstop>
-  <tabstop>tempt0</tabstop>
-  <tabstop>tempbeta0</tabstop>
+  <tabstop>temp0txt</tabstop>
+  <tabstop>temp0pv</tabstop>
+  <tabstop>temp0pin</tabstop>
+  <tabstop>temp0r</tabstop>
+  <tabstop>temp0t</tabstop>
+  <tabstop>temp0beta</tabstop>
   <tabstop>temp1</tabstop>
-  <tabstop>temptxt1</tabstop>
-  <tabstop>temppv1</tabstop>
-  <tabstop>temppin1</tabstop>
-  <tabstop>tempr1</tabstop>
-  <tabstop>tempt1</tabstop>
-  <tabstop>tempbeta1</tabstop>
+  <tabstop>temp1txt</tabstop>
+  <tabstop>temp1pv</tabstop>
+  <tabstop>temp1pin</tabstop>
+  <tabstop>temp1r</tabstop>
+  <tabstop>temp1t</tabstop>
+  <tabstop>temp1beta</tabstop>
   <tabstop>temp2</tabstop>
-  <tabstop>temptxt2</tabstop>
-  <tabstop>temppv2</tabstop>
-  <tabstop>temppin2</tabstop>
-  <tabstop>tempr2</tabstop>
-  <tabstop>tempt2</tabstop>
-  <tabstop>tempbeta2</tabstop>
+  <tabstop>temp2txt</tabstop>
+  <tabstop>temp2pv</tabstop>
+  <tabstop>temp2pin</tabstop>
+  <tabstop>temp2r</tabstop>
+  <tabstop>temp2t</tabstop>
+  <tabstop>temp2beta</tabstop>
   <tabstop>temp3</tabstop>
-  <tabstop>temptxt3</tabstop>
-  <tabstop>temppv3</tabstop>
-  <tabstop>temppin3</tabstop>
-  <tabstop>tempr3</tabstop>
-  <tabstop>tempt3</tabstop>
-  <tabstop>tempbeta3</tabstop>
+  <tabstop>temp3txt</tabstop>
+  <tabstop>temp3pv</tabstop>
+  <tabstop>temp3pin</tabstop>
+  <tabstop>temp3r</tabstop>
+  <tabstop>temp3t</tabstop>
+  <tabstop>temp3beta</tabstop>
   <tabstop>sw0</tabstop>
-  <tabstop>swtxt0</tabstop>
-  <tabstop>swpv0</tabstop>
-  <tabstop>swpin0</tabstop>
-  <tabstop>swsp0</tabstop>
-  <tabstop>swmode0</tabstop>
+  <tabstop>sw0txt</tabstop>
+  <tabstop>sw0pv</tabstop>
+  <tabstop>sw0pin</tabstop>
+  <tabstop>sw0sp</tabstop>
+  <tabstop>sw0mode</tabstop>
   <tabstop>sw1</tabstop>
-  <tabstop>swtxt1</tabstop>
-  <tabstop>swpv1</tabstop>
-  <tabstop>swpin1</tabstop>
-  <tabstop>swsp1</tabstop>
-  <tabstop>swmode1</tabstop>
+  <tabstop>sw1txt</tabstop>
+  <tabstop>sw1pv</tabstop>
+  <tabstop>sw1pin</tabstop>
+  <tabstop>sw1sp</tabstop>
+  <tabstop>sw1mode</tabstop>
   <tabstop>sw2</tabstop>
-  <tabstop>swtxt2</tabstop>
-  <tabstop>swpv2</tabstop>
-  <tabstop>swpin2</tabstop>
-  <tabstop>swsp2</tabstop>
-  <tabstop>swmode2</tabstop>
+  <tabstop>sw2txt</tabstop>
+  <tabstop>sw2pv</tabstop>
+  <tabstop>sw2pin</tabstop>
+  <tabstop>sw2sp</tabstop>
+  <tabstop>sw2mode</tabstop>
   <tabstop>save</tabstop>
   <tabstop>load</tabstop>
  </tabstops>
