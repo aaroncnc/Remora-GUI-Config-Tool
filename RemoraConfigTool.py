@@ -10,12 +10,12 @@ class Ui(QtWidgets.QMainWindow):
     #Setup actions
         self.save.clicked.connect(self.saveButtonPressed)
         self.load.clicked.connect(self.loadButtonPressed)
-        self.boards.activated.connect(self.loadboards)
-        self.xaxistmc.activated.connect(self.xtmc) 
-        self.yaxistmc.activated.connect(self.ytmc) 
-        self.zaxistmc.activated.connect(self.ztmc) 
-        self.e0axistmc.activated.connect(self.e0tmc)
-        self.e1axistmc.activated.connect(self.e1tmc)
+        self.boards.currentIndexChanged.connect(self.loadboards)
+        self.xaxistmc.currentIndexChanged.connect(self.xtmc) 
+        self.yaxistmc.currentIndexChanged.connect(self.ytmc) 
+        self.zaxistmc.currentIndexChanged.connect(self.ztmc) 
+        self.e0axistmc.currentIndexChanged.connect(self.e0tmc)
+        self.e1axistmc.currentIndexChanged.connect(self.e1tmc)
 
     #Lists
         self.axislist = ['xaxis', 'yaxis', 'zaxis', 'e0axis', 'e1axis']
@@ -38,6 +38,8 @@ class Ui(QtWidgets.QMainWindow):
             getattr(self, f'{self.axislist[z]}'"microstep").setVisible(0)
             getattr(self, f'{self.axislist[z]}'"stealthcop").setEnabled(0)
             getattr(self, f'{self.axislist[z]}'"stealthcop").setVisible(0)
+            getattr(self, f'{self.axislist[z]}'"rxpin").setEnabled(0)
+            getattr(self, f'{self.axislist[z]}'"rxpin").setVisible(0)
 
 #Import save data or pre configs into hmi        
     def loadButtonPressed(self):
@@ -50,8 +52,8 @@ class Ui(QtWidgets.QMainWindow):
             self.boards.setCurrentText(str(a))
         #axis line 2-6
             for z in range(5):
-                a, b, c, d, e, f, g, h, i, j, k, l = map(str,infile.readline().split("|"))
-                getattr(self, f'{self.axislist[z]}'"txt").setText(b),getattr(self, f'{self.axislist[z]}'"joint").setText(c),getattr(self, f'{self.axislist[z]}'"step").setText(d),getattr(self, f'{self.axislist[z]}'"dir").setText(e),getattr(self, f'{self.axislist[z]}'"enable").setText(f),getattr(self, f'{self.axislist[z]}'"cur").setText(g) ,getattr(self, f'{self.axislist[z]}'"tmc").setCurrentText(h) ,getattr(self, f'{self.axislist[z]}'"cursense").setText(i) , getattr(self, f'{self.axislist[z]}'"microstep").setText(j) ,getattr(self, f'{self.axislist[z]}'"stealthcop").setCurrentText(k)
+                a, b, c, d, e, f, g, h, i, j, k, l, m = map(str,infile.readline().split("|"))
+                getattr(self, f'{self.axislist[z]}'"txt").setText(b),getattr(self, f'{self.axislist[z]}'"joint").setText(c),getattr(self, f'{self.axislist[z]}'"step").setText(d),getattr(self, f'{self.axislist[z]}'"dir").setText(e),getattr(self, f'{self.axislist[z]}'"enable").setText(f),getattr(self, f'{self.axislist[z]}'"cur").setText(g) ,getattr(self, f'{self.axislist[z]}'"tmc").setCurrentText(h) ,getattr(self, f'{self.axislist[z]}'"cursense").setText(i) , getattr(self, f'{self.axislist[z]}'"microstep").setText(j) ,getattr(self, f'{self.axislist[z]}'"stealthcop").setCurrentText(k),getattr(self, f'{self.axislist[z]}'"rxpin").setText(l)
                 if a == "True": getattr(self, f'{self.axislist[z]}').setChecked(1)
                 else: getattr(self, f'{self.axislist[z]}').setChecked(0) 
         #output line 7-14
@@ -125,9 +127,11 @@ class Ui(QtWidgets.QMainWindow):
         with open('config.txt', 'w') as f:
             f.write('{'+'\n')
         #Boards
-            if self.boards.currentText() == "MKS SBASE v1.3":
+            if self.boards.currentText() == "MKS SBASE v1.3 LPC1768":
                 f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 0 - 3",'+'\n'+'\t'+'\t'+'"I2C SDA pin":'+'\t'+'\t'+'"0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin":'+'\t'+'\t'+'"0.1",'+'\n'+'\t'+'\t'+'"I2C address":'+'\t'+'\t'+'0,'+'\n'+'\t'+'\t'+'"Max current":'+'\t'+'\t'+'2.0,'+'\n'+'\t'+'\t'+'"Factor":'+'\t'+'\t'+'\t'+'113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+'\t'+self.xaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+'\t'+self.yaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+'\t'+self.zaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+'\t'+self.e0axiscur.text()+'\n'+'\t'+'},'+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 4 - 7",'+'\n'+'\t'+'\t'+'"I2C SDA pin":'+'\t'+'\t'+'"0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin":'+'\t'+'\t'+'"0.1",'+'\n'+'\t'+'\t'+'"I2C address":'+'\t'+'\t'+'2,'+'\n'+'\t'+'\t'+'"Max current":'+'\t'+'\t'+'2.0,'+'\n'+'\t'+'\t'+'"Factor":'+'\t'+'\t'+'\t'+'113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+'\t'+self.e1axiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+'\t'+'0.0'+'\n'+'\t'+'},'+'\n')
-            else:
+            if self.boards.currentText() == "SRK2 STM32F407":
+                f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "Motor Power",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"Enable motor power SKR2",'+'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+'"PC_13"'+'\n'+'\t'+'},'+'\n')
+            if self.boards.currentText() == "SKR v1.3 & v1.4 LPC1768":
                 f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n')
         #E-stop
             if self.estop.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "eStop",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.estoptxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + self.estoppin.text()+'"'+'\n'+'\t'+'},'+'\n')
@@ -137,7 +141,7 @@ class Ui(QtWidgets.QMainWindow):
         #TMC
             for i in range(5):
                 if getattr(self, f'{self.axislist[i]}').isChecked() == 1:
-                    if str(getattr(self, f'{self.axislist[i]}'"tmc").currentText()) != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + getattr(self, f'{self.axislist[i]}'"tmc").currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.axislist[i]}'"txt").text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ "1.10" +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cursense").text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cur").text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"microstep").text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'"' +'\n'+'\t'+'},'+'\n')
+                    if str(getattr(self, f'{self.axislist[i]}'"tmc").currentText()) != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + getattr(self, f'{self.axislist[i]}'"tmc").currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.axislist[i]}'"txt").text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ getattr(self, f'{self.axislist[i]}'"rxpin").text() +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cursense").text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cur").text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"microstep").text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'"' +'\n'+'\t'+'},'+'\n')
         #output 
             for i in range(8):
                     if getattr(self, f'{self.outlist[i]}'"chk").isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Digital Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.outlist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + getattr(self, f'{self.outlist[i]}'"pin").text()+'"'+','+'\n'+'\t'+'\t'+'"Mode":'+'\t'+'\t'+'\t'+'\t' +'"Output",'+'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+ getattr(self, f'{self.outlist[i]}'"state").currentText()+ '"'+','+'\n'+'\t'+'\t'+'"Invert":'+'\t'+'\t'+'\t' + '"'+ str(getattr(self, f'{self.outlist[i]}'"inv").isChecked())+'",' +'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' +f'{i}'+'\n'+'\t'+'},'+'\n')
@@ -179,7 +183,7 @@ class Ui(QtWidgets.QMainWindow):
                 s.write(str(self.boards.currentText())+'|'+'\n')
             #axis line 2-7
                 for i in range(5):
-                    s.write(str(getattr(self, f'{self.axislist[i]}').isChecked())+'|'+ getattr(self, f'{self.axislist[i]}'"txt").text()+'|'+ getattr(self, f'{self.axislist[i]}'"joint").text()+'|'+ getattr(self, f'{self.axislist[i]}'"step").text()+'|'+ getattr(self, f'{self.axislist[i]}'"dir").text()+'|'+ getattr(self, f'{self.axislist[i]}'"enable").text()+'|'+ getattr(self, f'{self.axislist[i]}'"cur").text()+'|'+ getattr(self, f'{self.axislist[i]}'"tmc").currentText()+'|'+ getattr(self, f'{self.axislist[i]}'"cursense").text()+'|'+ getattr(self, f'{self.axislist[i]}'"microstep").text()+'|'+ getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'|'+'\n')
+                    s.write(str(getattr(self, f'{self.axislist[i]}').isChecked())+'|'+ getattr(self, f'{self.axislist[i]}'"txt").text()+'|'+ getattr(self, f'{self.axislist[i]}'"joint").text()+'|'+ getattr(self, f'{self.axislist[i]}'"step").text()+'|'+ getattr(self, f'{self.axislist[i]}'"dir").text()+'|'+ getattr(self, f'{self.axislist[i]}'"enable").text()+'|'+ getattr(self, f'{self.axislist[i]}'"cur").text()+'|'+ getattr(self, f'{self.axislist[i]}'"tmc").currentText()+'|'+ getattr(self, f'{self.axislist[i]}'"cursense").text()+'|'+ getattr(self, f'{self.axislist[i]}'"microstep").text()+'|'+ getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'|'+ getattr(self, f'{self.axislist[i]}'"rxpin").text()+'|'+'\n')
             #output line 7-14
                 for i in range(8):
                     s.write(str(getattr(self, f'{self.outlist[i]}'"chk").isChecked())+'|'+ getattr(self, f'{self.outlist[i]}'"txt").text()+'|'+ getattr(self, f'{self.outlist[i]}'"pin").text()+'|'+ getattr(self, f'{self.outlist[i]}'"state").currentText()+'|'+ str(getattr(self, f'{self.outlist[i]}'"inv").isChecked())+'|'+'\n')
@@ -209,33 +213,33 @@ class Ui(QtWidgets.QMainWindow):
 
 #load boards from combo box        
     def loadboards(self):
-        if self.boards.currentText() == "MKS SBASE v1.3": self.xaxiscur.setEnabled(1),self.xaxiscur.setVisible(1),self.yaxiscur.setEnabled(1),self.yaxiscur.setVisible(1),self.zaxiscur.setEnabled(1),self.zaxiscur.setVisible(1),self.e0axiscur.setEnabled(1),self.e0axiscur.setVisible(1),self.e1axiscur.setEnabled(1),self.e1axiscur.setVisible(1)
+        if self.boards.currentText() == "MKS SBASE v1.3 LPC1768": self.xaxiscur.setEnabled(1),self.xaxiscur.setVisible(1),self.yaxiscur.setEnabled(1),self.yaxiscur.setVisible(1),self.zaxiscur.setEnabled(1),self.zaxiscur.setVisible(1),self.e0axiscur.setEnabled(1),self.e0axiscur.setVisible(1),self.e1axiscur.setEnabled(1),self.e1axiscur.setVisible(1)
         else:self.xaxiscur.setEnabled(0),self.xaxiscur.setVisible(0),self.yaxiscur.setEnabled(0),self.yaxiscur.setVisible(0),self.zaxiscur.setEnabled(0),self.zaxiscur.setVisible(0),self.e0axiscur.setEnabled(0),self.e0axiscur.setVisible(0),self.e1axiscur.setEnabled(0),self.e1axiscur.setVisible(0)
  
 #hide and show X axis tmc options 
     def xtmc(self):  
-        if self.xaxistmc.currentText() == "None": self.xaxiscur.setEnabled(0), self.xaxiscur.setVisible(0), self.xaxiscursense.setEnabled(0), self.xaxiscursense.setVisible(0), self.xaxismicrostep.setEnabled(0), self.xaxismicrostep.setVisible(0), self.xaxisstealthcop.setEnabled(0), self.xaxisstealthcop.setVisible(0)
-        else: self.xaxiscur.setEnabled(1), self.xaxiscur.setVisible(1), self.xaxiscursense.setEnabled(1), self.xaxiscursense.setVisible(1), self.xaxismicrostep.setEnabled(1), self.xaxismicrostep.setVisible(1), self.xaxisstealthcop.setEnabled(1), self.xaxisstealthcop.setVisible(1) 
+        if self.xaxistmc.currentText() == "None": self.xaxiscur.setEnabled(0), self.xaxiscur.setVisible(0), self.xaxiscursense.setEnabled(0), self.xaxiscursense.setVisible(0), self.xaxismicrostep.setEnabled(0), self.xaxismicrostep.setVisible(0), self.xaxisstealthcop.setEnabled(0), self.xaxisstealthcop.setVisible(0), self.xaxisrxpin.setEnabled(0), self.xaxisrxpin.setVisible(0)
+        else: self.xaxiscur.setEnabled(1), self.xaxiscur.setVisible(1), self.xaxiscursense.setEnabled(1), self.xaxiscursense.setVisible(1), self.xaxismicrostep.setEnabled(1), self.xaxismicrostep.setVisible(1), self.xaxisstealthcop.setEnabled(1), self.xaxisstealthcop.setVisible(1), self.xaxisrxpin.setEnabled(1), self.xaxisrxpin.setVisible(1)
             
 #hide and show Y axis tmc options            
     def ytmc(self):
-        if self.yaxistmc.currentText() == "None": self.yaxiscur.setEnabled(0), self.yaxiscur.setVisible(0), self.yaxiscursense.setEnabled(0), self.yaxiscursense.setVisible(0), self.yaxismicrostep.setEnabled(0), self.yaxismicrostep.setVisible(0), self.yaxisstealthcop.setEnabled(0), self.yaxisstealthcop.setVisible(0)
-        else: self.yaxiscur.setEnabled(1), self.yaxiscur.setVisible(1), self.yaxiscursense.setEnabled(1), self.yaxiscursense.setVisible(1), self.yaxismicrostep.setEnabled(1), self.yaxismicrostep.setVisible(1), self.yaxisstealthcop.setEnabled(1), self.yaxisstealthcop.setVisible(1) 
+        if self.yaxistmc.currentText() == "None": self.yaxiscur.setEnabled(0), self.yaxiscur.setVisible(0), self.yaxiscursense.setEnabled(0), self.yaxiscursense.setVisible(0), self.yaxismicrostep.setEnabled(0), self.yaxismicrostep.setVisible(0), self.yaxisstealthcop.setEnabled(0), self.yaxisstealthcop.setVisible(0), self.yaxisrxpin.setEnabled(0), self.yaxisrxpin.setVisible(0)
+        else: self.yaxiscur.setEnabled(1), self.yaxiscur.setVisible(1), self.yaxiscursense.setEnabled(1), self.yaxiscursense.setVisible(1), self.yaxismicrostep.setEnabled(1), self.yaxismicrostep.setVisible(1), self.yaxisstealthcop.setEnabled(1), self.yaxisstealthcop.setVisible(1), self.yaxisrxpin.setEnabled(1), self.yaxisrxpin.setVisible(1) 
 
 #hide and show Z axis tmc options            
     def ztmc(self):
-        if self.zaxistmc.currentText() == "None": self.zaxiscur.setEnabled(0), self.zaxiscur.setVisible(0), self.zaxiscursense.setEnabled(0), self.zaxiscursense.setVisible(0), self.zaxismicrostep.setEnabled(0), self.zaxismicrostep.setVisible(0), self.zaxisstealthcop.setEnabled(0), self.zaxisstealthcop.setVisible(0)
-        else: self.zaxiscur.setEnabled(1), self.zaxiscur.setVisible(1), self.zaxiscursense.setEnabled(1), self.zaxiscursense.setVisible(1), self.zaxismicrostep.setEnabled(1), self.zaxismicrostep.setVisible(1), self.zaxisstealthcop.setEnabled(1), self.zaxisstealthcop.setVisible(1) 
+        if self.zaxistmc.currentText() == "None": self.zaxiscur.setEnabled(0), self.zaxiscur.setVisible(0), self.zaxiscursense.setEnabled(0), self.zaxiscursense.setVisible(0), self.zaxismicrostep.setEnabled(0), self.zaxismicrostep.setVisible(0), self.zaxisstealthcop.setEnabled(0), self.zaxisstealthcop.setVisible(0), self.zaxisrxpin.setEnabled(0), self.zaxisrxpin.setVisible(0)
+        else: self.zaxiscur.setEnabled(1), self.zaxiscur.setVisible(1), self.zaxiscursense.setEnabled(1), self.zaxiscursense.setVisible(1), self.zaxismicrostep.setEnabled(1), self.zaxismicrostep.setVisible(1), self.zaxisstealthcop.setEnabled(1), self.zaxisstealthcop.setVisible(1), self.zaxisrxpin.setEnabled(1), self.zaxisrxpin.setVisible(1) 
 
 #hide and show E0 axis tmc options            
     def e0tmc(self):
-        if self.e0axistmc.currentText() == "None": self.e0axiscur.setEnabled(0), self.e0axiscur.setVisible(0), self.e0axiscursense.setEnabled(0), self.e0axiscursense.setVisible(0), self.e0axismicrostep.setEnabled(0), self.e0axismicrostep.setVisible(0), self.e0axisstealthcop.setEnabled(0), self.e0axisstealthcop.setVisible(0)
-        else: self.e0axiscur.setEnabled(1), self.e0axiscur.setVisible(1), self.e0axiscursense.setEnabled(1), self.e0axiscursense.setVisible(1), self.e0axismicrostep.setEnabled(1), self.e0axismicrostep.setVisible(1), self.e0axisstealthcop.setEnabled(1), self.e0axisstealthcop.setVisible(1) 
+        if self.e0axistmc.currentText() == "None": self.e0axiscur.setEnabled(0), self.e0axiscur.setVisible(0), self.e0axiscursense.setEnabled(0), self.e0axiscursense.setVisible(0), self.e0axismicrostep.setEnabled(0), self.e0axismicrostep.setVisible(0), self.e0axisstealthcop.setEnabled(0), self.e0axisstealthcop.setVisible(0), self.e0axisrxpin.setEnabled(0), self.e0axisrxpin.setVisible(0)
+        else: self.e0axiscur.setEnabled(1), self.e0axiscur.setVisible(1), self.e0axiscursense.setEnabled(1), self.e0axiscursense.setVisible(1), self.e0axismicrostep.setEnabled(1), self.e0axismicrostep.setVisible(1), self.e0axisstealthcop.setEnabled(1), self.e0axisstealthcop.setVisible(1), self.e0axisrxpin.setEnabled(1), self.e0axisrxpin.setVisible(1) 
 
 #hide and show E1 axis tmc options            
     def e1tmc(self):
-        if self.e1axistmc.currentText() == "None": self.e1axiscur.setEnabled(0), self.e1axiscur.setVisible(0), self.e1axiscursense.setEnabled(0), self.e1axiscursense.setVisible(0), self.e1axismicrostep.setEnabled(0), self.e1axismicrostep.setVisible(0), self.e1axisstealthcop.setEnabled(0), self.e1axisstealthcop.setVisible(0)
-        else: self.e1axiscur.setEnabled(1), self.e1axiscur.setVisible(1), self.e1axiscursense.setEnabled(1), self.e1axiscursense.setVisible(1), self.e1axismicrostep.setEnabled(1), self.e1axismicrostep.setVisible(1), self.e1axisstealthcop.setEnabled(1), self.e1axisstealthcop.setVisible(1)            
+        if self.e1axistmc.currentText() == "None": self.e1axiscur.setEnabled(0), self.e1axiscur.setVisible(0), self.e1axiscursense.setEnabled(0), self.e1axiscursense.setVisible(0), self.e1axismicrostep.setEnabled(0), self.e1axismicrostep.setVisible(0), self.e1axisstealthcop.setEnabled(0), self.e1axisstealthcop.setVisible(0), self.e1axisrxpin.setEnabled(0), self.e1axisrxpin.setVisible(0)
+        else: self.e1axiscur.setEnabled(1), self.e1axiscur.setVisible(1), self.e1axiscursense.setEnabled(1), self.e1axiscursense.setVisible(1), self.e1axismicrostep.setEnabled(1), self.e1axismicrostep.setVisible(1), self.e1axisstealthcop.setEnabled(1), self.e1axisstealthcop.setVisible(1), self.e1axisrxpin.setEnabled(1), self.e1axisrxpin.setVisible(1)            
 
 
 app = QtWidgets.QApplication(sys.argv)
