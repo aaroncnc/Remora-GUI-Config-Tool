@@ -1,5 +1,6 @@
 
 def checkit(parent):
+	print("checking")
 	parent.tabWidget.setCurrentIndex(0)
 	configErrors = []
 	tabError = False
@@ -24,18 +25,6 @@ def checkit(parent):
 	if parent.positionFeedbackCB.currentText() == 'Select':
 		tabError = True
 		configErrors.append('\tA Position Feedback must be selected')
-	if not parent.stepTimeLE.text():
-		tabError = True
-		configErrors.append('\tStep Time must be set')
-	if not parent.stepSpaceLE.text():
-		tabError = True
-		configErrors.append('\tStep Space must be set')
-	if not parent.dirSetupLE.text():
-		tabError = True
-		configErrors.append('\tDirection Time must be set')
-	if not parent.dirHoldLE.text():
-		tabError = True
-		configErrors.append('\tDirection Hole must be set')
 
 	if tabError:
 		configErrors.insert(nextHeader, 'Machine Tab:')
@@ -62,28 +51,38 @@ def checkit(parent):
 	# end of Display Tab
 
 	# check the Axis Tab for errors
-	if len(parent.coordinatesLB.text()) == 0:
+	#logic to jount joints
+	jointcnt = 0
+	for i in range(8):
+				if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1: 
+					jointcnt = jointcnt +1
+	
+	if jointcnt == 0:
 		tabError = True
 		configErrors.append('\tAt least one Joint must be configured starting with Joint 0')
 	else:
-		axes = {1:'X', 2:'Y', 3:'Z', 4:'A', 5:'B', 6:'C', 7:'U', 8:'V', 9:'W'}
-		for i in range(1, 9):
-			if parent.axisTabs.isTabEnabled(i):
-				if not getattr(parent, f'scale_{i}').text():
+		axes = {1:'X', 2:'Y', 3:'Z', 4:'E0', 5:'E1', 6:'E2', 7:'E3', 8:'E4'}
+		x = 0
+		for i in range(8):
+			#if parent.axisTabs.isTabEnabled(i):
+			if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1: 
+				x = i + 1
+				print(x)
+				if not getattr(parent, f'scale_{x}').text():
 					tabError = True
-					configErrors.append(f'\tThe Scale must be specified for the {axes[i]} Axis') 
-				if not getattr(parent, f'minLimit_{i}').text():
+					configErrors.append(f'\tThe Scale must be specified for the {axes[x]} Axis') 
+				if not getattr(parent, f'minLimit_{x}').text():
 					tabError = True
-					configErrors.append(f'\tThe Mininum Limit must be specified for the {axes[i]} Axis')
-				if not getattr(parent, f'maxLimit_{i}').text():
+					configErrors.append(f'\tThe Mininum Limit must be specified for the {axes[x]} Axis')
+				if not getattr(parent, f'maxLimit_{x}').text():
 					tabError = True
-					configErrors.append(f'\tThe Maximum Limit must be specified for the {axes[i]} Axis')
-				if not getattr(parent, f'maxVelocity_{i}').text():
+					configErrors.append(f'\tThe Maximum Limit must be specified for the {axes[x]} Axis')
+				if not getattr(parent, f'maxVelocity_{x}').text():
 					tabError = True
-					configErrors.append(f'\tThe Maximum Velocity must be specified for the {axes[i]} Axis')
-				if not getattr(parent, f'maxAccel_{i}').text():
+					configErrors.append(f'\tThe Maximum Velocity must be specified for the {axes[x]} Axis')
+				if not getattr(parent, f'maxAccel_{x}').text():
 					tabError = True
-					configErrors.append(f'\tThe Maximum Acceleration must be specified for the {axes[i]} Axis')
+					configErrors.append(f'\tThe Maximum Acceleration must be specified for the {axes[x]} Axis')
 
 	'''
 

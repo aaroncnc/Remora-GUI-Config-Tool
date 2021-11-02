@@ -55,27 +55,6 @@ def build(parent):
 	for item in positionFeedback:
 		parent.positionFeedbackCB.addItem(item[0], item[1])
 
-	drives = [
-		['Custom', False],
-		['Gecko 201', ['500', '4000', '20000', '1000']],
-		['Gecko 202', ['500', '4500', '20000', '1000']],
-		['Gecko 203v', ['1000', '2000', '200', '200']],
-		['Gecko 210', ['500', '4000', '20000', '1000']],
-		['Gecko 212', ['500', '4000', '20000', '1000']],
-		['Gecko 320', ['3500', '500', '200', '200']],
-		['Gecko 540', ['1000', '2000', '200', '200']],
-		['L297', ['500', '4000', '4000', '1000']],
-		['PMDX 150', ['1000', '2000', '1000', '1000']],
-		['Sherline', ['22000', '22000', '100000', '100000']],
-		['Xylotex BS-3', ['2000', '1000', '200', '200']],
-		['Parker 750', ['1000', '1000', '1000', '200000']],
-		['JVL SMD41/42', ['500', '500', '2500', '2500']],
-		['Hobbycnc', ['2000', '2000', '2000', '2000']],
-		['Keling 4030', ['5000', '5000', '20000', '20000']]
-		]
-
-	for item in drives:
-		parent.driveCB.addItem(item[0], item[1])
 
 	editors = {'Gedit':'gedit', 'Geany':'geany', 'Pyroom':'pyroom',
 		'Pluma':'pluma', 'Scite':'scite', 'Kwrite':'kwrite',
@@ -116,11 +95,3 @@ def build(parent):
 
 	for item in debug:
 		parent.debugCB.addItem(item[0], item[1])
-
-	#parent.pp1typeCB.addItem('Select1', False)
-	#parent.pp1typeCB.addItem('In', 'in')
-	#parent.pp1typeCB.addItem('Out', 'out')
-	#
-	#parent.pp2typeCB.addItem('Select', False)
-	#parent.pp2typeCB.addItem('In', 'in')
-	#parent.pp2typeCB.addItem('Out', 'out')

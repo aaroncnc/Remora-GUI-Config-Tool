@@ -1,11 +1,16 @@
 from PyQt5 import QtWidgets, uic
 from functools import partial
-from PyQt5.QtWidgets import QInputDialog, QFileDialog, QApplication, QMainWindow, QMessageBox, QMenu, QAction, QGridLayout, QLabel, QPushButton, QSpacerItem, QSizePolicy, QComboBox, QLineEdit, QCheckBox
+from PyQt5.QtWidgets import QInputDialog, QFileDialog, QApplication, QMainWindow, QMessageBox, QMenu, QAction, QGridLayout, QLabel, QPushButton, QSpacerItem, QSizePolicy, QComboBox, QLineEdit, QCheckBox, QButtonGroup
 
 
 import sys, os
 from libpport import buildini
 from libpport import buildhal
+from libpport import buildconfig
+from libpport import buildsave
+from libpport import buildcombos
+from libpport import utilities
+from libpport import checkconfig
 
 outputs = [{'Not Used':'Select'},
 	{'Spindle':['Spindle On', 'Spindle CW', 'Spindle CCW', 'Spindle Brake']},
@@ -15,7 +20,7 @@ outputs = [{'Not Used':'Select'},
 ]
 
 inputs = [{'Not Used':'Select'},
-	{'Homing':[
+	{'Home':[
 		'Home All', 'Joint 0 Home', 'Joint 1 Home', 'Joint 2 Home',
 		'Joint 3 Home', 'Joint 4 Home', 'Joint 5 Home',
 		'Joint 6 Home', 'Joint 7 Home']},
@@ -29,6 +34,17 @@ inputs = [{'Not Used':'Select'},
 		{'Joint 5':['Joint 5 max', 'Joint 5 min', 'Joint 5 Both']},
 		{'Joint 6':['Joint 6 max', 'Joint 6 min', 'Joint 6 Both']},
 		{'Joint 7':['Joint 7 max', 'Joint 7 min', 'Joint 7 Both']}]},
+	{'Home + Limits':[
+		{'Home all + Joint all':['Home + Limit All Max', 'Home + Limit All Min', 'Home + Limit All Both']},
+		{'Home + Limit Joint 0':['Home + Limit Joint 0 max', 'Home + Limit Joint 0 min', 'Home + Limit Joint 0 Both']},
+		{'Home + Limit Joint 1':['Home + Limit Joint 1 max', 'Home + Limit Joint 1 min', 'Home + Limit Joint 1 Both']},
+		{'Home + Limit Joint 2':['Home + Limit Joint 2 max', 'Home + Limit Joint 2 min', 'Home + Limit Joint 2 Both']},
+		{'Home + Limit Joint 3':['Home + Limit Joint 3 max', 'Home + Limit Joint 3 min', 'Home + Limit Joint 3 Both']},
+		{'Home + Limit Joint 4':['Home + Limit Joint 4 max', 'Home + Limit Joint 4 min', 'Home + Limit Joint 4 Both']},
+		{'Home + Limit Joint 5':['Home + Limit Joint 5 max', 'Home + Limit Joint 5 min', 'Home + Limit Joint 5 Both']},
+		{'Home + Limit Joint 6':['Home + Limit Joint 6 max', 'Home + Limit Joint 6 min', 'Home + Limit Joint 6 Both']},
+		{'Home + Limit Joint 7':['Home + Limit Joint 7 max', 'Home + Limit Joint 7 min', 'Home + Limit Joint 7 Both']}]},
+		
 	{'Jog':[
 		{'Joint 0':['Joint 0 Plus', 'Joint 0 Minus']},
 		{'Joint 1':['Joint 1 Plus', 'Joint 1 Minus']},
@@ -61,34 +77,8 @@ class Ui(QtWidgets.QMainWindow):
 		super(Ui, self).__init__()
 		uic.loadUi('remoreconfig.ui', self)
 		self.lib_path = os.path.split(os.path.realpath(sys.argv[0]))[0]
-
-	#Setup actions
-		self.buildini.clicked.connect(partial(buildini.build, self))
-		self.buildhal.clicked.connect(partial(buildhal.build, self))
-		self.save.clicked.connect(self.saveButtonPressed)
-		self.load.clicked.connect(self.loadButtonPressed)
-		self.boards.currentIndexChanged.connect(self.loadboards)
-		self.xaxistmc.currentIndexChanged.connect(self.xtmc) 
-		self.yaxistmc.currentIndexChanged.connect(self.ytmc) 
-		self.zaxistmc.currentIndexChanged.connect(self.ztmc) 
-		self.e0axistmc.currentIndexChanged.connect(self.e0tmc)
-		self.e1axistmc.currentIndexChanged.connect(self.e1tmc)
+#Lists
 		
-	#add menu options to outputs and inputs	
-		for i in range(8):
-			button =  getattr(self, f'outbtn{i}')
-			menu = QMenu()
-			menu.triggered.connect(lambda action, button=button: button.setText(action.text()))
-			add_menu(outputs, menu)
-			button.setMenu(menu)
-		for i in range(8):
-			button =  getattr(self, f'inbtn{i}')
-			menu = QMenu()
-			menu.triggered.connect(lambda action, button=button: button.setText(action.text()))
-			add_menu(inputs, menu)
-			button.setMenu(menu)
-
-	#Lists
 		self.axislist = ['xaxis', 'yaxis', 'zaxis', 'e0axis', 'e1axis', 'e2axis', 'e3axis', 'e4axis']
 		self.outbtnlist = ['outbtn0', 'outbtn1', 'outbtn2', 'outbtn3', 'outbtn4', 'outbtn5', 'outbtn6', 'outbtn7']
 		self.inbtnlist = ['inbtn0', 'inbtn1', 'inbtn2', 'inbtn3', 'inbtn4', 'inbtn5', 'inbtn6', 'inbtn7']
@@ -100,9 +90,66 @@ class Ui(QtWidgets.QMainWindow):
 		self.swlist = ['sw0', 'sw1', 'sw2']
 
 		self.show()
+
+
+	#Setup actions
+		
+		self.buildini.clicked.connect(partial(buildini.build, self))
+		self.buildhal.clicked.connect(partial(buildhal.build, self))
+		self.save.clicked.connect(partial(buildconfig.build, self))
+		self.save.clicked.connect(partial(buildsave.build, self))
+		self.load.clicked.connect(partial(buildsave.load, self))
+		self.boards.currentIndexChanged.connect(self.loadboards)
+		self.xaxistmc.currentIndexChanged.connect(self.xtmc) 
+		self.yaxistmc.currentIndexChanged.connect(self.ytmc) 
+		self.zaxistmc.currentIndexChanged.connect(self.ztmc) 
+		self.e0axistmc.currentIndexChanged.connect(self.e0tmc)
+		self.e1axistmc.currentIndexChanged.connect(self.e1tmc)
+		self.e2axistmc.currentIndexChanged.connect(self.e2tmc)
+		self.e3axistmc.currentIndexChanged.connect(self.e3tmc)
+		self.e4axistmc.currentIndexChanged.connect(self.e4tmc)
+		
+
+		self.buttonGroup.buttonClicked.connect(self.axisUpdate)
+		
+		
+		#self.actionOpenConfig.triggered.connect(partial(loadini.openini, self))
+		
+		#self.actionCheckConfiguration.triggered.connect(partial(checkconfig.checkit, self))
+		self.actionCheckConfiguration.clicked.connect(partial(checkconfig.checkit, self))
+		
+		#self.actionBuildConfiguration.triggered.connect(partial(buildfiles.build, self))
+		#self.actionTabHelp.triggered.connect(self.help)
+		#self.actionBuildHelp.triggered.connect(partial(self.help, 20))
+		#self.actionPCHelp.triggered.connect(partial(self.help, 30))
+		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
+		#self.driveCB.currentIndexChanged.connect(partial(utilities.driveChanged, self))
+		#self.pp1typeCB.currentIndexChanged.connect(partial(buildmenus.buildPort1, self))
+		#self.pp2typeCB.currentIndexChanged.connect(partial(buildmenus.buildPort2, self))
+		#self.resetTimingPB.clicked.connect(partial(utilities.setTiming, self))
+		#self.startUpFilePB.clicked.connect(partial(utilities.fileDialog, self, 'startUpFileLE'))
+		#self.portInfoPB.clicked.connect(partial(utilities.getPortInfo, self))
+		
+	#run actions	
+		buildcombos.build(self)
+
+		
+	#add menu options to outputs and inputs	
+		for i in range(8):
+			button =  getattr(self, f'{self.outlist[i]}'"txt")
+			menu = QMenu()
+			menu.triggered.connect(lambda action, button=button: button.setText(action.text()))
+			add_menu(outputs, menu)
+			button.setMenu(menu)
+		for i in range(8):
+			button =  getattr(self, f'{self.inlist[i]}'"txt")
+			menu = QMenu()
+			menu.triggered.connect(lambda action, button=button: button.setText(action.text()))
+			add_menu(inputs, menu)
+			button.setMenu(menu)
 		
 	#hide elements not needed on startup
-		for z in range(5):
+		for z in range(8):
 			getattr(self, f'{self.axislist[z]}'"cur").setEnabled(0)
 			getattr(self, f'{self.axislist[z]}'"cur").setVisible(0)
 			getattr(self, f'{self.axislist[z]}'"cursense").setEnabled(0)
@@ -114,182 +161,21 @@ class Ui(QtWidgets.QMainWindow):
 			getattr(self, f'{self.axislist[z]}'"rxpin").setEnabled(0)
 			getattr(self, f'{self.axislist[z]}'"rxpin").setVisible(0)
 			
-
-#Import save data or pre configs into hmi	
-
-	 
-	def loadButtonPressed(self):
-		options = QFileDialog.Options()
-		options |= QFileDialog.DontUseNativeDialog
-		fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)", options=options)
-		with open(fileName,"r") as infile:
-		#boards line 1
-			a, b = map(str,infile.readline().split("|"))
-			self.boards.setCurrentText(str(a))
-		#axis line 2-6
-			for z in range(5):
-				a, b, c, d, e, f, g, h, i, j, k, l, m = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.axislist[z]}'"txt").setText(b),getattr(self, f'{self.axislist[z]}'"joint").setText(c),getattr(self, f'{self.axislist[z]}'"step").setText(d),getattr(self, f'{self.axislist[z]}'"dir").setText(e),getattr(self, f'{self.axislist[z]}'"enable").setText(f),getattr(self, f'{self.axislist[z]}'"cur").setText(g) ,getattr(self, f'{self.axislist[z]}'"tmc").setCurrentText(h) ,getattr(self, f'{self.axislist[z]}'"cursense").setText(i) , getattr(self, f'{self.axislist[z]}'"microstep").setText(j) ,getattr(self, f'{self.axislist[z]}'"stealthcop").setCurrentText(k),getattr(self, f'{self.axislist[z]}'"rxpin").setText(l)
-				if a == "True": getattr(self, f'{self.axislist[z]}').setChecked(1)
-				else: getattr(self, f'{self.axislist[z]}').setChecked(0) 
-		#output line 7-14
-			for z in range(8):
-				a, b, c, d, e, f = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.outlist[z]}'"txt").setText(b),getattr(self, f'{self.outlist[z]}'"pin").setText(c),getattr(self, f'{self.outlist[z]}'"state").setCurrentText(d)
-				if a == "True": getattr(self, f'{self.outlist[z]}'"chk").setChecked(1)
-				else: getattr(self, f'{self.outlist[z]}'"chk").setChecked(0)
-				if e == "True": getattr(self, f'{self.outlist[z]}'"inv").setChecked(1)
-				else: getattr(self, f'{self.outlist[z]}'"inv").setChecked(0)	
-		#input line 14-21
-			for z in range(8):
-				a, b, c, d, e, f = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.inlist[z]}'"txt").setText(b),getattr(self, f'{self.inlist[z]}'"pin").setText(c),getattr(self, f'{self.inlist[z]}'"state").setCurrentText(d)
-				if a == "True": getattr(self, f'{self.inlist[z]}'"chk").setChecked(1)
-				else: getattr(self, f'{self.inlist[z]}'"chk").setChecked(0)
-				if e == "True": getattr(self, f'{self.inlist[z]}'"inv").setChecked(1)
-				else: getattr(self, f'{self.inlist[z]}'"inv").setChecked(0)	 
-		#E stop line 22
-			a, b, c, d = map(str,infile.readline().split("|"))
-			self.estoptxt.setText(b),self.estoppin.setText(c)
-			if a == "True": self.estop.setChecked(1)
-			else: self.estop.setChecked(0)
-		#reset line 23
-			a, b, c, d = map(str,infile.readline().split("|"))
-			self.resettxt.setText(b),self.resetpin.setText(c)
-			if a == "True": self.reset.setChecked(1)
-			else: self.reset.setChecked(0) 
-		#PWM line 24-31
-			for z in range(7):
-				a, b, c, d, e, f, g, h, i, j = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.pwmlist[z]}'"txt").setText(b),getattr(self, f'{self.pwmlist[z]}'"max").setText(c),getattr(self, f'{self.pwmlist[z]}'"pin").setText(d),getattr(self, f'{self.pwmlist[z]}'"freq").setText(g),getattr(self, f'{self.pwmlist[z]}'"period").setText(h)
-				if a == "True": getattr(self, f'{self.pwmlist[z]}').setChecked(1)
-				else: getattr(self, f'{self.pwmlist[z]}').setChecked(0)
-				if e == "True": getattr(self, f'{self.pwmlist[z]}'"hw").setChecked(1)
-				else: getattr(self, f'{self.pwmlist[z]}'"hw").setChecked(0)
-				if f == "True": getattr(self, f'{self.pwmlist[z]}'"vf").setChecked(1)
-				else: getattr(self, f'{self.pwmlist[z]}'"vf").setChecked(0)
-		#rc servo line 32
-			a, b, c, d, e = map(str,infile.readline().split("|"))
-			self.rcservotxt.setText(b),self.rcservopin.setText(c)
-			if a == "True": self.rcservo.setChecked(1)
-			else: self.rcservo.setChecked(0)  
-		#QEM line 33
-			a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
-			self.qemtxt.setText(b),self.qempv.setText(c),self.qeminput.setText(g),self.qemstate.setCurrentText(h)
-			if a == "True": self.qem.setChecked(1),
-			else: self.qem.setChecked(0)
-		#encoder line 34-37
-			for z in range(4):
-				a, b, c, d, e, f, g, h, i = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.enclist[z]}'"txt").setText(b),getattr(self, f'{self.enclist[z]}'"pv").setText(c), getattr(self, f'{self.enclist[z]}'"apin").setText(d), getattr(self, f'{self.enclist[z]}'"bpin").setText(e), getattr(self, f'{self.enclist[z]}'"ipin").setText(f),getattr(self, f'{self.enclist[z]}'"input").setText(g),getattr(self, f'{self.enclist[z]}'"state").setCurrentText(h)
-				if a == "True": getattr(self, f'{self.enclist[z]}').setChecked(1),
-				else: getattr(self, f'{self.enclist[z]}').setChecked(0)
-		#temp line 38-41
-			for z in range(4):
-				a, b, c, d, e, f, g, h = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.templist[z]}'"txt").setText(b),getattr(self, f'{self.templist[z]}'"pv").setText(c),getattr(self, f'{self.templist[z]}'"pin").setText(d),getattr(self, f'{self.templist[z]}'"r").setText(e),getattr(self, f'{self.templist[z]}'"t").setText(f),getattr(self, f'{self.templist[z]}'"beta").setText(g)
-				if a == "True": getattr(self, f'{self.templist[z]}').setChecked(1),
-				else: getattr(self, f'{self.templist[z]}').setChecked(0)
-		
-		#switch line 42-44
-			for z in range(3):
-				a, b, c, d, e, f, g = map(str,infile.readline().split("|"))
-				getattr(self, f'{self.swlist[z]}'"txt").setText(b),getattr(self, f'{self.swlist[z]}'"pv").setText(c),getattr(self, f'{self.swlist[z]}'"pin").setText(d),getattr(self, f'{self.swlist[z]}'"sp").setText(e),getattr(self, f'{self.swlist[z]}'"mode").setCurrentText(f)
-				if a == "True": getattr(self, f'{self.swlist[z]}').setChecked(1),
-				else: getattr(self, f'{self.swlist[z]}').setChecked(0)
-
-# Write data out to the config file for the board		 
-	def saveButtonPressed(self):
-		with open('config.txt', 'w') as f:
-			f.write('{'+'\n')
-		#Boards
-			if self.boards.currentText() == "MKS SBASE v1.3 LPC1768":
-				f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 0 - 3",'+'\n'+'\t'+'\t'+'"I2C SDA pin":'+'\t'+'\t'+'"0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin":'+'\t'+'\t'+'"0.1",'+'\n'+'\t'+'\t'+'"I2C address":'+'\t'+'\t'+'0,'+'\n'+'\t'+'\t'+'"Max current":'+'\t'+'\t'+'2.0,'+'\n'+'\t'+'\t'+'"Factor":'+'\t'+'\t'+'\t'+'113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+'\t'+self.xaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+'\t'+self.yaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+'\t'+self.zaxiscur.text()+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+'\t'+self.e0axiscur.text()+'\n'+'\t'+'},'+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "MCP4451",'+'\n'+'\t'+'"Comment": "Digipot for joints/Axis 4 - 7",'+'\n'+'\t'+'\t'+'"I2C SDA pin":'+'\t'+'\t'+'"0.0",'+'\n'+'\t'+'\t'+'"I2C SCL pin":'+'\t'+'\t'+'"0.1",'+'\n'+'\t'+'\t'+'"I2C address":'+'\t'+'\t'+'2,'+'\n'+'\t'+'\t'+'"Max current":'+'\t'+'\t'+'2.0,'+'\n'+'\t'+'\t'+'"Factor":'+'\t'+'\t'+'\t'+'113.33,'+'\n'+'\t'+'\t'+'"Current 0":'+'\t'+'\t'+self.e1axiscur.text()+','+'\n'+'\t'+'\t'+'"Current 1":'+'\t'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 2":'+'\t'+'\t'+'0.0'+','+'\n'+'\t'+'\t'+'"Current 3":'+'\t'+'\t'+'0.0'+'\n'+'\t'+'},'+'\n')
-			if self.boards.currentText() == "SRK2 STM32F407":
-				f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n'+'\t'+'{'+'\n'+'\t'+'"Thread": "On load",'+'\n'+'\t'+'"Type": "Motor Power",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"Enable motor power SKR2",'+'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+'"PC_13"'+'\n'+'\t'+'},'+'\n')
-			if self.boards.currentText() == "SKR v1.3 & v1.4 LPC1768":
-				f.write('\t'+'"Board": "'+ self.boards.currentText() + '",' +'\n'+'\t'+'"Modules":['+'\n')
-		#E-stop
-			if self.estop.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "eStop",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.estoptxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + self.estoppin.text()+'"'+'\n'+'\t'+'},'+'\n')
-		#axis
-			for i in range(5):
-				if getattr(self, f'{self.axislist[i]}').isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "stepgen",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.axislist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"Joint Number":'+'\t'+'\t'+ getattr(self, f'{self.axislist[i]}'"joint").text()+','+'\n'+'\t'+'\t'+'"Step Pin":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"step").text()+'",'+'\n'+'\t'+'\t'+'"Direction Pin":'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"dir").text()+'",' +'\n'+'\t'+'\t'+'"Enable Pin":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"enable").text()+'"' +'\n'+'\t'+'},'+'\n')
-		#TMC
-			for i in range(5):
+	def axisUpdate(self):
+		print("axis update")
+		axislist2 = ['X', 'Y', 'Z', 'E0', 'E1', 'E2', 'E3', 'E4']
+		temp = ""
+		for i in range(8):
 				if getattr(self, f'{self.axislist[i]}').isChecked() == 1:
-					if str(getattr(self, f'{self.axislist[i]}'"tmc").currentText()) != "None": f.write('\t'+'{'+'\n'+'\t'+'"Thread": "On Load",'+'\n'+'\t'+'"Type": "' + getattr(self, f'{self.axislist[i]}'"tmc").currentText() + '",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.axislist[i]}'"txt").text() + ' TMC Driver",' +'\n'+'\t'+'\t'+'"RX pin":'+'\t'+'\t'+'\t'+ getattr(self, f'{self.axislist[i]}'"rxpin").text() +','+'\n'+'\t'+'\t'+'"RSense":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cursense").text()+'",'+'\n'+'\t'+'\t'+'"Current":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"cur").text()+'",' +'\n'+'\t'+'\t'+'"Microsteps":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"microstep").text()+'",' +'\n'+'\t'+'\t'+'"Stealth chop":'+'\t'+'\t' +'"' + getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'"' +'\n'+'\t'+'},'+'\n')
-		#output 
-			for i in range(8):
-					if getattr(self, f'{self.outlist[i]}'"chk").isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Digital Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.outlist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + getattr(self, f'{self.outlist[i]}'"pin").text()+'"'+','+'\n'+'\t'+'\t'+'"Mode":'+'\t'+'\t'+'\t'+'\t' +'"Output",'+'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+ getattr(self, f'{self.outlist[i]}'"state").currentText()+ '"'+','+'\n'+'\t'+'\t'+'"Invert":'+'\t'+'\t'+'\t' + '"'+ str(getattr(self, f'{self.outlist[i]}'"inv").isChecked())+'",' +'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' +f'{i}'+'\n'+'\t'+'},'+'\n')
-		#input
-			for i in range(8):
-					if getattr(self, f'{self.inlist[i]}'"chk").isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Digital Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.inlist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + getattr(self, f'{self.inlist[i]}'"pin").text()+'"'+','+'\n'+'\t'+'\t'+'"Mode":'+'\t'+'\t'+'\t'+'\t' +'"Input",'+'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+ getattr(self, f'{self.inlist[i]}'"state").currentText()+ '"'+','+'\n'+'\t'+'\t'+'"Invert":'+'\t'+'\t'+'\t' + '"'+ str(getattr(self, f'{self.inlist[i]}'"inv").isChecked())+'",' +'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' +f'{i}'+'\n'+'\t'+'},'+'\n')
-		#PWM
-			for i in range(7):
-					if getattr(self, f'{self.pwmlist[i]}').isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "PWM",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.pwmlist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"SP[i]":'+'\t'+'\t'+'\t'+ getattr(self, f'{self.pwmlist[i]}'"spi").text()+','+'\n'+'\t'+'\t'+'"PWM Pin":'+'\t'+'\t'+'\t' +'"' + getattr(self, f'{self.pwmlist[i]}'"pin").text()+'",'+'\n'+'\t'+'\t'+'"PWM Max":'+'\t'+'\t'+'\t' + getattr(self, f'{self.pwmlist[i]}'"max").text()+',' +'\n'+'\t'+'\t'+'"Hardware PWM":'+'\t'+'\t' +'"' +  str(getattr(self, f'{self.pwmlist[i]}'"hw").isChecked())+'",'+'\n'+'\t'+'\t'+'"Variable Freq":'+'\t' +'"' +  str(getattr(self, f'{self.pwmlist[i]}'"vf").isChecked())+'",'+'\n'+'\t'+'\t'+'"Perioid SP[i]":'+'\t' + getattr(self, f'{self.pwmlist[i]}'"period").text()+',' +'\n'+'\t'+'\t'+'"Perioid US":'+'\t'+'\t' + getattr(self, f'{self.pwmlist[i]}'"freq").text() +'\n'+'\t'+'},'+'\n')
-		#Rc Servo
-			if self.rcservo.isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "RCServo",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.rcservotxt.text() + '",' +'\n'+'\t'+'\t'+'"Servo Pin":'+'\t'+'\t'+ '"' + self.rcservopin.text()+'",'+'\n'+'\t'+'\t'+'"SP[i]":'+'\t'+'\t'+'\t' + self.rcservospi.text()+'\n'+'\t'+'},'+'\n')
-		#QEM
-			if self.qem.isChecked() == 1: 
-				f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "QEI",'+'\n'+'\t'+'\t'+'"Comment":' +'\t'+'\t'+'\t'+'"'+ self.qemtxt.text() + '",' +'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+ self.qemstate.currentText()+ '",'+'\n'+'\t'+'\t'+'"PV[i]":'+'\t'+'\t'+'\t'+ self.qempv.text())
-				if self.qeminput.text() == "":
-					f.write('\n'+'\t'+'},'+'\n')
-				else:
-					f.write(','+'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' + self.qeminput.text()+','+'\n'+'\t'+'\t'+'"Enable Index":'+'\t'+'\t' +'"True"' +'\n'+'\t'+'},'+'\n')
-		#Encoder 
-			for i in range(4):
-					if getattr(self, f'{self.enclist[i]}').isChecked() == 1:
-						f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Base",'+'\n'+'\t'+'"Type": "Encoder",'+'\n'+'\t'+'\t'+'"Comment":' +'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.enclist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"ChA Pin":' +'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.enclist[i]}'"apin").text() + '",' +'\n'+'\t'+'\t'+'"ChB Pin":' +'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.enclist[i]}'"bpin").text() + '",'+'\n'+'\t'+'\t'+'"Modifier":'+'\t'+'\t'+'\t'+ '"'+	 str(getattr(self, f'{self.enclist[i]}'"state").currentText())+ '",'+'\n'+'\t'+'\t'+'"PV[i]":'+'\t'+'\t'+'\t'+ getattr(self, f'{self.enclist[i]}'"pv").text())
-						if getattr(self, f'{self.enclist[i]}'"input").text() == "":	 f.write('\n'+'\t'+'},'+'\n')
-						else: f.write(','+'\n'+'\t'+'\t'+'"Data Bit":'+'\t'+'\t'+'\t' + getattr(self, f'{self.enclist[i]}'"input").text()+','+'\n'+'\t'+'\t'+'"Index Pin":'+'\t'+'\t'+'"' + getattr(self, f'{self.enclist[i]}'"ipin").text()+'"' +'\n'+'\t'+'},'+'\n')
-		#Temp 
-			for i in range(4):
-					if getattr(self, f'{self.templist[i]}').isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Temperature",'+'\n'+'\t'+'\t'+'"Comment":' +'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.templist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"PV[i]":' +'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.templist[i]}'"pv").text() + '",' +'\n'+'\t'+'\t'+'"Sensor":' +'\t'+'\t'+'\t'+'"Thermistor",'+'\n'+'\t'+'\t'+'\t'+'"Thermistor":'+'\n'+'\t'+'\t'+'\t'+'{'+'\n'+'\t'+'\t'+'\t'+'\t'+'"Pin":'+ '\t'+'\t'+'"'+ getattr(self, f'{self.templist[i]}'"pin").text()+'",' +'\n'+'\t'+'\t'+'\t'+'\t'+'"beta":'+ '\t'+'\t'+ getattr(self, f'{self.templist[i]}'"beta").text()+',' +'\n'+ '\t'+'\t'+'\t'+'\t'+'"r0":'+ '\t'+'\t'+ getattr(self, f'{self.templist[i]}'"r").text()+',' +'\n'+'\t'+'\t'+'\t'+'\t'+'"t0":'+ '\t'+'\t'+ getattr(self, f'{self.templist[i]}'"t").text() +'\n'+ '\t'+'\t'+'\t'+'}'+'\n'+'\t'+'},'+'\n')
-		#swtich 
-			for i in range(3):
-					if getattr(self, f'{self.swlist[i]}').isChecked() == 1: f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Switch",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ getattr(self, f'{self.swlist[i]}'"txt").text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+ '"' + getattr(self, f'{self.swlist[i]}'"pin").text()+'"'+','+'\n'+'\t'+'\t'+'"Mode":'+'\t'+'\t'+'\t'+'\t'+'"' + str(getattr(self, f'{self.swlist[i]}'"mode").currentText())+'",'+'\n'+'\t'+'\t'+'"PV[i]":'+'\t'+'\t'+'\t'+ getattr(self, f'{self.swlist[i]}'"pv").text()+','+'\n'+'\t'+'\t'+'"SP":'+'\t'+'\t'+'\t'+'\t'+ getattr(self, f'{self.swlist[i]}'"sp").text() +'\n'+'\t'+'},'+'\n')
-		#reset pin this must be last
-			f.write('\t'+'{'+'\n'+'\t'+'"Thread": "Servo",'+'\n'+'\t'+'"Type": "Reset Pin",'+'\n'+'\t'+'\t'+'"Comment":'+'\t'+'\t'+'\t'+'"'+ self.resettxt.text() + '",' +'\n'+'\t'+'\t'+'"Pin":'+'\t'+'\t'+'\t'+'\t'+'"'+ self.resetpin.text() +'"' +'\n'+'\t'+'}'+'\n')
-		 # ending format
-			f.write('\t'+']'+'\n'+'}')
-			
-#write out data to save file for hmi	
-			with open('save.txt', 'w') as s:
-			#boards line 1
-				s.write(str(self.boards.currentText())+'|'+'\n')
-			#axis line 2-7
-				for i in range(5):
-					s.write(str(getattr(self, f'{self.axislist[i]}').isChecked())+'|'+ getattr(self, f'{self.axislist[i]}'"txt").text()+'|'+ getattr(self, f'{self.axislist[i]}'"joint").text()+'|'+ getattr(self, f'{self.axislist[i]}'"step").text()+'|'+ getattr(self, f'{self.axislist[i]}'"dir").text()+'|'+ getattr(self, f'{self.axislist[i]}'"enable").text()+'|'+ getattr(self, f'{self.axislist[i]}'"cur").text()+'|'+ getattr(self, f'{self.axislist[i]}'"tmc").currentText()+'|'+ getattr(self, f'{self.axislist[i]}'"cursense").text()+'|'+ getattr(self, f'{self.axislist[i]}'"microstep").text()+'|'+ getattr(self, f'{self.axislist[i]}'"stealthcop").currentText()+'|'+ getattr(self, f'{self.axislist[i]}'"rxpin").text()+'|'+'\n')
-			#output line 7-14
-				for i in range(8):
-					s.write(str(getattr(self, f'{self.outlist[i]}'"chk").isChecked())+'|'+ getattr(self, f'{self.outlist[i]}'"txt").text()+'|'+ getattr(self, f'{self.outlist[i]}'"pin").text()+'|'+ getattr(self, f'{self.outlist[i]}'"state").currentText()+'|'+ str(getattr(self, f'{self.outlist[i]}'"inv").isChecked())+'|'+'\n')
-			#input0 line 15-22
-				for i in range(8):
-					s.write(str(getattr(self, f'{self.inlist[i]}'"chk").isChecked())+'|'+ getattr(self, f'{self.inlist[i]}'"txt").text()+'|'+ getattr(self, f'{self.inlist[i]}'"pin").text()+'|'+ getattr(self, f'{self.inlist[i]}'"state").currentText()+'|'+ str(getattr(self, f'{self.inlist[i]}'"inv").isChecked())+'|'+'\n')
-			#reset pin line 23
-				s.write(str(self.estop.isChecked())+'|'+ self.estoptxt.text()+'|'+self.estoppin.text()+'|'+'\n')
-			#reset pin line 24
-				s.write(str(self.reset.isChecked())+'|'+ self.resettxt.text()+'|'+self.resetpin.text()+'|'+'\n')
-			#PWM line 25-31
-				for i in range(7):
-					s.write(str(getattr(self, f'{self.pwmlist[i]}').isChecked())+'|'+ getattr(self, f'{self.pwmlist[i]}'"txt").text()+'|'+ getattr(self, f'{self.pwmlist[i]}'"max").text()+'|'+ getattr(self, f'{self.pwmlist[i]}'"pin").text()+'|'+ str(getattr(self, f'{self.pwmlist[i]}'"hw").isChecked())+'|'+ str(getattr(self, f'{self.pwmlist[i]}'"vf").isChecked())+'|'+ getattr(self, f'{self.pwmlist[i]}'"freq").text()+'|'+ getattr(self, f'{self.pwmlist[i]}'"period").text()+'|'+ getattr(self, f'{self.pwmlist[i]}'"spi").text()+'|'+'\n')
-			#rc Servo line 32
-				s.write(str(self.rcservo.isChecked())+'|'+ self.rcservotxt.text()+'|'+self.rcservopin.text()+'|'+self.rcservospi.text()+'|'+'\n')
-			#QEM line 33
-				s.write(str(self.qem.isChecked())+'|'+ self.qemtxt.text()+'|'+self.qempv.text()+'|'+self.qemapin.text()+'|'+self.qembpin.text()+'|'+self.qemipin.text()+'|'+self.qeminput.text()+'|'+str(self.qemstate.currentText())+'|'+'\n')
-			#Encoder line 34-37
-				for i in range(4):
-					s.write(str(getattr(self, f'{self.enclist[i]}').isChecked())+'|'+ getattr(self, f'{self.enclist[i]}'"txt").text()+'|'+ getattr(self, f'{self.enclist[i]}'"pv").text()+'|'+ getattr(self, f'{self.enclist[i]}'"apin").text()+'|'+ getattr(self, f'{self.enclist[i]}'"bpin").text()+'|'+ getattr(self, f'{self.enclist[i]}'"ipin").text()+'|'+ getattr(self, f'{self.enclist[i]}'"input").text()+'|'+ str(getattr(self, f'{self.enclist[i]}'"state").currentText())+'|'+'\n')
-			#temp line 38-41
-				for i in range(4):
-					s.write(str(getattr(self, f'{self.templist[i]}').isChecked())+'|'+ getattr(self, f'{self.templist[i]}'"txt").text()+'|'+ getattr(self, f'{self.templist[i]}'"pv").text()+'|'+ getattr(self, f'{self.templist[i]}'"pin").text()+'|'+ getattr(self, f'{self.templist[i]}'"r").text()+'|'+ getattr(self, f'{self.templist[i]}'"t").text()+'|'+ getattr(self, f'{self.templist[i]}'"beta").text()+'|'+'\n')
-			#swtich	 line 42-44
-				for i in range(3):
-					s.write(str(getattr(self, f'{self.swlist[i]}').isChecked())+'|'+ getattr(self, f'{self.swlist[i]}'"txt").text()+'|'+ getattr(self, f'{self.swlist[i]}'"pv").text()+'|'+ getattr(self, f'{self.swlist[i]}'"pin").text()+'|'+ getattr(self, f'{self.swlist[i]}'"sp").text()+'|'+ str(getattr(self, f'{self.swlist[i]}'"mode").currentText())+'|'+'\n')
+					print(f'{axislist2[i]}')
+					temp = temp + f'{axislist2[i]}' + " "
+					self.coordinatesLB.setText(temp)
+		
+
 
 #load boards from combo box		   
 	def loadboards(self):
-		if self.boards.currentText() == "MKS SBASE v1.3 LPC1768": self.xaxiscur.setEnabled(1),self.xaxiscur.setVisible(1),self.yaxiscur.setEnabled(1),self.yaxiscur.setVisible(1),self.zaxiscur.setEnabled(1),self.zaxiscur.setVisible(1),self.e0axiscur.setEnabled(1),self.e0axiscur.setVisible(1),self.e1axiscur.setEnabled(1),self.e1axiscur.setVisible(1)
+		if self.boards.currentText() == "MKS SBASE v1.3 LPC1768": self.xaxiscur.setEnabled(1),self.xaxiscur.setVisible(1),self.yaxiscur.setEnabled(1),self.yaxiscur.setVisible(1),self.zaxiscur.setEnabled(1),self.zaxiscur.setVisible(1),self.e0axiscur.setEnabled(1),self.e0axiscur.setVisible(1),self.e1axiscur.setEnabled(1),self.e1axiscur.setVisible(1),self.e2axiscur.setEnabled(1),self.e2axiscur.setVisible(1),self.e3axiscur.setEnabled(1),self.e3axiscur.setVisible(1),self.e4axiscur.setEnabled(1),self.e4axiscur.setVisible(1)
 		else:self.xaxiscur.setEnabled(0),self.xaxiscur.setVisible(0),self.yaxiscur.setEnabled(0),self.yaxiscur.setVisible(0),self.zaxiscur.setEnabled(0),self.zaxiscur.setVisible(0),self.e0axiscur.setEnabled(0),self.e0axiscur.setVisible(0),self.e1axiscur.setEnabled(0),self.e1axiscur.setVisible(0)
  
 #hide and show X axis tmc options 
@@ -316,7 +202,19 @@ class Ui(QtWidgets.QMainWindow):
 	def e1tmc(self):
 		if self.e1axistmc.currentText() == "None": self.e1axiscur.setEnabled(0), self.e1axiscur.setVisible(0), self.e1axiscursense.setEnabled(0), self.e1axiscursense.setVisible(0), self.e1axismicrostep.setEnabled(0), self.e1axismicrostep.setVisible(0), self.e1axisstealthcop.setEnabled(0), self.e1axisstealthcop.setVisible(0), self.e1axisrxpin.setEnabled(0), self.e1axisrxpin.setVisible(0)
 		else: self.e1axiscur.setEnabled(1), self.e1axiscur.setVisible(1), self.e1axiscursense.setEnabled(1), self.e1axiscursense.setVisible(1), self.e1axismicrostep.setEnabled(1), self.e1axismicrostep.setVisible(1), self.e1axisstealthcop.setEnabled(1), self.e1axisstealthcop.setVisible(1), self.e1axisrxpin.setEnabled(1), self.e1axisrxpin.setVisible(1)			
-		
+#hide and show e2 axis tmc options			  
+	def e2tmc(self):
+		if self.e2axistmc.currentText() == "None": self.e2axiscur.setEnabled(0), self.e2axiscur.setVisible(0), self.e2axiscursense.setEnabled(0), self.e2axiscursense.setVisible(0), self.e2axismicrostep.setEnabled(0), self.e2axismicrostep.setVisible(0), self.e2axisstealthcop.setEnabled(0), self.e2axisstealthcop.setVisible(0), self.e2axisrxpin.setEnabled(0), self.e2axisrxpin.setVisible(0)
+		else: self.e2axiscur.setEnabled(1), self.e2axiscur.setVisible(1), self.e2axiscursense.setEnabled(1), self.e2axiscursense.setVisible(1), self.e2axismicrostep.setEnabled(1), self.e2axismicrostep.setVisible(1), self.e2axisstealthcop.setEnabled(1), self.e2axisstealthcop.setVisible(1), self.e2axisrxpin.setEnabled(1), self.e2axisrxpin.setVisible(1)			
+#hide and show e3 axis tmc options			  
+	def e3tmc(self):
+		if self.e3axistmc.currentText() == "None": self.e3axiscur.setEnabled(0), self.e3axiscur.setVisible(0), self.e3axiscursense.setEnabled(0), self.e3axiscursense.setVisible(0), self.e3axismicrostep.setEnabled(0), self.e3axismicrostep.setVisible(0), self.e3axisstealthcop.setEnabled(0), self.e3axisstealthcop.setVisible(0), self.e3axisrxpin.setEnabled(0), self.e3axisrxpin.setVisible(0)
+		else: self.e3axiscur.setEnabled(1), self.e3axiscur.setVisible(1), self.e3axiscursense.setEnabled(1), self.e3axiscursense.setVisible(1), self.e3axismicrostep.setEnabled(1), self.e3axismicrostep.setVisible(1), self.e3axisstealthcop.setEnabled(1), self.e3axisstealthcop.setVisible(1), self.e3axisrxpin.setEnabled(1), self.e3axisrxpin.setVisible(1)			
+#hide and show e4 axis tmc options			  
+	def e4tmc(self):
+		if self.e4axistmc.currentText() == "None": self.e4axiscur.setEnabled(0), self.e4axiscur.setVisible(0), self.e4axiscursense.setEnabled(0), self.e4axiscursense.setVisible(0), self.e4axismicrostep.setEnabled(0), self.e4axismicrostep.setVisible(0), self.e4axisstealthcop.setEnabled(0), self.e4axisstealthcop.setVisible(0), self.e4axisrxpin.setEnabled(0), self.e4axisrxpin.setVisible(0)
+		else: self.e4axiscur.setEnabled(1), self.e4axiscur.setVisible(1), self.e4axiscursense.setEnabled(1), self.e4axiscursense.setVisible(1), self.e4axismicrostep.setEnabled(1), self.e4axismicrostep.setVisible(1), self.e4axisstealthcop.setEnabled(1), self.e4axisstealthcop.setVisible(1), self.e4axisrxpin.setEnabled(1), self.e4axisrxpin.setVisible(1)			
+	
 app = QtWidgets.QApplication(sys.argv)
 window = Ui()
 app.exec_()

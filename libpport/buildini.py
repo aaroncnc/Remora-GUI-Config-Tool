@@ -21,9 +21,10 @@ def build(parent):
 	#	except OSError:
 	#		parent.machinePTE.appendPlainText(f'OS error\n {traceback.print_exc()}')
 	
-	f = open("ini.txt", "w")
+	f = open(f'{parent.configName.text()}'".ini", "w")
 
 	f.write('# This file was created by the Remora Configuration Tool\n')
+	f.write(f'parent.boards.currentText()\n')
 	f.write(f'# on {datetime.now().strftime("%b %d %Y %H:%M:%S")}\n')
 	f.write('# Changes to most values are ok and will be read by the Configuration Tool\n')
 
@@ -32,8 +33,8 @@ def build(parent):
 	#f.close()
 	#f.write(f'VERSION = {parent.emcVersion}\n')
 	f.write(f'VERSION = 1.1\n')
-	f.write(f'MACHINE = {parent.configName}\n')
-	f.write(f'DEBUG = {parent.debugCB.currentText()}\n')
+	f.write(f'MACHINE = {parent.configName.text()}\n')
+	f.write(f'DEBUG = {parent.debugCB.currentData()}\n')
 
 	# build the [DISPLAY] section maxFeedOverrideLE
 	f.write('\n[DISPLAY]\n')
@@ -118,7 +119,7 @@ def build(parent):
 
 	# build the [HAL] section
 	f.write('\n[HAL]\n')
-	f.write(f'HALFILE = {parent.configName}.hal\n')
+	f.write(f'HALFILE = {parent.configName.text()}.hal\n')
 	f.write('HALFILE = io.hal\n')
 	if parent.customhalCB.isChecked():
 		f.write('HALFILE = custom.hal\n')
