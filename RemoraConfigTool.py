@@ -162,13 +162,11 @@ class Ui(QtWidgets.QMainWindow):
 			getattr(self, f'{self.axislist[z]}'"rxpin").setVisible(0)
 			
 	def axisUpdate(self):
-		print("axis update")
-		axislist2 = ['X', 'Y', 'Z', 'E0', 'E1', 'E2', 'E3', 'E4']
+		axislist2 = ['X', 'Y', 'Z', 'A', 'B', 'C', 'U', 'V']
 		temp = ""
 		for i in range(8):
 				if getattr(self, f'{self.axislist[i]}').isChecked() == 1:
-					print(f'{axislist2[i]}')
-					temp = temp + f'{axislist2[i]}' + " "
+					temp = temp + f'{axislist2[i]}'
 					self.coordinatesLB.setText(temp)
 		
 

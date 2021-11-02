@@ -72,9 +72,9 @@ def build(parent):
 	
 	f.write(f'KINEMATICS = trivkins coordinates= {parent.coordinatesLB.text()}')
 	axislist2 = ['X', 'Y', 'Z', 'A', 'B', 'C', 'U', 'V', 'W']
-	for i in range(8):
-				if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1:
-					f.write(f'{axislist2[i]}')			
+	#for i in range(8):
+	#			if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1:
+	#				f.write(f'{axislist2[i]}')			
 	#if len(set(parent.coordinatesLB.text())) == len(parent.coordinatesLB.text()):
 	#	f.write(f'KINEMATICS = trivkins coordinates={parent.coordinatesLB.text()}')
 	#	for i in range(8):
@@ -134,29 +134,30 @@ def build(parent):
 	#f.close()
 
 	# build the AXES and JOINT sections
-	axes = {1:'X', 2:'Y', 3:'Z', 4:'A', 5:'B', 6:'C', 7:'U', 8:'V'}
-	axisType = {1:'LINEAR', 2:'LINEAR', 3:'LINEAR',
-		4:'ANGULAR', 5:'ANGULAR', 6:'ANGULAR',
-		7:'LINEAR', 8:'LINEAR', 9:'LINEAR'}
-	for i in range(1, 8):
+	axes = {0:'X', 1:'Y', 2:'Z', 3:'A', 4:'B', 5:'C', 6:'U', 7:'V'}
+	axisType = {0:'LINEAR', 1:'LINEAR', 2:'LINEAR',
+		3:'ANGULAR', 4:'ANGULAR', 5:'ANGULAR',
+		6:'LINEAR', 7:'LINEAR'}
+	#for x in range(8):
+	for i in range(8):
 		if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1:
 		#if parent.axisTabs.isTabEnabled(i):
 			f.write(f'\n[AXIS_{axes[i]}]\n')
-			f.write(f'MIN_LIMIT = {getattr(parent, "minLimit_" + str(i)).text()}\n')
-			f.write(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + str(i)).text()}\n')
-			f.write(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + str(i)).text()}\n')
-			f.write(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + str(i)).text()}\n')
-
-			f.write(f'\n[JOINT_{i-1}]\n')
-			f.write(f'TYPE = {getattr(parent, "axisType_" + str(i)).text()}\n')
-			f.write(f'MIN_LIMIT = {getattr(parent, "minLimit_" + str(i)).text()}\n')
-			f.write(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + str(i)).text()}\n')
-			f.write(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + str(i)).text()}\n')
-			f.write(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + str(i)).text()}\n')
-			if getattr(parent, "reverse_" + str(i)).isChecked():
-				f.write(f'SCALE = -{getattr(parent, "scale_" + str(i)).text()}\n')
+			f.write(f'MIN_LIMIT = {getattr(parent, "minLimit_" + str(i+1)).text()}\n')
+			f.write(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + str(i+1)).text()}\n')
+			f.write(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + str(i+1)).text()}\n')
+			f.write(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + str(i+1)).text()}\n')
+	
+			f.write(f'\n[JOINT_{i}]\n')
+			f.write(f'TYPE = {getattr(parent, "axisType_" + str(i+1)).text()}\n')
+			f.write(f'MIN_LIMIT = {getattr(parent, "minLimit_" + str(i+1)).text()}\n')
+			f.write(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + str(i+1)).text()}\n')
+			f.write(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + str(i+1)).text()}\n')
+			f.write(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + str(i+1)).text()}\n')
+			if getattr(parent, "reverse_" + str(i+1)).isChecked():
+				f.write(f'SCALE = -{getattr(parent, "scale_" + str(i+1)).text()}\n')
 			else:
-				f.write(f'SCALE = {getattr(parent, "scale_" + str(i)).text()}\n')
+				f.write(f'SCALE = {getattr(parent, "scale_" + str(i+1)).text()}\n')
 			#f.write(f'STEPGEN_MAX_VEL = {str(float(getattr(parent, "maxVelocity_" + str(i)).text()) * 1.2)}\n')
 			#f.write(f'STEPGEN_MAX_ACC = {str(float(getattr(parent, "maxAccel_" + str(i)).text()) * 1.2)}\n')
 			if parent.linearUnitsCB.currentText()  == 'inch':
@@ -165,20 +166,20 @@ def build(parent):
 			else:
 				f.write('FERROR = 0.0050\n')
 				f.write('MIN_FERROR = 0.0025\n')
-			if getattr(parent, "home_" + str(i)).text():
-				f.write(f'HOME = {getattr(parent, "home_" + str(i)).text()}\n')
-			if getattr(parent, "homeOffset_" + str(i)).text():
-				f.write(f'HOME_OFFSET = {getattr(parent, "homeOffset_" + str(i)).text()}\n')
-			if getattr(parent, "homeSearchVel_" + str(i)).text():
-				f.write(f'HOME_SEARCH_VEL = {getattr(parent, "homeSearchVel_" + str(i)).text()}\n')
-			if getattr(parent, "homeLatchVel_" + str(i)).text():
-				f.write(f'HOME_LATCH_VEL = {getattr(parent, "homeLatchVel_" + str(i)).text()}\n')
-			if getattr(parent, "homeUseIndex_" + str(i)).isChecked():
-				f.write(f'HOME_USE_INDEX = {getattr(parent, "homeUseIndex_" + str(i)).isChecked()}\n')
-			if getattr(parent, "homeIgnoreLimits_" + str(i)).isChecked():
-				f.write(f'HOME_IGNORE_LIMITS = {getattr(parent, "homeIgnoreLimits_" + str(i)).isChecked()}\n')
-			if getattr(parent, "homeSequence_" + str(i)).text():
-				f.write(f'HOME_SEQUENCE = {getattr(parent, "homeSequence_" + str(i)).text()}\n')
+			if getattr(parent, "home_" + str(i+1)).text():
+				f.write(f'HOME = {getattr(parent, "home_" + str(i+1)).text()}\n')
+			if getattr(parent, "homeOffset_" + str(i+1)).text():
+				f.write(f'HOME_OFFSET = {getattr(parent, "homeOffset_" + str(i+1)).text()}\n')
+			if getattr(parent, "homeSearchVel_" + str(i+1)).text():
+				f.write(f'HOME_SEARCH_VEL = {getattr(parent, "homeSearchVel_" + str(i+1)).text()}\n')
+			if getattr(parent, "homeLatchVel_" + str(i+1)).text():
+				f.write(f'HOME_LATCH_VEL = {getattr(parent, "homeLatchVel_" + str(i+1)).text()}\n')
+			if getattr(parent, "homeUseIndex_" + str(i+1)).isChecked():
+				f.write(f'HOME_USE_INDEX = {getattr(parent, "homeUseIndex_" + str(i+1)).isChecked()}\n')
+			if getattr(parent, "homeIgnoreLimits_" + str(i+1)).isChecked():
+				f.write(f'HOME_IGNORE_LIMITS = {getattr(parent, "homeIgnoreLimits_" + str(i+1)).isChecked()}\n')
+			if getattr(parent, "homeSequence_" + str(i+1)).text():
+				f.write(f'HOME_SEQUENCE = {getattr(parent, "homeSequence_" + str(i+1)).text()}\n')
 
 	f.write('\n# DO NOT change anything below this line\n')
 
