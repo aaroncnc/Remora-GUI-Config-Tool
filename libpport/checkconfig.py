@@ -1,6 +1,5 @@
 
 def checkit(parent):
-	print("checking")
 	parent.tabWidget.setCurrentIndex(0)
 	configErrors = []
 	tabError = False
@@ -67,7 +66,6 @@ def checkit(parent):
 			#if parent.axisTabs.isTabEnabled(i):
 			if getattr(parent, f'{parent.axislist[i]}').isChecked() == 1: 
 				x = i + 1
-				print(x)
 				if not getattr(parent, f'scale_{x}').text():
 					tabError = True
 					configErrors.append(f'\tThe Scale must be specified for the {axes[x]} Axis') 
