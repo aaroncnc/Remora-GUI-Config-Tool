@@ -96,7 +96,7 @@ class Ui(QtWidgets.QMainWindow):
 		
 		self.buildini.clicked.connect(partial(buildini.build, self))
 		self.buildhal.clicked.connect(partial(buildhal.build, self))
-		self.save.clicked.connect(partial(buildconfig.build, self))
+		self.buildconfig.clicked.connect(partial(buildconfig.build, self))
 		self.save.clicked.connect(partial(buildsave.build, self))
 		self.load.clicked.connect(partial(buildsave.load, self))
 		self.boards.currentIndexChanged.connect(self.loadboards)

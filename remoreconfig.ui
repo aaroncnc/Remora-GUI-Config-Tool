@@ -463,7 +463,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="0" colspan="2">
+    <item row="4" column="0" colspan="2">
      <widget class="QTabWidget" name="tabWidget">
       <property name="palette">
        <palette>
@@ -914,7 +914,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -8496,7 +8496,7 @@ Acceleration</string>
           <x>20</x>
           <y>30</y>
           <width>881</width>
-          <height>121</height>
+          <height>71</height>
          </rect>
         </property>
         <property name="title">
@@ -8508,10 +8508,10 @@ Acceleration</string>
          </property>
          <property name="geometry">
           <rect>
-           <x>800</x>
-           <y>70</y>
+           <x>740</x>
+           <y>40</y>
            <width>31</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="text">
@@ -8524,21 +8524,21 @@ Acceleration</string>
         <widget class="QLabel" name="label_171">
          <property name="geometry">
           <rect>
-           <x>800</x>
-           <y>40</y>
-           <width>51</width>
-           <height>22</height>
+           <x>740</x>
+           <y>20</y>
+           <width>31</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
           <string>SP[i]</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="pwm6_3">
+        <widget class="QCheckBox" name="pwm6">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>70</y>
+           <x>10</x>
+           <y>40</y>
            <width>81</width>
            <height>27</height>
           </rect>
@@ -8553,10 +8553,10 @@ Acceleration</string>
         <widget class="QLabel" name="label_172">
          <property name="geometry">
           <rect>
-           <x>550</x>
+           <x>520</x>
            <y>20</y>
-           <width>61</width>
-           <height>41</height>
+           <width>71</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="text">
@@ -8569,10 +8569,10 @@ Acceleration</string>
         <widget class="QLabel" name="label_176">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>40</x>
            <y>20</y>
-           <width>111</width>
-           <height>61</height>
+           <width>41</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="text">
@@ -8585,8 +8585,8 @@ Acceleration</string>
         <widget class="QCheckBox" name="pwm6vf">
          <property name="geometry">
           <rect>
-           <x>560</x>
-           <y>70</y>
+           <x>540</x>
+           <y>40</y>
            <width>21</width>
            <height>27</height>
           </rect>
@@ -8599,7 +8599,7 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>460</x>
-           <y>70</y>
+           <y>40</y>
            <width>21</width>
            <height>27</height>
           </rect>
@@ -8612,9 +8612,9 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>330</x>
-           <y>70</y>
+           <y>40</y>
            <width>81</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="placeholderText">
@@ -8624,10 +8624,10 @@ Acceleration</string>
         <widget class="QLabel" name="label_170">
          <property name="geometry">
           <rect>
-           <x>650</x>
-           <y>40</y>
-           <width>68</width>
-           <height>22</height>
+           <x>610</x>
+           <y>20</y>
+           <width>41</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
@@ -8637,10 +8637,10 @@ Acceleration</string>
         <widget class="QLineEdit" name="pwm6period">
          <property name="geometry">
           <rect>
-           <x>730</x>
-           <y>70</y>
+           <x>680</x>
+           <y>40</y>
            <width>31</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="placeholderText">
@@ -8650,10 +8650,10 @@ Acceleration</string>
         <widget class="QLabel" name="label_177">
          <property name="geometry">
           <rect>
-           <x>730</x>
-           <y>40</y>
-           <width>51</width>
-           <height>22</height>
+           <x>680</x>
+           <y>20</y>
+           <width>31</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
@@ -8664,9 +8664,9 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>40</y>
-           <width>68</width>
-           <height>22</height>
+           <y>20</y>
+           <width>41</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
@@ -8677,9 +8677,9 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>230</x>
-           <y>70</y>
+           <y>40</y>
            <width>81</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="placeholderText">
@@ -8689,10 +8689,10 @@ Acceleration</string>
         <widget class="QLineEdit" name="pwm6txt">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>70</y>
+           <x>120</x>
+           <y>40</y>
            <width>81</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="placeholderText">
@@ -8703,7 +8703,7 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>240</x>
-           <y>40</y>
+           <y>20</y>
            <width>71</width>
            <height>22</height>
           </rect>
@@ -8716,9 +8716,9 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>340</x>
-           <y>40</y>
-           <width>101</width>
-           <height>22</height>
+           <y>20</y>
+           <width>61</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
@@ -8728,10 +8728,10 @@ Acceleration</string>
         <widget class="QLineEdit" name="pwm6freq">
          <property name="geometry">
           <rect>
-           <x>640</x>
-           <y>70</y>
+           <x>610</x>
+           <y>40</y>
            <width>51</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
          </property>
          <property name="placeholderText">
@@ -8741,10 +8741,10 @@ Acceleration</string>
         <widget class="QLabel" name="label_173">
          <property name="geometry">
           <rect>
-           <x>460</x>
+           <x>430</x>
            <y>20</y>
-           <width>68</width>
-           <height>41</height>
+           <width>81</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="text">
@@ -8758,10 +8758,10 @@ Acceleration</string>
        <widget class="QGroupBox" name="groupBox_13">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>160</y>
-          <width>281</width>
-          <height>141</height>
+          <x>30</x>
+          <y>410</y>
+          <width>251</width>
+          <height>91</height>
          </rect>
         </property>
         <property name="title">
@@ -8773,8 +8773,11 @@ Acceleration</string>
            <x>90</x>
            <y>30</y>
            <width>151</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
+         </property>
+         <property name="text">
+          <string>10</string>
          </property>
          <property name="placeholderText">
           <string>comment</string>
@@ -8784,10 +8787,13 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>90</x>
-           <y>80</y>
+           <y>60</y>
            <width>151</width>
-           <height>34</height>
+           <height>21</height>
           </rect>
+         </property>
+         <property name="text">
+          <string>3000</string>
          </property>
          <property name="placeholderText">
           <string>comment</string>
@@ -8798,8 +8804,8 @@ Acceleration</string>
           <rect>
            <x>20</x>
            <y>30</y>
-           <width>81</width>
-           <height>31</height>
+           <width>51</width>
+           <height>21</height>
           </rect>
          </property>
          <property name="text">
@@ -8813,9 +8819,9 @@ Acceleration</string>
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>80</y>
-           <width>61</width>
-           <height>31</height>
+           <y>60</y>
+           <width>51</width>
+           <height>16</height>
           </rect>
          </property>
          <property name="text">
@@ -8823,6 +8829,377 @@ Acceleration</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_75">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>881</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>High speed spindle encoder </string>
+        </property>
+        <widget class="QLineEdit" name="qempv">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>40</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="placeholderText">
+          <string>0-7</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>20</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pulses per Revolution</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_64">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>20</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Index Pin</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="qemipin">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>40</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1.24</string>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="qem">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string> spindle encoder </string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="qemapin">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>40</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1.20</string>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>20</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Index  Input #</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="qembpin">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>40</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1.23</string>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="qemtxt">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>40</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="placeholderText">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_63">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>20</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ChB Pin</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>20</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_30">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>20</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pointer #</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="qeminput">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>690</x>
+           <y>40</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>0-7</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_62">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>20</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ChA Pin</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="qemstate">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>40</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Pull None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Open Drain</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pull Up</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pull Down</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_61">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>20</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pin State</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_76">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>270</y>
+          <width>931</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Setup notes for high speed encoder</string>
+        </property>
+        <widget class="QLabel" name="label_499">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>491</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pulses per Revolution: if you have a quadrature encoder mutiply the value by 4  (300ppr *4 =1200)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_500">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>561</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ChA, ChB, index Pins: These pins are dedicated pins specific to your micro controller. look up data sheet to find them</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_501">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>811</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Index Input: Leave blank if you dont have or dont want to use the index pulse. If you use the index pulse you will lose a input on the inputs tab of the same number.</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_502">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>851</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pointer #:  is limted to 0-7 for a total of 8 and each number can only be used once in the entire application and are shared with Thermistors. Do not use the same number twice</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_77">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>931</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Setup notes Spindle PWM settings</string>
+        </property>
+        <widget class="QLabel" name="label_507">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>791</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hardware PWM: If hardware PWM is enabled only the following pins can be used  2.0, 2.5, 1.18, 1.20, 1.21, 1.23, 1.24, 1.26, 3.25, 3.26</string>
          </property>
         </widget>
        </widget>
@@ -11654,22 +12031,6 @@ Acceleration</string>
          <string>0-256</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="pwm6">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>580</y>
-          <width>81</width>
-          <height>27</height>
-         </rect>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::RightToLeft</enum>
-        </property>
-        <property name="text">
-         <string>PWM 6</string>
-        </property>
-       </widget>
        <widget class="Line" name="line_16">
         <property name="geometry">
          <rect>
@@ -12057,122 +12418,6 @@ Acceleration</string>
        <attribute name="title">
         <string>Encoders</string>
        </attribute>
-       <widget class="QLabel" name="label_17">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>0</y>
-          <width>111</width>
-          <height>61</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Enable</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_25">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>20</y>
-          <width>68</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Name</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_26">
-        <property name="geometry">
-         <rect>
-          <x>560</x>
-          <y>0</y>
-          <width>68</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Index Input #</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qeminput">
-        <property name="geometry">
-         <rect>
-          <x>560</x>
-          <y>60</y>
-          <width>31</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>0-7</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="qem">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>60</y>
-          <width>81</width>
-          <height>27</height>
-         </rect>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::RightToLeft</enum>
-        </property>
-        <property name="text">
-         <string>QEM</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_30">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>20</y>
-          <width>91</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Pointer #</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qempv">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>60</y>
-          <width>41</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>0-7</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qemtxt">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>60</y>
-          <width>81</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>comment</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_27">
         <property name="geometry">
          <rect>
@@ -12721,19 +12966,6 @@ Acceleration</string>
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="Line" name="line_47">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>90</y>
-          <width>741</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
        <widget class="Line" name="line_46">
         <property name="geometry">
          <rect>
@@ -12889,154 +13121,6 @@ Acceleration</string>
          <enum>Qt::Vertical</enum>
         </property>
        </widget>
-       <widget class="QComboBox" name="qemstate">
-        <property name="geometry">
-         <rect>
-          <x>630</x>
-          <y>60</y>
-          <width>101</width>
-          <height>32</height>
-         </rect>
-        </property>
-        <item>
-         <property name="text">
-          <string>Pull None</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Open Drain</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Pull Up</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Pull Down</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_61">
-        <property name="geometry">
-         <rect>
-          <x>640</x>
-          <y>20</y>
-          <width>111</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Pin State</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_62">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>10</y>
-          <width>71</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>ChA Pin</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qemapin">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>330</x>
-          <y>60</y>
-          <width>41</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>1.20</string>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qembpin">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>60</y>
-          <width>41</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>1.23</string>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_63">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>10</y>
-          <width>71</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>ChB Pin</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_64">
-        <property name="geometry">
-         <rect>
-          <x>470</x>
-          <y>10</y>
-          <width>81</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Index Pin</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="qemipin">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>60</y>
-          <width>41</width>
-          <height>34</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>1.24</string>
-        </property>
-        <property name="placeholderText">
-         <string/>
-        </property>
-       </widget>
        <widget class="Line" name="line_54">
         <property name="geometry">
          <rect>
@@ -13054,7 +13138,7 @@ Acceleration</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
+          <y>90</y>
           <width>841</width>
           <height>16</height>
          </rect>
@@ -13180,6 +13264,125 @@ Acceleration</string>
         </property>
         <property name="text">
          <string>Example: 500rpm * 100 pulse per rev * 4 / 60 = 3.333KHz</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_492">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>70</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Index Pin</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_493">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>70</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pin State</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_35">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>70</y>
+          <width>31</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enable</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_494">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>70</y>
+          <width>68</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Index Input #</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_495">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>70</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_496">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>70</y>
+          <width>51</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pointer #</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_497">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>70</y>
+          <width>41</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ChA Pin</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_498">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>70</y>
+          <width>41</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ChB Pin</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -14387,7 +14590,35 @@ Acceleration</string>
       </widget>
      </widget>
     </item>
-    <item row="2" column="1">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="actionCheckConfiguration">
+      <property name="text">
+       <string>check configuration</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="buildconfig">
+      <property name="text">
+       <string>Build config</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="buildhal">
+      <property name="text">
+       <string>Build HAL</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="buildini">
+      <property name="text">
+       <string>Build ini</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
      <widget class="QPushButton" name="save">
       <property name="palette">
        <palette>
@@ -14835,18 +15066,11 @@ Acceleration</string>
        <string notr="true"/>
       </property>
       <property name="text">
-       <string>Save config</string>
+       <string>Save GUI</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QPushButton" name="buildini">
-      <property name="text">
-       <string>Build ini</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
      <widget class="QPushButton" name="load">
       <property name="enabled">
        <bool>true</bool>
@@ -15297,50 +15521,14 @@ Acceleration</string>
        <string notr="true"/>
       </property>
       <property name="text">
-       <string>Load Config</string>
+       <string>Load GUI</string>
       </property>
       <property name="checkable">
        <bool>false</bool>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="buildhal">
-      <property name="text">
-       <string>Build HAL</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="actionCheckConfiguration">
-      <property name="text">
-       <string>check configuration</string>
-      </property>
-     </widget>
-    </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1039</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menubeta">
-    <property name="title">
-     <string>beta</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menutest">
-    <property name="title">
-     <string>test</string>
-    </property>
-   </widget>
-   <addaction name="menubeta"/>
-   <addaction name="menutest"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionactionCheckConfiguration">
@@ -15476,19 +15664,10 @@ Acceleration</string>
   <tabstop>pwm5freq</tabstop>
   <tabstop>pwm5period</tabstop>
   <tabstop>pwm5spi</tabstop>
-  <tabstop>pwm6</tabstop>
   <tabstop>rcservo</tabstop>
   <tabstop>rcservotxt</tabstop>
   <tabstop>rcservopin</tabstop>
   <tabstop>rcservospi</tabstop>
-  <tabstop>qem</tabstop>
-  <tabstop>qemtxt</tabstop>
-  <tabstop>qempv</tabstop>
-  <tabstop>qemapin</tabstop>
-  <tabstop>qembpin</tabstop>
-  <tabstop>qemipin</tabstop>
-  <tabstop>qeminput</tabstop>
-  <tabstop>qemstate</tabstop>
   <tabstop>enc0</tabstop>
   <tabstop>enc0txt</tabstop>
   <tabstop>enc0pv</tabstop>
@@ -15567,8 +15746,6 @@ Acceleration</string>
   <tabstop>sw2pin</tabstop>
   <tabstop>sw2sp</tabstop>
   <tabstop>sw2mode</tabstop>
-  <tabstop>save</tabstop>
-  <tabstop>load</tabstop>
  </tabstops>
  <resources/>
  <connections/>
